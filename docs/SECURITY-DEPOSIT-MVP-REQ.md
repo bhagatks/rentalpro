@@ -176,9 +176,10 @@ Three-way reconcile: bank = trust GL = sum of sub-ledgers (monthly, CAP-4)
 
 ## 9. Runbook & prerequisites
 
-| ID | Task | Blocker? | Status |
-|----|------|----------|--------|
-| P1 | **Texas attorney review:** 30-day rule, itemization, TREC trust account, forwarding address | **Prod gate** | ⬜ |
+| ID | Task | Blocker? | Status | Notes |
+|----|------|----------|--------|-------|
+| **P0** | **Partner review** — confirm native sub-ledger vs escrow bolt-on, trust bank setup, TX compliance strategy | Before prod | ⬜ | **Check with partner** |
+| P1 | **Texas attorney review:** 30-day rule, itemization, TREC trust account, forwarding address | **Prod gate** | ⬜ | Can combine brief with M4 P1 |
 | P2 | Chart of accounts template: trust vs operating (TX PM) | MVP | ⬜ |
 | P3 | Stripe Connect trust account setup per org | MVP | ⬜ |
 | B1 | DepositAccount + sub-ledger schema | — | ⬜ |
@@ -200,7 +201,7 @@ Three-way reconcile: bank = trust GL = sum of sub-ledgers (monthly, CAP-4)
 | Third-party escrow | Phase 2 optional (Roost/Rentable) | Not MVP |
 | Deposit alternatives | Phase 2 (Rhino/Jetty) | Not MVP |
 | Interest on deposits | Phase 2 / state-specific | TX MVP TBD in P1 |
-| Trust account | Separate Stripe Connect trust + GL segregation | Required |
+| M5 trust approach | **Check with partner** before prod | Native CAP-4 locked pending partner confirm |
 
 ---
 

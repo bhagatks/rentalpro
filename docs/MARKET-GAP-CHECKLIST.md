@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-05  
 **Purpose:** Features competitors ship that are missing or thin in our 12 CAPs.  
-**Status:** 🔄 M1–M5 locked; M6–M10 open. M11–M12 Phase 2 non-goals.
+**Status:** 🔄 M1–M5 locked; M6 non-goal; M7–M10 open. M11–M12 Phase 2 non-goals.
 
 **Legend:** 🔴 Must clarify for MVP · 🟡 Should add to CAP draft · ⚪ Phase 2 / non-goal candidate
 

@@ -98,6 +98,7 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 | **Platform** | Bidirectional sync with legacy PMS (AppFolio, Yardi) | Import-onboarding only (CAP-1); no live sync |
 | **Geography** | States outside Texas | Expand state-by-state after Texas validation |
 | **Leasing** | Renters insurance requirement enforcement | Phase 2 |
+| **Operations** | Eviction & legal notice tracking (full workflow) | **Non-goal MVP (M6)** — PM/attorney outside platform; M2 Notice to Pay only · [`EVICTION-NON-GOAL-CHECKLIST.md`](../../docs/EVICTION-NON-GOAL-CHECKLIST.md) |
 | **Operations** | Recurring / preventive maintenance schedules | Phase 2 |
 | **Operations** | Maintenance chargeback to tenant | Phase 2 |
 | **Accounting** | AP / vendor bills outside work orders | Phase 2 |

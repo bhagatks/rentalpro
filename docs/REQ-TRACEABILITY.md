@@ -31,7 +31,8 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | M3 | [`LEASE-RENEWAL-MVP-REQ.md`](./LEASE-RENEWAL-MVP-REQ.md) | ✅ §1–9 |
 | M4 | [`MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md`](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) | ✅ §1–9 |
 | M5 | [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) | ✅ §1–9 |
-| M6–M10 | TBD on lock | ⬜ |
+| M6 | [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) | ✅ non-goal + checklists |
+| M7–M10 | TBD on lock | ⬜ |
 
 ---
 
