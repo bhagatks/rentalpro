@@ -20,7 +20,7 @@ Your job is to:
 3. **Decide** what is in MVP vs not
 4. **Write down** decisions so engineers and AI agents do not guess later
 
-That is BMad. You are the requirements half. The founder + AI tools (Cursor or Claude Code) handle the file updates.
+That is BMad. You own **requirements**. The founder owns **merge, infrastructure, and final locks**. You both use Cursor or Claude Code to update docs — but different files and different jobs (see Part 2).
 
 ---
 
@@ -63,6 +63,142 @@ The founder will invite you to the **rentalpro** private repo.
 | Handoff | `docs/HANDOFF-TO-CURSOR.md` | Vision + locked decisions |
 
 You can **read docs in the browser** on day one even before installing anything else.
+
+---
+
+## Part 0B — Founder: add you as Collaborator
+
+**Partner:** copy this section and send it to the founder with your GitHub username.  
+**Founder:** follow these steps once.
+
+### What “Collaborator” means
+
+| | Partner (Collaborator) | Founder (repo owner) |
+|--|------------------------|----------------------|
+| **Can do** | Read repo, edit docs, push branches, open Issues & PRs | Everything + merge to `main`, repo settings, invites |
+| **Cannot do** | Change repo settings, invite others, delete repo | — |
+| **Access level needed** | **Write** (not Read-only) | Owner |
+
+### Founder steps (5 minutes)
+
+1. Open the repo in a browser: `https://github.com/bhagatks/rentalpro`
+2. Click **Settings** (top tab — only visible to owner)
+3. Left sidebar → **Collaborators** (under “Access”)
+   - If GitHub asks for your password or 2FA, complete verification
+4. Click **Add people**
+5. Type the partner’s **GitHub username** (exact spelling)
+6. Select role: **Write** → click **Add [username] to this repository**
+7. GitHub sends an invite email to the partner’s Gmail
+
+**Done when:** Partner confirms they accepted the invite and can open the repo.
+
+### If the invite does not arrive
+
+| Check | Action |
+|-------|--------|
+| Wrong username | Partner sends profile URL: `github.com/[username]` |
+| Spam folder | Partner searches inbox for “GitHub” |
+| Pending invite | Settings → Collaborators → see “Pending invite” → **Resend invitation** |
+| Still stuck | 10-min screenshare: partner shares screen on github.com |
+
+---
+
+## Part 2 — Who updates what (you vs founder)
+
+This is the split. Stay in your lane to avoid overwriting each other.
+
+### You (partner) own and edit
+
+| Area | Files / folders | Your job |
+|------|-----------------|----------|
+| **Capability specs** | `docs/capabilities/CAP-*.md` | Intent, success, user stories, open questions, lock status |
+| **Product decisions log** | `_bmad-output/specs/spec-rentalpro/.memlog.md` | Append every decision (via AI tool) |
+| **Market gaps** | `docs/MARKET-GAP-CHECKLIST.md` | Mark items MVP / Phase 2 / Never |
+| **AI product calls** | `docs/AI-MVP-DECISIONS.md` | Resolve TBD items with founder, then log |
+| **Constraints / Non-goals / Success** | `_bmad-output/specs/spec-rentalpro/SPEC.md` | Draft sections (AI re-derives from memlog) |
+| **Questions for founder** | GitHub **Issues** you create | See Part 2B below |
+
+### Founder owns (do not edit without asking)
+
+| Area | Files / folders | Founder’s job |
+|------|-----------------|-----------------|
+| **Vision & business model** | `docs/HANDOFF-TO-CURSOR.md` | Locked — partner builds on, does not rewrite |
+| **Agent / engineering rules** | `AGENTS.md`, `docs/rules/`, `.cursor/rules/` | Engineering conventions |
+| **Merge to main** | Pull requests | Founder reviews and merges your PRs |
+| **Infrastructure locks** | CAP-11, stack choices | Already locked by founder |
+| **Code & architecture** | App code, Prisma, APIs | Not started until after spec/PRD |
+| **Repo admin** | GitHub Settings, collaborators | Founder only |
+
+### Both of you can read everything
+
+When unsure: **open a GitHub Issue** and ask before editing a file in the founder-only column.
+
+---
+
+## Part 2B — How to reach the founder and tell him what to do
+
+Use **GitHub Issues** as your inbox to the founder. He gets an email notification when you create one.
+
+### When to open an Issue
+
+| Situation | Example title |
+|-----------|---------------|
+| You need a **founder decision** | `Founder decision: screening income multiplier for CAP-2` |
+| You **locked a CAP** and want review | `Review: CAP-4 accounting draft ready to lock` |
+| You are **blocked** | `Blocked: need answer on deposits — MVP or Phase 2?` |
+| You pushed a **branch/PR** | `PR ready: partner CAP-2 updates for review` |
+| Something is **founder-only** | `Founder action: update HANDOFF with new pricing call` |
+
+### How to create an Issue (browser — no coding)
+
+1. Go to `https://github.com/bhagatks/rentalpro`
+2. Click **Issues** tab → green **New issue**
+3. Use this template:
+
+```markdown
+## What I need from the founder
+[One sentence — e.g. "Pick income multiplier for screening"]
+
+## Context
+- CAP / doc: [e.g. CAP-2, AI-MVP-DECISIONS.md]
+- What I already decided: [bullet list or "none yet"]
+
+## Options (if you have a recommendation)
+1. Option A — …
+2. Option B — …
+**My recommendation:** …
+
+## What I changed (if anything)
+- Branch / PR: [link or "not pushed yet"]
+- Files: [e.g. memlog, CAP-2 doc]
+
+## Urgency
+- [ ] Blocking my work
+- [ ] Can wait until weekly sync
+```
+
+4. Click **Submit new issue**
+5. Founder gets notified by email and on GitHub
+
+### How to @mention the founder
+
+In the Issue comment box, type `@bhagatks` (founder’s GitHub username) to ping him directly.
+
+### Your push workflow (keeps `main` clean)
+
+Do **not** push directly to `main` until the founder says you can. Use this flow:
+
+```
+1. GitHub Desktop → Current branch → New branch
+   Name: partner/cap-2-screening  (use descriptive names)
+2. Make doc changes with Cursor / Claude Code
+3. GitHub Desktop → Commit → Push origin
+4. On GitHub.com → "Compare & pull request" banner → Open PR
+5. Open an Issue OR add PR description: "Ready for review — [summary]"
+6. Founder merges → you pull latest in GitHub Desktop (Fetch → Pull)
+```
+
+**Partner creates branch + PR. Founder merges.** That is the handoff.
 
 ---
 
@@ -281,17 +417,19 @@ Claude Code **always asks before editing files**. That is good for you.
 
 You do not need to understand the diff line-by-line — ask: “Summarize what you changed in plain English.”
 
-### B7. Saving your work back to GitHub
+### B7. Saving your work (branch + PR — not straight to main)
 
 After you approve doc changes in Cursor or Claude Code:
 
 1. Open **GitHub Desktop**
-2. You should see changed files listed on the left
-3. Write a short summary (e.g. “CAP-2: locked screening income rule”)
-4. Click **Commit to main** (or ask founder which branch)
-5. Click **Push origin**
+2. **Current branch → New branch** (e.g. `partner/cap-4-review`)
+3. You should see changed files listed on the left
+4. Write a short summary (e.g. “CAP-4: monthly sign-off flow clarified”)
+5. Click **Commit to partner/cap-4-review** → **Push origin**
+6. GitHub.com shows **Compare & pull request** → open PR
+7. Open a GitHub **Issue** or comment on the PR: `@bhagatks ready for review`
 
-**Not comfortable pushing yet?** Tell the founder: “I updated files locally — can you review and push?” Early on, that is fine.
+Founder merges. Then **Fetch origin → Pull** in GitHub Desktop to sync.
 
 ---
 
@@ -429,7 +567,7 @@ Append it to .memlog.md, update the relevant CAP doc, and re-derive SPEC.md.
 
 You never need to edit those files by hand — that is what Cursor Agent or Claude Code is for.
 
-When ready, commit and push via **GitHub Desktop** so the founder sees your changes in the repo.
+When ready, commit on a **partner branch** and open a **Pull Request** — do not push to `main` unless the founder told you to. See **Part 2B**.
 
 ---
 
@@ -671,8 +809,11 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 |------|---------|
 | Stuck on terminology | Ask your AI: “Explain [term] like I am new to proptech” |
 | Not sure if in scope | Ask: “Is [X] a Constraint, Non-goal, or Capability?” |
-| Founder unavailable | Leave questions in CAP **Open questions** via Agent / Claude Code |
-| GitHub invite not received | Check spam; confirm username + Gmail with founder |
+| Need founder to decide something | Open a GitHub **Issue** — see Part 2B template |
+| PR ready for review | Comment `@bhagatks` on the PR + short summary |
+| Not sure if a file is yours to edit | Check **Part 2** table; if founder-owned, open Issue first |
+| GitHub invite not received | Check spam; send founder your exact username + Gmail |
+| Founder unavailable | Open Issue (non-urgent) + note in CAP **Open questions** |
 | Cursor vs Claude Code | Either works — same prompts, same files |
 | Want the full BMad map | Read `docs/BMAD-REFERENCE.md` (optional, denser) |
 
@@ -681,13 +822,13 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 ## Quick reference card (pin this)
 
 ```
-GITHUB  → Personal Gmail account → accept invite → clone with GitHub Desktop
-OPEN    → Cursor or Claude Code Desktop → open rentalpro folder
-READ    → docs/HANDOFF-TO-CURSOR.md + one CAP doc
-THINK   → Intent clear? Success testable? Open questions?
-DECIDE  → Talk to founder or AI
-LOG     → “Append to .memlog.md, update CAP, re-derive SPEC.md”
-PUSH    → GitHub Desktop → Commit → Push origin
+GITHUB  → Personal Gmail → founder adds Collaborator (Write) → accept invite
+CLONE   → GitHub Desktop → rentalpro folder
+OPEN    → Cursor or Claude Code Desktop
+READ    → Part 2: know what YOU edit vs founder
+WORK    → CAP docs, memlog, checklist — your files only
+HANDOFF → New branch → commit → push → Pull Request → Issue @founder
+MERGE   → Founder merges PR → you Pull in GitHub Desktop
 ```
 
 **Tool pick:** Cursor = visual · Claude Code Desktop = if you already use Claude · Same prompts either way.
