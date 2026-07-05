@@ -12,7 +12,7 @@
 
 | ID | Feature | Market | Priority | TBD action |
 |----|---------|--------|----------|------------|
-| M1 | Listings & marketing syndication (Zillow, etc.) | AppFolio, DoorLoop, Entrata | ⚪ | Assign to CAP-2 sub-feature or CAP-14 · **TBD** |
+| M1 | Listings & marketing syndication (Zillow, etc.) | AppFolio, DoorLoop, Entrata | ⚪ | **Full MVP** — [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) |
 | M2 | Delinquency & rent collection (late fees, reminders, plans) | All Tier 2 | 🔴 | CAP-4 or CAP-7 sub-feature · **TBD** |
 | M3 | Lease renewals (90-day workflow, renewal e-sign) | AppFolio Flows, Buildium | 🟡 | CAP-2 sub-feature · **TBD** |
 | M4 | Move-in / move-out inspections (photo checklist) | DoorLoop AI inspections | ⚪ | New sub-feature or Phase 2 · **TBD** |
@@ -32,7 +32,7 @@
 ### CAP-2 Autonomous leasing
 - [ ] 🔴 Guest card / CRM pipeline (lead stages, source) · **TBD**
 - [ ] 🔴 Application fee + Texas §92.3515 criteria flow · partial in AI-MVP-DECISIONS
-- [ ] 🟡 Listing pages & syndication · **TBD** (M1)
+- [ ] 🟡 Listing pages & syndication · **Full MVP** — [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) (M1)
 - [ ] 🟡 Tour scheduling · **Non-goal** (M12 locked)
 - [ ] 🟡 Lease renewal workflow · **TBD** (M3)
 - [ ] ⚪ Renters insurance requirement · **TBD**

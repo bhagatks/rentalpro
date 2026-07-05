@@ -89,7 +89,7 @@
 See `docs/MARKET-GAP-CHECKLIST.md`.
 
 - [ ] Guest card / CRM pipeline (lead stages, source tracking)
-- [ ] Listing pages & syndication (M1)
+- [x] Listing Package + syndication hub (M1 Full MVP) — [`docs/SYNDICATION-MVP-RUNBOOK.md`](../../SYNDICATION-MVP-RUNBOOK.md)
 - [ ] Tour / self-showing scheduling (M12)
 - [ ] Lease renewal workflow (M3)
 - [ ] Renters insurance requirement
@@ -101,5 +101,6 @@ See `docs/MARKET-GAP-CHECKLIST.md`.
 | 2026-07-05 | Lease A+B: PM template + platform Texas starter |
 | 2026-07-05 | AI fills draft; PM reviews; not greenfield generation |
 | 2026-07-05 | Screening A+B sources; decision layer TBD |
+| 2026-07-05 | M1 Full MVP: Listing Package + Syndication Hub; runbook at `docs/SYNDICATION-MVP-RUNBOOK.md` |
 
 **See also:** `docs/AI-MVP-DECISIONS.md`

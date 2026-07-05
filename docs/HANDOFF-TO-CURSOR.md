@@ -1,16 +1,16 @@
 # RentalPro.ai: Handoff to Cursor
 
-**Last updated:** 2026-07-05 (Constraints / Non-goals / Success signal locked)  
-**Status:** Spec kernel complete — CAP micro-specs draft; CAP-11 locked; screening parked  
-**Next session:** Lock CAP drafts → resume screening (optional) → bmad-prd
+**Last updated:** 2026-07-05 (M1 Full MVP runbook; M2–M10 still open)  
+**Status:** Spec kernel complete — walking M1–M10; M1 locked Full MVP  
+**Next session:** Continue M2–M10 picks → lock remaining CAPs → bmad-prd
 
 ## Pick up here
 
 1. Read [`docs/README.md`](./README.md) — CAP status table  
-2. Review locked **Constraints, Non-goals, Success signal** in [`SPEC.md`](../_bmad-output/specs/spec-rentalpro/SPEC.md)  
-3. Review [`docs/MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md) — **M1–M10 open questions** (pick before CAP lock)
-4. Optional: `resume screening` or `lock CAP-N` in Cursor chat
-5. Resolve M1–M10 → then lock remaining CAP micro-specs → **bmad-prd**
+2. **M1 syndication:** [`docs/SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) — single tracker for Day 1 approvals + build  
+3. Continue **M2–M10** open questions in [`MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md)  
+4. Optional: `resume screening` or `lock CAP-N` in Cursor chat  
+5. Lock remaining CAP micro-specs → **bmad-prd**
 
 **Stack direction (not locked in spec):** Vercel + Supabase + Clerk
 
@@ -134,7 +134,7 @@ Tenant uploads video of issue → AI diagnoses problem
 - **Constraints:** Locked (10 non-negotiables — see SPEC.md)
 - **Non-goals:** Locked (Phase 2 out-of-scope table — see SPEC.md)
 - **Success signal:** Locked (14-day APM validation criteria — see SPEC.md)
-- **Market gaps:** M1–M12 assigned in `MARKET-GAP-CHECKLIST.md`
+- **Market gaps:** M1–M10 **open questions**; M11–M12 locked Phase 2 non-goals
 - **CAP-11 micro-spec:** Locked (`docs/capabilities/CAP-11-multi-tenant-saas.md`)
 - **AI MVP decisions (partial):** Locked + TBD in `docs/AI-MVP-DECISIONS.md` (screening parked)
 
