@@ -21,7 +21,7 @@ The following files in `docs/rules/` are the single source of truth — both Cla
 - **Brand:** RentalPro.ai
 - **Mission:** Autonomous Property Management (APM) — AI-native platform that replaces the human property manager.
 - **Product surfaces:** B2B SaaS multi-tenant dashboard + resident/owner portals + autonomous agent workflows.
-- **Phase:** bmad-spec guided mode (pre-MVP). Spec before PRD before architecture before code.
+- **Phase:** bmad-spec guided mode — kernel complete except CAP micro-spec locks; next: bmad-prd
 
 ---
 
@@ -96,10 +96,10 @@ Current status:
 | Field | Status |
 |---|---|
 | Why | ✅ Locked |
-| Capabilities | 🔄 Draft |
-| Constraints | ⏳ Pending |
-| Non-goals | ⏳ Pending |
-| Success signal | ⏳ Pending |
+| Capabilities | 🔄 Draft (12 micro-specs; CAP-11 locked) |
+| Constraints | ✅ Locked |
+| Non-goals | ✅ Locked |
+| Success signal | ✅ Locked |
 
 ---
 

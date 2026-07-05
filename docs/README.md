@@ -12,7 +12,7 @@
 | [BMAD-REFERENCE.md](./BMAD-REFERENCE.md) | How we build (spec → PRD → architecture → code) |
 | [MVP-SPRINT-PLAN.md](./MVP-SPRINT-PLAN.md) | Build order, MVP scope, 24/7 sprint map |
 | [AI-MVP-DECISIONS.md](./AI-MVP-DECISIONS.md) | AI agent decisions — locked + TBD (Texas MVP) |
-| [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | Market parity gaps vs AppFolio/Buildium — TBD |
+| [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | Market parity gaps vs AppFolio/Buildium — assigned |
 | [SHARING-OPTIONS.md](./SHARING-OPTIONS.md) | How to share this with your partner (wiki, site, Notion) |
 
 ## Spec & research (canonical)

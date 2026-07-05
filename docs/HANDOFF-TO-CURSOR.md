@@ -1,16 +1,16 @@
 # RentalPro.ai: Handoff to Cursor
 
-**Last updated:** 2026-07-05 (session end)  
-**Status:** Mid-spec — CAP-11 locked; CAP-1–12 draft micro-specs done; screening parked  
-**Next session:** Review/lock CAP drafts → Constraints / Non-goals / Success signal → bmad-prd
+**Last updated:** 2026-07-05 (Constraints / Non-goals / Success signal locked)  
+**Status:** Spec kernel complete — CAP micro-specs draft; CAP-11 locked; screening parked  
+**Next session:** Lock CAP drafts → resume screening (optional) → bmad-prd
 
-## Pick up tomorrow
+## Pick up here
 
 1. Read [`docs/README.md`](./README.md) — CAP status table  
-2. Review [`docs/AI-MVP-DECISIONS.md`](./AI-MVP-DECISIONS.md) — locked AI + screening TBD  
-3. Optional: `resume screening` or `lock CAP-10` in Cursor chat  
-4. Review **`docs/MARKET-GAP-CHECKLIST.md`** — assign 🔴 MVP gaps (deposits, delinquency, renewals)  
-5. PR merged to main — work on `main` only  
+2. Review locked **Constraints, Non-goals, Success signal** in [`SPEC.md`](../_bmad-output/specs/spec-rentalpro/SPEC.md)  
+3. Review [`docs/MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md) — M1–M12 assigned  
+4. Optional: `resume screening` or `lock CAP-N` in Cursor chat  
+5. Next phase: **bmad-prd** (expand spec into detailed requirements)
 
 **Stack direction (not locked in spec):** Vercel + Supabase + Clerk
 
@@ -131,18 +131,20 @@ Tenant uploads video of issue → AI diagnoses problem
 - **Why:** Locked (force, target, lever, escalation model)
 - **Competitive research:** 17 platforms in `competitive-matrix.md`
 - **Capabilities kernel:** 12 CAPs drafted in `SPEC.md`
+- **Constraints:** Locked (10 non-negotiables — see SPEC.md)
+- **Non-goals:** Locked (Phase 2 out-of-scope table — see SPEC.md)
+- **Success signal:** Locked (14-day APM validation criteria — see SPEC.md)
+- **Market gaps:** M1–M12 assigned in `MARKET-GAP-CHECKLIST.md`
 - **CAP-11 micro-spec:** Locked (`docs/capabilities/CAP-11-multi-tenant-saas.md`)
 - **AI MVP decisions (partial):** Locked + TBD in `docs/AI-MVP-DECISIONS.md` (screening parked)
 
 ### 🔄 IN PROGRESS
-- **Capabilities:** CAP-1–10, CAP-12 micro-specs not started; 12 CAPs in SPEC still draft
+- **Capabilities:** CAP-1–10, CAP-12 micro-specs draft — need review/lock
 - **AI agents:** Texas leasing/maintenance decisions locked; screening TBD
 
 ### ⏳ PENDING
-- **Constraints:** Non-negotiables (compliance, multi-tenancy, accounting accuracy)
-- **Non-goals:** Explicit out-of-scope (native apps Phase 2, voice Phase 2, etc.)
-- **Success Signal:** How we know it's working
-- **CAP-10, CAP-5:** Foundation micro-specs
+- **bmad-prd:** Expand locked spec into detailed requirements (next phase)
+- **CAP micro-spec locks:** Review drafts against market gap assignments
 
 ### 📁 ARTIFACTS
 - **Spec workspace:** `_bmad-output/specs/spec-rentalpro/`
@@ -248,12 +250,12 @@ Once all five fields are locked, Spec is complete. Ready to move to PRD phase.
 ```
 1. Ideation ✅
 2. bmad-product-brief (skipped)
-3. bmad-spec (GUIDED MODE) ← YOU ARE HERE
+3. bmad-spec (GUIDED MODE) ← NEARLY COMPLETE
    - Why: ✅ Locked
-   - Capabilities: 🔄 In progress (needs research)
-   - Constraints: ⏳ Pending
-   - Non-goals: ⏳ Pending
-   - Success signal: ⏳ Pending
+   - Capabilities: 🔄 Draft (CAP-11 locked; others need review)
+   - Constraints: ✅ Locked
+   - Non-goals: ✅ Locked
+   - Success signal: ✅ Locked
 4. bmad-prd (next)
 5. bmad-architecture (then)
 6. bmad-create-epics-and-stories (then)

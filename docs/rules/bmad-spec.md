@@ -9,10 +9,10 @@ RentalPro is in **bmad-spec guided mode**. Follow this workflow before writing a
 2. bmad-product-brief (skipped)
 3. bmad-spec (GUIDED MODE) ← CURRENT
    - Why: ✅ Locked
-   - Capabilities: 🔄 In progress
-   - Constraints: ⏳ Pending
-   - Non-goals: ⏳ Pending
-   - Success signal: ⏳ Pending
+   - Capabilities: 🔄 Draft (12 CAP micro-specs; CAP-11 locked)
+   - Constraints: ✅ Locked (2026-07-05)
+   - Non-goals: ✅ Locked (2026-07-05)
+   - Success signal: ✅ Locked (2026-07-05)
 4. bmad-prd (next)
 5. bmad-architecture (then)
 6. bmad-create-epics-and-stories (then)
@@ -25,10 +25,10 @@ RentalPro is in **bmad-spec guided mode**. Follow this workflow before writing a
 | Field | Status | Rule |
 |---|---|---|
 | **Why** | Locked | Force, target, lever, escalation model — do not re-litigate |
-| **Capabilities** | Draft | CAP-N with intent + success criterion each |
-| **Constraints** | Pending | Must bend design; if it doesn't rule anything out, it's decoration |
-| **Non-goals** | Pending | Explicit out-of-scope stops scope creep |
-| **Success signal** | Pending | Concrete, testable signal APM is working |
+| **Capabilities** | Draft | CAP-N with intent + success criterion each; CAP-11 locked |
+| **Constraints** | Locked | Must bend design; if it doesn't rule anything out, it's decoration |
+| **Non-goals** | Locked | Explicit out-of-scope stops scope creep |
+| **Success signal** | Locked | Concrete, testable signal APM is working |
 
 ## Capability format
 
