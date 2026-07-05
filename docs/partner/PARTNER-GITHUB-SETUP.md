@@ -1,5 +1,6 @@
 # GitHub setup — invite your partner
 
+**Repository:** [https://github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro)  
 **See also:** [PARTNER-START-HERE.md](./PARTNER-START-HERE.md)
 
 Both of you are partners. GitHub just needs one person to send the invite — whoever created the repository can do that in Settings.
