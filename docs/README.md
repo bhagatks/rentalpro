@@ -8,7 +8,7 @@
 
 | Doc | What it is |
 |-----|------------|
-| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Partner onboarding — GitHub, roles, Cursor + Claude Code |
+| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Partner onboarding — GitHub, roles, Cursor + Claude Code, step-by-step |
 | [FOUNDER-COLLABORATOR-CHECKLIST.md](./partner/FOUNDER-COLLABORATOR-CHECKLIST.md) | **Founder:** add Collaborator, merge PRs, who owns what |
 
 ## Start here

@@ -1,26 +1,27 @@
 # RentalPro.ai — Partner Start Guide
 
-**Audience:** Non-technical partner  
-**Last updated:** 2026-07-05 (GitHub + Cursor + Claude Code)  
-**You do not need to know how to code.**  
-**You do need a GitHub account** — create one with your **personal Gmail** (Step 1 below).
+**For:** Product partner (requirements & spec)  
+**Last updated:** 2026-07-05  
+**Focus:** GitHub setup, Cursor + Claude Code, BMad workflow  
 
-This guide walks you from zero to contributing the same way the founder has been working in BMad — through conversation, decisions, and written requirements.
+Welcome. This guide walks you through each step — account setup, repo access, tools, and how we divide work between you and the founder. Your product and domain experience is what this phase needs; the steps below are here to make the mechanics clear.
+
+**First step:** Create a GitHub account with your **personal Gmail** (Part 0).
 
 ---
 
-## What you are helping with (30-second version)
+## What you are helping with
 
-RentalPro.ai is an AI property management platform. Before anyone builds software, we must **lock what the product does** — in plain language, with testable outcomes.
+RentalPro.ai is an AI property management platform. Before engineering starts, we **lock what the product does** — with clear language and testable outcomes.
 
-Your job is to:
+Your focus in this phase:
 
 1. **Read** what exists
-2. **Ask** good product questions
-3. **Decide** what is in MVP vs not
-4. **Write down** decisions so engineers and AI agents do not guess later
+2. **Ask** strong product questions
+3. **Decide** what belongs in MVP vs later
+4. **Record** decisions so the team and AI agents have a single source of truth
 
-That is BMad. You own **requirements**. The founder owns **merge, infrastructure, and final locks**. You both use Cursor or Claude Code to update docs — but different files and different jobs (see Part 2).
+That is BMad. You lead **requirements**. The founder handles **merge, infrastructure, and final locks**. You both use Cursor or Claude Code to update documentation — on different files and with different responsibilities (see Part 2).
 
 ---
 
@@ -149,7 +150,7 @@ Use **GitHub Issues** as your inbox to the founder. He gets an email notificatio
 | You pushed a **branch/PR** | `PR ready: partner CAP-2 updates for review` |
 | Something is **founder-only** | `Founder action: update HANDOFF with new pricing call` |
 
-### How to create an Issue (browser — no coding)
+### How to create an Issue (in the browser)
 
 1. Go to `https://github.com/bhagatks/rentalpro`
 2. Click **Issues** tab → green **New issue**
@@ -206,9 +207,9 @@ Do **not** push directly to `main` until the founder says you can. Use this flow
 
 After GitHub access works, get a local copy for Cursor or Claude Code.
 
-### Step 1.1 — Install GitHub Desktop (recommended — no Terminal)
+### Step 1.1 — Install GitHub Desktop (recommended)
 
-GitHub Desktop is a simple app to download the repo without typing commands.
+GitHub Desktop lets you clone and sync the repo with a visual interface — no command-line workflow required unless you prefer one.
 
 1. Go to [https://desktop.github.com](https://desktop.github.com)
 2. Download and install for Mac or Windows
@@ -216,9 +217,9 @@ GitHub Desktop is a simple app to download the repo without typing commands.
 4. **File → Clone repository**
 5. Select **rentalpro** from the list (or paste the repo URL the founder sends)
 6. Choose a location (e.g. `Documents/rentalpro`) → **Clone**
-7. You now have a folder on your computer with `docs/` and `_bmad-output/`
+7. Confirm the folder contains `docs/` and `_bmad-output/`
 
-**Alternative (browser only, no install):** On the repo page, click green **Code → Download ZIP**, unzip, open in Cursor. Re-download when the founder says there are updates — GitHub Desktop is easier long-term.
+**Alternative:** On the repo page in your browser, click green **Code → Download ZIP**, unzip, and open in Cursor. GitHub Desktop is easier for ongoing sync when the founder merges updates.
 
 ### Step 1.2 — Setup checklist
 
@@ -228,35 +229,35 @@ GitHub Desktop is a simple app to download the repo without typing commands.
 - [ ] Project folder on laptop (GitHub Desktop clone or zip)
 - [ ] AI tool installed (Cursor or Claude Code — next sections)
 
-You do **not** need to learn git commands, branches, or pull requests yet. Focus on reading docs and logging decisions; the founder helps with git sync early on.
+During the first week, you can focus on reading docs and logging decisions. The founder will walk through branch/PR workflow with you on your first merge — details are in Part 2B and Part 1B (section B7).
 
 ---
 
 ### Step 1.3 — Pick your AI tool
 
-The founder uses **Cursor** and/or **Claude Code**. Both read the same project files and follow the same rules (`AGENTS.md`, `docs/rules/`). Pick one — you do not need both.
+The founder uses **Cursor** and/or **Claude Code**. Both read the same project files and follow the same rules (`AGENTS.md`, `docs/rules/`). Choose one primary tool — both work with the same prompts in this guide.
 
-| Tool | Best for you if… | Looks like… |
-|------|------------------|-------------|
-| **Cursor** (recommended for non-technical) | You want a normal app with folders on the left and chat on the right | VS Code + AI chat panel |
-| **Claude Code Desktop** | You already pay for Claude (Pro/Max/Team) and want a standalone app | Claude app → **Code** tab |
-| **Claude Code Terminal** | You are comfortable in Terminal / command line | Text window where you type to Claude |
-| **Claude in Cursor** (extension) | You use Cursor but want Claude as the model | Cursor + “Claude Code” extension |
+| Tool | Good fit when… | What it looks like |
+|------|----------------|-------------------|
+| **Cursor** | You prefer a visual editor with folders and an AI panel side by side | VS Code + integrated AI chat |
+| **Claude Code Desktop** | You already use Claude (Pro/Max/Team) and want a dedicated app | Claude app → **Code** tab |
+| **Claude Code Terminal** | You prefer working from the command line | Terminal session with Claude |
+| **Claude in Cursor** (extension) | You use Cursor and want Claude Code inside it | Cursor + “Claude Code” extension |
 
-**If unsure:** use **Cursor**. It is the most visual and closest to “chat with your project folder.”
+**Default recommendation:** **Cursor** — strong for browsing docs and running Agent mode in one window.
 
 ---
 
 ## Part 1A — Cursor setup (step by step)
 
-Cursor is a code editor with AI built in. You will use it like a **smart assistant that also updates documents**.
+Cursor is an AI-enabled editor. For this project you will use it primarily to **read and update product documentation** with Agent assistance.
 
 ### A1. Install Cursor
 
 1. Go to [https://cursor.com](https://cursor.com)
 2. Download for Mac or Windows
 3. Create an account and sign in
-4. Choose a plan (Free works to start; Pro gives more AI usage)
+4. Select a plan (Free works to start; Pro offers higher AI usage limits)
 
 ### A2. Open the project folder
 
@@ -265,14 +266,14 @@ Cursor is a code editor with AI built in. You will use it like a **smart assista
 3. Select your cloned `rentalpro` folder (e.g. `Documents/rentalpro` from GitHub Desktop)
 4. In the left sidebar you should see folders like `docs`, `_bmad-output`
 
-**Tour of the screen (you only need 2 areas):**
+**Layout — two areas matter most for spec work:**
 
-| Area | Where | What you use it for |
-|------|-------|---------------------|
-| File tree | Left sidebar | Open markdown docs to read |
-| Agent / Chat | Right panel | Talk to AI — **this is your main workspace** |
+| Area | Location | Purpose |
+|------|----------|---------|
+| File tree | Left sidebar | Open and read markdown docs |
+| Agent / Chat | Right panel | AI conversation and document updates |
 
-You can ignore the center “code” area unless you want to read a file there.
+The center editor shows file contents when you select a doc from the tree.
 
 ### A3. Open your first chat
 
@@ -290,10 +291,10 @@ You can ignore the center “code” area unless you want to read a file there.
 **First message to paste:**
 
 ```
-I am a non-technical partner on RentalPro.ai.
+I am the product partner on RentalPro.ai, focused on requirements and spec.
 Read docs/partner/PARTNER-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
-In plain English: where are we in the project, and what should I do first?
-Do not suggest code — only product requirements.
+Summarize where we are in the project and recommend my highest-value next step.
+Focus on product requirements, not implementation.
 ```
 
 ### A4. Cursor shortcuts to remember
@@ -306,14 +307,14 @@ Do not suggest code — only product requirements.
 | Accept a change | Click **Accept** on the diff | Same |
 | Reject a change | Click **Reject** | Same |
 
-**Tip:** When the agent proposes edits, **read the summary first**, then Accept. You are approving product decisions, not code.
+**Tip:** When the agent proposes edits, read the summary first, then Accept or Reject. You are approving **product decisions** captured in documentation.
 
-### A5. Cursor modes (simple guide)
+### A5. Cursor modes
 
 | Mode | Use when… | Edits files? |
 |------|-----------|--------------|
 | **Agent** | “Log this decision and update the CAP doc” | Yes |
-| **Ask** | “Explain CAP-4 to me in plain English” | No |
+| **Ask** | “Walk me through CAP-4 accounting requirements” | No |
 | **Plan** | Big multi-file change — review plan first | After you approve |
 
 For BMad spec work, use **Agent** most of the time.
@@ -328,16 +329,16 @@ Official docs: [code.claude.com/docs](https://code.claude.com/docs/en/overview)
 
 ### B1. Pick how you will run Claude Code
 
-| Surface | Non-technical friendly? | Notes |
-|---------|---------------------------|-------|
-| **Desktop app** | ⭐ Best | Open local clone from GitHub Desktop |
-| **Terminal CLI** | Medium | `cd` into cloned folder, type `claude` |
+| Surface | Ease of use | Notes |
+|---------|-------------|-------|
+| **Desktop app** | ⭐ Recommended | Open local clone from GitHub Desktop |
+| **Terminal CLI** | Familiar if you use Terminal | `cd` into cloned folder, type `claude` |
 | **Extension inside Cursor** | Good | Same folder as Cursor |
-| **Web** ([claude.ai/code](https://claude.ai/code)) | Good | Sign in with GitHub — uses repo directly |
+| **Web** ([claude.ai/code](https://claude.ai/code)) | Good | Sign in with GitHub — works directly against the repo |
 
 **Recommended:** Clone with GitHub Desktop, then open that folder in Claude Code Desktop or Cursor.
 
-### B2. Install — Desktop app (recommended for you)
+### B2. Install — Desktop app (recommended starting point)
 
 1. Download Claude desktop: [claude.ai/download](https://claude.ai/download)
 2. Install and sign in (Claude Pro, Max, Team, or Enterprise)
@@ -370,7 +371,7 @@ claude
 
 (Change the path to wherever GitHub Desktop cloned the repo.)
 
-First run opens a browser to log in. After that, type plain English at the prompt.
+First run opens a browser to log in. After that, type your requests at the prompt.
 
 **Useful commands:**
 
@@ -382,7 +383,7 @@ First run opens a browser to log in. After that, type plain English at the promp
 | `/clear` | Start fresh conversation |
 | `/exit` | Quit |
 
-**Never used Terminal before?** Use the **Desktop app** instead, or ask the founder for a 10-minute screenshare.
+**Prefer a graphical workflow?** Use the **Desktop app** (section B2). The Terminal path is optional.
 
 ### B4. Install — Claude Code inside Cursor (optional)
 
@@ -400,22 +401,22 @@ Same project folder, same prompts as the rest of this guide.
 Paste this as your first message (Desktop, Terminal, or extension):
 
 ```
-I am a non-technical partner on RentalPro.ai.
+I am the product partner on RentalPro.ai, focused on requirements and spec.
 Read docs/partner/PARTNER-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
-In plain English: where are we in the project, and what should I do first?
-Do not suggest code — only product requirements.
+Summarize where we are in the project and recommend my highest-value next step.
+Focus on product requirements, not implementation.
 ```
 
 ### B6. Approving changes in Claude Code
 
-Claude Code **always asks before editing files**. That is good for you.
+Claude Code **asks for approval before editing files**.
 
-1. Claude shows what it wants to change
-2. Read the summary in plain English
+1. Claude shows the proposed changes
+2. Review the summary
 3. Approve or reject
-4. For spec work, approve updates to `docs/`, `.memlog.md`, and CAP files
+4. For spec work, expect updates to `docs/`, `.memlog.md`, and CAP files
 
-You do not need to understand the diff line-by-line — ask: “Summarize what you changed in plain English.”
+If the diff is dense, ask: “Summarize what you changed in a few sentences.”
 
 ### B7. Saving your work (branch + PR — not straight to main)
 
@@ -450,9 +451,9 @@ The **prompts are identical**. Only the button / window differs.
 
 ---
 
-## Part 2 — Understand the project (read these in order)
+## Part 3 — Understand the project (read these in order)
 
-You do not need to read everything at once. Follow this sequence.
+Work through these at your own pace. The Day 1 list below is a suggested starting sequence.
 
 ### Reading list — Day 1 (about 45–60 minutes)
 
@@ -471,14 +472,16 @@ You do not need to read everything at once. Follow this sequence.
 | `docs/MVP-SPRINT-PLAN.md` | Build order (for context; you are not scheduling sprints yet) |
 | `_bmad-output/specs/spec-rentalpro/SPEC.md` | The one-page “contract” summary |
 
-### Skip for now (founder / engineering)
+### Out of scope for this phase (founder / engineering)
 
-- `AGENTS.md`, `docs/rules/`, anything about Prisma, API routes, or tests
-- You can ignore code folders entirely during spec phase
+These areas exist in the repo but are not the focus while we finish the spec:
+
+- `AGENTS.md`, `docs/rules/` — engineering agent conventions
+- Application source code, Prisma schema, API routes, tests — after spec and PRD
 
 ---
 
-## Part 3 — BMad explained without jargon
+## Part 4 — BMad workflow overview
 
 BMad is a **step-by-step order** for building a product. Think of it as a checklist you must complete before coding.
 
@@ -490,8 +493,8 @@ Ideas  →  SPEC  →  PRD  →  Architecture  →  Stories  →  Code
 
 ### The SPEC has 5 boxes
 
-| Box | Plain English | Status today |
-|-----|---------------|--------------|
+| Box | Meaning | Status today |
+|-----|---------|--------------|
 | **Why** | Why does this product exist? | ✅ Done — do not reopen |
 | **Capabilities** | What can the product do? (12 features, CAP-1 to CAP-12) | 🔄 Draft — **your main focus** |
 | **Constraints** | Hard rules that limit design | ⏳ Next — **you lead this** |
@@ -503,7 +506,7 @@ If someone says “let’s just build the portal,” the answer is: **not until 
 
 ---
 
-## Part 4 — What is a “Capability” (CAP)?
+## Part 5 — What is a “Capability” (CAP)?
 
 Each capability is **one thing the system can do**.
 
@@ -537,7 +540,7 @@ Each has a deep-dive page in `docs/capabilities/CAP-N-*.md`.
 
 ---
 
-## Part 5 — How decisions get saved (important)
+## Part 6 — How decisions get saved (important)
 
 There are two layers of documents:
 
@@ -561,17 +564,17 @@ This is the **decision diary**. Every lock gets a dated line.
 **Say this in Cursor (Agent) or Claude Code:**
 
 ```
-We decided: [your decision in plain English].
+We decided: [state your decision clearly].
 Append it to .memlog.md, update the relevant CAP doc, and re-derive SPEC.md.
 ```
 
-You never need to edit those files by hand — that is what Cursor Agent or Claude Code is for.
+The AI tools can apply edits for you — you review and approve, same as the founder’s workflow.
 
-When ready, commit on a **partner branch** and open a **Pull Request** — do not push to `main` unless the founder told you to. See **Part 2B**.
+When ready, commit on a **partner branch** and open a **Pull Request**. See **Part 2B** for the full handoff flow.
 
 ---
 
-## Part 6 — Locked decisions (do not overturn)
+## Part 7 — Locked decisions (do not overturn)
 
 These were already decided. Your job is to **build on** them, not relitigate.
 
@@ -591,7 +594,7 @@ Full detail: `docs/HANDOFF-TO-CURSOR.md` and `docs/AI-MVP-DECISIONS.md`.
 
 ---
 
-## Part 7 — Your weekly rhythm
+## Part 8 — Your weekly rhythm
 
 ### Daily (15–30 min)
 
@@ -612,26 +615,26 @@ Agenda template:
 
 ---
 
-## Part 8 — Copy-paste prompts (Cursor + Claude Code)
+## Part 9 — Copy-paste prompts (Cursor + Claude Code)
 
 Use these in **Cursor Agent** (`Cmd+I` / `Ctrl+I`) or **Claude Code** (Desktop, Terminal, or extension). Replace the `[brackets]`.
 
 ### Orientation
 
 ```
-I am a non-technical partner on RentalPro.ai.
+I am the product partner on RentalPro.ai, focused on requirements and spec.
 Read docs/partner/PARTNER-START-HERE.md and .memlog.md.
 What is the single highest-value thing I should do in the next 30 minutes?
-Do not suggest code — only product requirements.
+Focus on product requirements, not implementation.
 ```
 
 ### Review one capability
 
 ```
-Review docs/capabilities/CAP-[N]-*.md for a non-technical partner.
+Review docs/capabilities/CAP-[N]-*.md from a product partner perspective.
 Is Intent clear? Is Success testable?
-List open questions I should answer with the founder.
-Do not suggest code — only product requirements.
+List open questions I should align on with the founder.
+Focus on product requirements, not implementation.
 ```
 
 ### Make a decision
@@ -681,12 +684,12 @@ List any remaining TBD items that do not block lock.
 
 ```
 Read competitive-matrix.md and CAP-[N] doc.
-In plain English: what do AppFolio/Buildium do here, and what are we doing differently for MVP?
+Summarize what AppFolio/Buildium do here and how our MVP approach differs.
 ```
 
 ---
 
-## Part 9 — Your first assignment (Day 1 homework)
+## Part 10 — Your first assignment (Day 1)
 
 Complete this before the first working session with the founder.
 
@@ -724,7 +727,7 @@ A short message:
 
 ---
 
-## Part 10 — Your second assignment (Week 1)
+## Part 11 — Your second assignment (Week 1)
 
 | Day | Focus | Output |
 |-----|-------|--------|
@@ -736,7 +739,7 @@ A short message:
 
 ---
 
-## Part 11 — Open questions waiting for you
+## Part 12 — Open questions waiting for you
 
 These are explicitly unresolved. Your product judgment is needed.
 
@@ -751,7 +754,7 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 ---
 
-## Part 12 — What NOT to do
+## Part 13 — What NOT to do
 
 | Do not… | Because… |
 |---------|----------|
@@ -760,18 +763,18 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 | Reopen **Why** / business model | Already locked; wastes time |
 | Write requirements without **Success** criteria | Engineers cannot test vibes |
 | Edit `SPEC.md` directly without memlog | Gets overwritten; decision is lost |
-| Jump to “let’s build X” | Spec phase is not finished |
-| Worry about database or APIs | Architecture comes after PRD |
+| Jump to implementation before spec is complete | Spec → PRD → architecture → code is the agreed order |
+| Edit engineering-only files without alignment | See Part 2 — open an Issue first |
 | Treat copies outside GitHub as source of truth | Repo + memlog win |
 
 ---
 
-## Part 13 — Glossary
+## Part 14 — Glossary
 
 | Term | Meaning |
 |------|---------|
 | **GitHub** | Where project files live; you need an account (personal Gmail) |
-| **GitHub Desktop** | Simple app to clone and push — no Terminal commands |
+| **GitHub Desktop** | Desktop app to clone, commit, and push — visual git workflow |
 | **Repo** | The project folder on GitHub (rentalpro) |
 | **Cursor** | AI code editor — visual app with chat/Agent panel |
 | **Claude Code** | Anthropic’s AI agent — Desktop app, Terminal, or extension |
@@ -789,7 +792,7 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 ---
 
-## Part 14 — When spec is “done”
+## Part 15 — When spec is “done”
 
 You will know spec phase is complete when:
 
@@ -803,11 +806,11 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 
 ---
 
-## Part 15 — Getting help
+## Part 16 — Getting help
 
 | Need | Do this |
 |------|---------|
-| Stuck on terminology | Ask your AI: “Explain [term] like I am new to proptech” |
+| Unfamiliar term | Ask your AI: “Explain [term] in the context of property management SaaS” |
 | Not sure if in scope | Ask: “Is [X] a Constraint, Non-goal, or Capability?” |
 | Need founder to decide something | Open a GitHub **Issue** — see Part 2B template |
 | PR ready for review | Comment `@bhagatks` on the PR + short summary |
@@ -833,8 +836,8 @@ MERGE   → Founder merges PR → you Pull in GitHub Desktop
 
 **Tool pick:** Cursor = visual · Claude Code Desktop = if you already use Claude · Same prompts either way.
 
-**You are not behind. You are exactly who this phase needs.**
+**You are exactly who this phase needs.**
 
 ---
 
-*Questions about this guide? Tell the founder or paste into Cursor / Claude Code: “Update docs/partner/PARTNER-START-HERE.md based on my question: …”*
+*Questions about this guide? Tell the founder, or ask Cursor / Claude Code to update `docs/partner/PARTNER-START-HERE.md` based on your feedback.*
