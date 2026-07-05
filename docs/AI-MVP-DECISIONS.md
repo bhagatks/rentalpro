@@ -1,8 +1,10 @@
 # AI MVP Decisions — Texas
 
 **Status:** in progress — **screening parked (TBD)**  
-**Last updated:** 2026-07-05  
+**Last updated:** 2026-07-05 (session end)  
 **Scope:** AI agent behavior only (leasing, maintenance, accounting). Infra/hosting in separate notes.
+
+> **Tomorrow:** Review CAP drafts in `docs/capabilities/`. Say `resume screening` or pick a CAP to lock.
 
 ---
 

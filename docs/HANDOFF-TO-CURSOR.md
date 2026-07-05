@@ -1,8 +1,17 @@
 # RentalPro.ai: Handoff to Cursor
 
-**Last updated:** 2026-07-05  
-**Status:** Mid-spec — CAP-11 locked; AI decisions partial (screening parked)  
-**Next Step:** CAP-10/CAP-5 micro-specs OR resume screening → lock Constraints / Non-goals / Success signal
+**Last updated:** 2026-07-05 (session end)  
+**Status:** Mid-spec — CAP-11 locked; CAP-1–12 draft micro-specs done; screening parked  
+**Next session:** Review/lock CAP drafts → Constraints / Non-goals / Success signal → bmad-prd
+
+## Pick up tomorrow
+
+1. Read [`docs/README.md`](./README.md) — CAP status table  
+2. Review [`docs/AI-MVP-DECISIONS.md`](./AI-MVP-DECISIONS.md) — locked AI + screening TBD  
+3. Optional: `resume screening` or `lock CAP-10` in Cursor chat  
+4. PR open: [github.com/bhagatks/rentalpro/pull/2](https://github.com/bhagatks/rentalpro/pull/2) — merge when ready  
+
+**Stack direction (not locked in spec):** Vercel + Supabase + Clerk
 
 ## Project Overview
 
