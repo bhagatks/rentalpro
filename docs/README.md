@@ -4,11 +4,11 @@
 **Audience:** Founders, engineers, partners  
 **Status:** Pre-MVP spec phase
 
-## For product partners (non-technical)
+## For partners (non-technical)
 
 | Doc | What it is |
 |-----|------------|
-| [PRODUCT-DIRECTOR-START-HERE.md](./partner/PRODUCT-DIRECTOR-START-HERE.md) | Step-by-step onboarding — Cursor + Claude Code, no coding required |
+| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Step-by-step onboarding — no GitHub, Cursor + Claude Code, no coding required |
 
 ## Start here
 

@@ -1,9 +1,10 @@
-# RentalPro.ai — Product Director Start Guide
+# RentalPro.ai — Partner Start Guide
 
-**Audience:** Non-technical product partner  
+**Audience:** Non-technical partner  
 **Last updated:** 2026-07-05 (Cursor + Claude Code)  
 **You do not need to know how to code.**  
-**You do not need GitHub on day one.**
+**You do not need GitHub.**  
+**You do not need git, Terminal, or pull requests.**
 
 This guide walks you from zero to contributing the same way the founder has been working in BMad — through conversation, decisions, and written requirements.
 
@@ -24,26 +25,71 @@ That is BMad. You are the requirements half. The founder + AI tools (Cursor or C
 
 ---
 
-## Part 1 — Get set up (do this first)
+## Part 0 — Before anything else (no GitHub needed)
 
-### Step 1: Get the project files
+You can start **today** without GitHub, without cloning, and without knowing what a repo is.
 
-Pick **one** path with the founder. You only need one.
+### What the founder sends you (pick one)
 
-| Option | Best if… | What the founder does |
-|--------|----------|------------------------|
-| **A. GitHub access** | You are okay learning “click to read a file” | Invites you to the private repo; you open files in the browser |
-| **B. Notion mirror** | You want a clean wiki with comments | Founder imports `docs/` into Notion and shares a link |
-| **C. Google Drive / PDF export** | You want zero new tools tonight | Founder exports key docs; you read and reply in a shared doc |
-| **D. AI tool on your laptop** | You want the full experience like the founder | Founder helps you install Cursor or Claude Code and open the project folder |
+| What you get | How you use it | When to move on |
+|--------------|----------------|-----------------|
+| **Notion link** | Read + comment in Notion | When ready for AI tool on laptop |
+| **Google Drive folder** | Read docs, reply in a shared Google Doc | Same |
+| **Zip file of the project** | Unzip to Desktop → open in Cursor or Claude Code | Best path to full BMad workflow |
+| **30-min screenshare** | Founder walks you through reading list | Anytime |
 
-**Recommended for non-technical partners:** Start with **B (Notion)** or **C (Drive)** to read. Move to **D (AI tool)** once you are comfortable.
+**Ask the founder for:** a Notion link or zip file. That is enough for week one.
 
-You do **not** need to understand git, branches, or pull requests to contribute product decisions.
+GitHub is optional and can come later. The founder will merge your decisions into the real project files.
 
 ---
 
-### Step 2: Pick your AI tool
+## Part 1 — Get set up (do this first)
+
+### Step 1: Three phases (start where you are)
+
+```
+Phase A — Read only     →  Notion or Google Drive (no install)
+Phase B — AI on laptop  →  Zip folder + Cursor or Claude Code
+Phase C — Later         →  GitHub access (optional, founder adds when ready)
+```
+
+**Start at Phase A.** Do not wait for GitHub.
+
+---
+
+### Step 2: Phase A — Read only (Day 1, zero install)
+
+The founder shares these files (Notion, Drive, or PDF):
+
+| Read first | Why |
+|------------|-----|
+| This guide (`PARTNER-START-HERE.md`) | How to work |
+| `docs/HANDOFF-TO-CURSOR.md` | Vision + locked decisions |
+| `docs/AI-MVP-DECISIONS.md` | What AI will / will not do in MVP |
+| `docs/capabilities/CAP-2-autonomous-leasing.md` | Example feature spec |
+| `docs/capabilities/CAP-4-autonomous-accounting.md` | Second example |
+
+**Your output:** Write answers in a Google Doc or Notion comments. Send the founder a short summary. That counts as contributing.
+
+---
+
+### Step 3: Phase B — Get the project folder (no GitHub)
+
+Ask the founder to **zip the project** and send it (email, Drive, Dropbox, AirDrop).
+
+**On your computer:**
+
+1. Download the zip file
+2. Double-click to unzip
+3. You should see a folder (often named `rentalpro`) containing `docs/` and `_bmad-output/`
+4. Remember where it lives (e.g. Desktop → `rentalpro`)
+
+**You still do not need GitHub.** When you make decisions with Cursor or Claude Code, tell the founder: “I updated the docs locally — please sync.” The founder copies changes into git.
+
+---
+
+### Step 4: Pick your AI tool
 
 The founder uses **Cursor** and/or **Claude Code**. Both read the same project files and follow the same rules (`AGENTS.md`, `docs/rules/`). Pick one — you do not need both.
 
@@ -60,7 +106,7 @@ The founder uses **Cursor** and/or **Claude Code**. Both read the same project f
 
 ## Part 1A — Cursor setup (step by step)
 
-Cursor is a code editor with AI built in. You will use it like a **smart PM assistant that also updates documents**.
+Cursor is a code editor with AI built in. You will use it like a **smart assistant that also updates documents**.
 
 ### A1. Install Cursor
 
@@ -69,23 +115,11 @@ Cursor is a code editor with AI built in. You will use it like a **smart PM assi
 3. Create an account and sign in
 4. Choose a plan (Free works to start; Pro gives more AI usage)
 
-### A2. Get the project folder on your computer
-
-Ask the founder to do **one** of these on a quick call:
-
-| Method | What happens |
-|--------|--------------|
-| **Founder clones for you** | They open Terminal, run `git clone`, you get a folder named `rentalpro` |
-| **Founder sends a zip** | You unzip it; founder later copies your decisions back to git |
-| **You get GitHub access** | Founder invites you; you click green **Code → Download ZIP** (no git commands needed) |
-
-You should end up with a folder that contains `docs/` and `_bmad-output/`.
-
-### A3. Open the project in Cursor
+### A2. Open the project folder
 
 1. Launch Cursor
 2. **File → Open Folder…**
-3. Select the `rentalpro` folder
+3. Select the unzipped `rentalpro` folder (e.g. on your Desktop)
 4. In the left sidebar you should see folders like `docs`, `_bmad-output`
 
 **Tour of the screen (you only need 2 areas):**
@@ -97,7 +131,7 @@ You should end up with a folder that contains `docs/` and `_bmad-output/`.
 
 You can ignore the center “code” area unless you want to read a file there.
 
-### A4. Open your first chat
+### A3. Open your first chat
 
 **Option 1 — Agent mode (best for updating docs):**
 
@@ -113,13 +147,13 @@ You can ignore the center “code” area unless you want to read a file there.
 **First message to paste:**
 
 ```
-I am the product director partner on RentalPro.ai. I am non-technical.
-Read docs/partner/PRODUCT-DIRECTOR-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
+I am a non-technical partner on RentalPro.ai.
+Read docs/partner/PARTNER-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
 In plain English: where are we in the project, and what should I do first?
 Do not suggest code — only product requirements.
 ```
 
-### A5. Cursor shortcuts to remember
+### A4. Cursor shortcuts to remember
 
 | Action | Mac | Windows |
 |--------|-----|---------|
@@ -131,7 +165,7 @@ Do not suggest code — only product requirements.
 
 **Tip:** When the agent proposes edits, **read the summary first**, then Accept. You are approving product decisions, not code.
 
-### A6. Cursor modes (simple guide)
+### A5. Cursor modes (simple guide)
 
 | Mode | Use when… | Edits files? |
 |------|-----------|--------------|
@@ -145,32 +179,34 @@ For BMad spec work, use **Agent** most of the time.
 
 ## Part 1B — Claude Code setup (step by step)
 
-Claude Code is Anthropic’s AI coding agent. It reads your project folder, edits markdown files, and asks before changing anything. Same job as Cursor Agent — different app.
+Claude Code is Anthropic’s AI agent. It reads your project folder, edits markdown files, and asks before changing anything. Same job as Cursor Agent — different app.
 
 Official docs: [code.claude.com/docs](https://code.claude.com/docs/en/overview)
 
 ### B1. Pick how you will run Claude Code
 
-| Surface | Non-technical friendly? | Notes |
-|---------|---------------------------|-------|
-| **Desktop app** | ⭐ Best | Download app → Code tab → open folder |
-| **Terminal CLI** | Medium | Type `claude` in Terminal |
-| **Web** ([claude.ai/code](https://claude.ai/code)) | Good | No install; needs GitHub connected |
-| **Extension inside Cursor** | Good | Install “Claude Code” extension in Cursor |
+| Surface | Non-technical friendly? | Needs GitHub? |
+|---------|---------------------------|---------------|
+| **Desktop app** | ⭐ Best | No — open local folder |
+| **Terminal CLI** | Medium | No — open local folder |
+| **Extension inside Cursor** | Good | No |
+| **Web** ([claude.ai/code](https://claude.ai/code)) | Good | Yes — connects to GitHub repos |
+
+**Without GitHub:** use **Desktop app** or **Terminal** with the unzipped folder.
 
 ### B2. Install — Desktop app (recommended for you)
 
 1. Download Claude desktop: [claude.ai/download](https://claude.ai/download)
 2. Install and sign in (Claude Pro, Max, Team, or Enterprise)
 3. Open the app → click the **Code** tab
-4. **Open folder** → select the `rentalpro` project folder
+4. **Open folder** → select the unzipped `rentalpro` folder
 5. Start a session — Claude Code can now see your docs
 
 Paid Claude subscription required for Code features.
 
-### B3. Install — Terminal (if founder prefers CLI)
+### B3. Install — Terminal (optional)
 
-**Mac / Linux / WSL — one command:**
+**Mac / Linux / WSL:**
 
 ```bash
 curl -fsSL https://claude.ai/install.sh | bash
@@ -185,13 +221,15 @@ irm https://claude.ai/install.ps1 | iex
 **Then start working:**
 
 ```bash
-cd /path/to/rentalpro
+cd ~/Desktop/rentalpro
 claude
 ```
 
+(Change the path to wherever you unzipped the folder.)
+
 First run opens a browser to log in. After that, type plain English at the prompt.
 
-**Useful terminal commands (copy-paste):**
+**Useful commands:**
 
 | Command | What it does |
 |---------|--------------|
@@ -201,7 +239,7 @@ First run opens a browser to log in. After that, type plain English at the promp
 | `/clear` | Start fresh conversation |
 | `/exit` | Quit |
 
-**Never used Terminal before?** Ask the founder for a 10-minute screenshare, or use the **Desktop app** instead.
+**Never used Terminal before?** Use the **Desktop app** instead, or ask the founder for a 10-minute screenshare.
 
 ### B4. Install — Claude Code inside Cursor (optional)
 
@@ -219,8 +257,8 @@ Same project folder, same prompts as the rest of this guide.
 Paste this as your first message (Desktop, Terminal, or extension):
 
 ```
-I am the product director partner on RentalPro.ai. I am non-technical.
-Read docs/partner/PRODUCT-DIRECTOR-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
+I am a non-technical partner on RentalPro.ai.
+Read docs/partner/PARTNER-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
 In plain English: where are we in the project, and what should I do first?
 Do not suggest code — only product requirements.
 ```
@@ -236,14 +274,15 @@ Claude Code **always asks before editing files**. That is good for you.
 
 You do not need to understand the diff line-by-line — ask: “Summarize what you changed in plain English.”
 
-### B7. Claude Code commands you might use
+### B7. After you edit files locally (no GitHub)
 
-| Type this | When |
-|-----------|------|
-| `/help` | Forgot what’s available |
-| `/clear` | New topic — fresh chat |
-| `what does this project do?` | Orientation |
-| `commit my doc changes with message: …` | After a session (founder can also handle git) |
+Tell the founder one of these:
+
+- “I updated CAP-2 and memlog on my machine — can you pull/sync?”
+- Send the changed files back (zip or Drive)
+- Screenshare and walk through what you decided
+
+The founder handles git. You focus on decisions.
 
 ---
 
@@ -381,6 +420,8 @@ Append it to .memlog.md, update the relevant CAP doc, and re-derive SPEC.md.
 
 You never need to edit those files by hand — that is what Cursor Agent or Claude Code is for.
 
+**No GitHub?** Still log decisions the same way in your local folder. Tell the founder to sync when done.
+
 ---
 
 ## Part 6 — Locked decisions (do not overturn)
@@ -431,15 +472,16 @@ Use these in **Cursor Agent** (`Cmd+I` / `Ctrl+I`) or **Claude Code** (Desktop, 
 ### Orientation
 
 ```
-I am the product director on RentalPro.ai. Non-technical.
-Read docs/partner/PRODUCT-DIRECTOR-START-HERE.md and .memlog.md.
+I am a non-technical partner on RentalPro.ai.
+Read docs/partner/PARTNER-START-HERE.md and .memlog.md.
 What is the single highest-value thing I should do in the next 30 minutes?
+Do not suggest code — only product requirements.
 ```
 
 ### Review one capability
 
 ```
-Review docs/capabilities/CAP-[N]-*.md for a non-technical product director.
+Review docs/capabilities/CAP-[N]-*.md for a non-technical partner.
 Is Intent clear? Is Success testable?
 List open questions I should answer with the founder.
 Do not suggest code — only product requirements.
@@ -508,7 +550,7 @@ Complete this before the first working session with the founder.
 - [ ] `docs/capabilities/CAP-2-autonomous-leasing.md`
 - [ ] `docs/capabilities/CAP-4-autonomous-accounting.md`
 
-### Task B — Answer (write in Notion, Google Doc, or your AI chat)
+### Task B — Answer (Notion, Google Doc, or AI chat)
 
 For **CAP-2** and **CAP-4**, answer:
 
@@ -558,6 +600,7 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 | Do not… | Because… |
 |---------|----------|
+| Wait for GitHub to start reading | Notion/Drive/zip is enough for Day 1 |
 | Reopen **Why** / business model | Already locked; wastes time |
 | Write requirements without **Success** criteria | Engineers cannot test vibes |
 | Edit `SPEC.md` directly without memlog | Gets overwritten; decision is lost |
@@ -567,7 +610,7 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 ---
 
-## Part 13 — Glossary (10 terms)
+## Part 13 — Glossary
 
 | Term | Meaning |
 |------|---------|
@@ -608,6 +651,7 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 | Stuck on terminology | Ask your AI: “Explain [term] like I am new to proptech” |
 | Not sure if in scope | Ask: “Is [X] a Constraint, Non-goal, or Capability?” |
 | Founder unavailable | Leave questions in CAP **Open questions** via Agent / Claude Code |
+| No GitHub yet | Read in Notion/Drive; use zip + Cursor/Claude Code for edits |
 | Cursor vs Claude Code | Either works — same prompts, same files |
 | Want the full BMad map | Read `docs/BMAD-REFERENCE.md` (optional, denser) |
 
@@ -616,11 +660,13 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 ## Quick reference card (pin this)
 
 ```
-READ  →  docs/HANDOFF-TO-CURSOR.md + one CAP doc
-THINK →  Intent clear? Success testable? Open questions?
-DECIDE→  Talk to founder or AI (Cursor Agent / Claude Code)
-LOG   →  “Append to .memlog.md, update CAP, re-derive SPEC.md”
-REPEAT→  Next CAP
+PHASE A → Read in Notion/Drive (no install)
+PHASE B → Unzip folder → Cursor Agent or Claude Code Desktop
+READ    → docs/HANDOFF-TO-CURSOR.md + one CAP doc
+THINK   → Intent clear? Success testable? Open questions?
+DECIDE  → Talk to founder or AI
+LOG     → “Append to .memlog.md, update CAP, re-derive SPEC.md”
+SYNC    → Tell founder to merge your local changes (no GitHub required)
 ```
 
 **Tool pick:** Cursor = visual · Claude Code Desktop = if you already use Claude · Same prompts either way.
@@ -629,4 +675,4 @@ REPEAT→  Next CAP
 
 ---
 
-*Questions about this guide? Tell the founder or paste into Cursor / Claude Code: “Update docs/partner/PRODUCT-DIRECTOR-START-HERE.md based on my question: …”*
+*Questions about this guide? Tell the founder or paste into Cursor / Claude Code: “Update docs/partner/PARTNER-START-HERE.md based on my question: …”*
