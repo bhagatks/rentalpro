@@ -16,7 +16,7 @@
 | [AI-MVP-DECISIONS.md](./AI-MVP-DECISIONS.md) | AI agent decisions — locked + TBD (Texas MVP) |
 | [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | Market parity M1–M10 — M1/M2/M3 locked; M4–M10 open |
 | [SYNDICATION-MVP-RUNBOOK.md](./SYNDICATION-MVP-RUNBOOK.md) | **M1 Full MVP** — time-sensitive syndication tasks (single tracker) |
-| [LEASE-RENEWAL-MVP-REQ.md](./LEASE-RENEWAL-MVP-REQ.md) | **M3** — lease renewals + Owner (landlord) approval |
+| [MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) | **M4** — move-in + move-out inspections |
 | [SHARING-OPTIONS.md](./SHARING-OPTIONS.md) | How to share this with your partner (wiki, site, Notion) |
 
 ## Spec & research (canonical)

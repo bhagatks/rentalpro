@@ -52,7 +52,7 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | **M1** | Listing Package + one-submit syndication | ✅ **Locked Full MVP** | [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) | CAP-2 |
 | **M2** | Delinquency + state rules + PM customization | ✅ **Locked MVP** | [`DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) | CAP-4, CAP-7, CAP-5 |
 | **M3** | Lease renewals + Owner approval on increases | ✅ **Locked MVP** | [`LEASE-RENEWAL-MVP-REQ.md`](./LEASE-RENEWAL-MVP-REQ.md) | CAP-2, CAP-8, CAP-5 |
-| M4 | Move-in / move-out inspections | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | TBD |
+| **M4** | Move-in / move-out inspections | ✅ **Locked MVP** | [`MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md`](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) | CAP-2, CAP-7, M5 |
 | M5 | Security deposit lifecycle | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | CAP-4 (TBD) |
 | M6 | Eviction & legal notices | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | TBD |
 | M7 | Unified comms hub | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | CAP-7 (TBD) |
