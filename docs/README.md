@@ -14,9 +14,9 @@
 | [BMAD-REFERENCE.md](./BMAD-REFERENCE.md) | How we build (spec → PRD → architecture → code) |
 | [MVP-SPRINT-PLAN.md](./MVP-SPRINT-PLAN.md) | Build order, MVP scope, 24/7 sprint map |
 | [AI-MVP-DECISIONS.md](./AI-MVP-DECISIONS.md) | AI agent decisions — locked + TBD (Texas MVP) |
-| [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | Market parity M1–M10 — M1/M2 locked; M3–M10 open |
+| [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | Market parity M1–M10 — M1/M2/M3 locked; M4–M10 open |
 | [SYNDICATION-MVP-RUNBOOK.md](./SYNDICATION-MVP-RUNBOOK.md) | **M1 Full MVP** — time-sensitive syndication tasks (single tracker) |
-| [DELINQUENCY-RULES-ENGINE.md](./DELINQUENCY-RULES-ENGINE.md) | **M2** — state rules + PM customization (3-layer model) |
+| [LEASE-RENEWAL-MVP-REQ.md](./LEASE-RENEWAL-MVP-REQ.md) | **M3** — lease renewals + Owner (landlord) approval |
 | [SHARING-OPTIONS.md](./SHARING-OPTIONS.md) | How to share this with your partner (wiki, site, Notion) |
 
 ## Spec & research (canonical)

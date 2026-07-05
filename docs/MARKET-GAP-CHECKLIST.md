@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-05  
 **Purpose:** Features competitors ship that are missing or thin in our 12 CAPs.  
-**Status:** 🔄 M1–M2 locked; M3–M10 open questions. M11–M12 Phase 2 non-goals.
+**Status:** 🔄 M1–M3 locked; M4–M10 open. M11–M12 Phase 2 non-goals.
 
 **Legend:** 🔴 Must clarify for MVP · 🟡 Should add to CAP draft · ⚪ Phase 2 / non-goal candidate
 
@@ -14,7 +14,7 @@
 |----|---------|--------|----------|------------|
 | M1 | Listings & marketing syndication (Zillow, etc.) | AppFolio, DoorLoop, Entrata | ⚪ | **Full MVP** — [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) |
 | M2 | Delinquency & rent collection (late fees, reminders, plans) | All Tier 2 | 🔴 | **MVP locked** — CAP-4 + CAP-7 · [`DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) |
-| M3 | Lease renewals (90-day workflow, renewal e-sign) | AppFolio Flows, Buildium | 🟡 | CAP-2 sub-feature · **TBD** |
+| M3 | Lease renewals (90-day workflow, renewal e-sign) | AppFolio Flows, Buildium | 🟡 | **MVP locked** — CAP-2 + Owner approval · [`LEASE-RENEWAL-MVP-REQ.md`](./LEASE-RENEWAL-MVP-REQ.md) |
 | M4 | Move-in / move-out inspections (photo checklist) | DoorLoop AI inspections | ⚪ | New sub-feature or Phase 2 · **TBD** |
 | M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | All trust accounting | 🔴 | CAP-4 sub-feature · **TBD** |
 | M6 | Eviction & legal notice tracking | Buildium, AppFolio | ⚪ | Phase 2 CAP or Non-goal · **TBD** |
@@ -34,7 +34,7 @@
 - [ ] 🔴 Application fee + Texas §92.3515 criteria flow · partial in AI-MVP-DECISIONS
 - [ ] 🟡 Listing pages & syndication · **Full MVP** — [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) (M1)
 - [ ] 🟡 Tour scheduling · **Non-goal** (M12 locked)
-- [ ] 🟡 Lease renewal workflow · **TBD** (M3)
+- [x] 🟡 Lease renewal workflow · **MVP** — [`LEASE-RENEWAL-MVP-REQ.md`](./LEASE-RENEWAL-MVP-REQ.md) (M3)
 - [ ] ⚪ Renters insurance requirement · **TBD**
 
 ### CAP-3 / CAP-7 Maintenance & resident

@@ -1,8 +1,8 @@
 # RentalPro.ai: Handoff to Cursor
 
-**Last updated:** 2026-07-05 (M1 + M2 locked; M3–M10 open)  
-**Status:** Walking M1–M10 — M1 syndication + M2 delinquency locked  
-**Next session:** Continue M3–M10 → lock remaining CAPs → bmad-prd
+**Last updated:** 2026-07-05 (M1–M3 locked; M4–M10 open)  
+**Status:** Walking M1–M10 — M1/M2/M3 locked  
+**Next session:** Continue M4–M10 → lock remaining CAPs → bmad-prd
 
 ## Pick up here
 

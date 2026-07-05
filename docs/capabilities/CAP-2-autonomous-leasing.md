@@ -91,7 +91,7 @@ See `docs/MARKET-GAP-CHECKLIST.md`.
 - [ ] Guest card / CRM pipeline (lead stages, source tracking)
 - [x] Listing Package + syndication hub (M1 Full MVP) — [`docs/SYNDICATION-MVP-RUNBOOK.md`](../../SYNDICATION-MVP-RUNBOOK.md)
 - [ ] Tour / self-showing scheduling (M12)
-- [ ] Lease renewal workflow (M3)
+- [x] Lease renewal workflow (M3) — [`LEASE-RENEWAL-MVP-REQ.md`](../../LEASE-RENEWAL-MVP-REQ.md); Owner (`owner` role) approves increases above threshold
 - [ ] Renters insurance requirement
 
 ## Decisions log
@@ -102,5 +102,6 @@ See `docs/MARKET-GAP-CHECKLIST.md`.
 | 2026-07-05 | AI fills draft; PM reviews; not greenfield generation |
 | 2026-07-05 | Screening A+B sources; decision layer TBD |
 | 2026-07-05 | M1 Full MVP: Listing Package + Syndication Hub; runbook at `docs/SYNDICATION-MVP-RUNBOOK.md` |
+| 2026-07-05 | M3 locked MVP: lease renewals CAP-2; Owner role approves rent increases above threshold; full req `docs/LEASE-RENEWAL-MVP-REQ.md` |
 
 **See also:** `docs/AI-MVP-DECISIONS.md`
