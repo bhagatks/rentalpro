@@ -1,10 +1,10 @@
 # RentalPro.ai — Partner Start Guide
 
-**For:** Product partner (requirements & spec)  
+**For:** Co-founders (requirements & spec)  
 **Last updated:** 2026-07-05  
 **Focus:** GitHub setup, Cursor + Claude Code, BMad workflow  
 
-Welcome. This guide walks you through each step — account setup, repo access, tools, and how we divide work between you and the founder. Your product and domain experience is what this phase needs; the steps below are here to make the mechanics clear.
+Welcome. This guide walks you through each step — account setup, repo access, tools, and how we divide work between **co-founders**. Your product and domain experience is what this phase needs; the steps below make the mechanics clear.
 
 **First step:** Create a GitHub account with your **personal Gmail** (Part 0).
 
@@ -21,13 +21,13 @@ Your focus in this phase:
 3. **Decide** what belongs in MVP vs later
 4. **Record** decisions so the team and AI agents have a single source of truth
 
-That is BMad. You lead **requirements**. The founder handles **merge, infrastructure, and final locks**. You both use Cursor or Claude Code to update documentation — on different files and with different responsibilities (see Part 2).
+That is BMad. You lead **requirements** depth on CAPs and spec. Your co-founder (repo owner) handles **merge, repo admin, and engineering locks** for now. You both use Cursor or Claude Code to update documentation — on different files with clear ownership (see Part 2).
 
 ---
 
 ## Part 0 — Create your GitHub account (do this first)
 
-GitHub is where the project files live. You need your **own account** so the founder can invite you to the repo.
+GitHub is where the project files live. You need your **own account** so the repo owner can invite you as a Collaborator.
 
 **Use your personal Gmail.** Do not skip account creation — no Notion-only or zip-only workaround for this project.
 
@@ -36,17 +36,17 @@ GitHub is where the project files live. You need your **own account** so the fou
 1. Go to [https://github.com/signup](https://github.com/signup)
 2. Enter your **personal Gmail address** (the one you check daily)
 3. Create a password → verify email → complete signup
-4. Pick a **username** (e.g. `johnsmith-pm`) — you will send this to the founder
+4. Pick a **username** (e.g. `johnsmith-pm`) — send this to your co-founder (repo owner)
 5. Skip team/enterprise prompts unless asked — free account is fine
 
-### Step 0.2 — Tell the founder
+### Step 0.2 — Tell your co-founder (repo owner)
 
 Send a message like:
 
 > GitHub username: `[your-username]`  
 > Email: `[your-personal-gmail@gmail.com]`
 
-The founder will invite you to the **rentalpro** private repo.
+The repo owner will invite you to the **rentalpro** private repo as a **Collaborator**.
 
 ### Step 0.3 — Accept the invite
 
@@ -67,88 +67,88 @@ You can **read docs in the browser** on day one even before installing anything 
 
 ---
 
-## Part 0B — Founder: add you as Collaborator
+## Part 0B — Repo owner: add co-founder as Collaborator
 
-**Partner:** copy this section and send it to the founder with your GitHub username.  
-**Founder:** follow these steps once.
+**If you need access:** send your GitHub username to your co-founder who owns the repo.  
+**Repo owner co-founder:** follow these steps to invite them.
 
 ### What “Collaborator” means
 
-| | Partner (Collaborator) | Founder (repo owner) |
-|--|------------------------|----------------------|
+| | Co-founder (Collaborator) | Repo owner |
+|--|---------------------------|------------|
 | **Can do** | Read repo, edit docs, push branches, open Issues & PRs | Everything + merge to `main`, repo settings, invites |
 | **Cannot do** | Change repo settings, invite others, delete repo | — |
 | **Access level needed** | **Write** (not Read-only) | Owner |
 
-### Founder steps (5 minutes)
+### Repo owner steps (5 minutes)
 
 1. Open the repo in a browser: `https://github.com/bhagatks/rentalpro`
 2. Click **Settings** (top tab — only visible to owner)
 3. Left sidebar → **Collaborators** (under “Access”)
    - If GitHub asks for your password or 2FA, complete verification
 4. Click **Add people**
-5. Type the partner’s **GitHub username** (exact spelling)
+5. Type the co-founder’s **GitHub username** (exact spelling)
 6. Select role: **Write** → click **Add [username] to this repository**
-7. GitHub sends an invite email to the partner’s Gmail
+7. GitHub sends an invite email to the co-founder’s Gmail
 
-**Done when:** Partner confirms they accepted the invite and can open the repo.
+**Done when:** Co-founder confirms they accepted the invite and can open the repo.
 
 ### If the invite does not arrive
 
 | Check | Action |
 |-------|--------|
-| Wrong username | Partner sends profile URL: `github.com/[username]` |
-| Spam folder | Partner searches inbox for “GitHub” |
+| Wrong username | Co-founder sends profile URL: `github.com/[username]` |
+| Spam folder | Co-founder searches inbox for “GitHub” |
 | Pending invite | Settings → Collaborators → see “Pending invite” → **Resend invitation** |
-| Still stuck | 10-min screenshare: partner shares screen on github.com |
+| Still stuck | 10-min screenshare: co-founder shares screen on github.com |
 
 ---
 
-## Part 2 — Who updates what (you vs founder)
+## Part 2 — Who updates what (co-founder role split)
 
-This is the split. Stay in your lane to avoid overwriting each other.
+Both of you are partners. This table splits **files and responsibilities** — not rank. Align on anything in the repo-owner column before editing.
 
-### You (partner) own and edit
+### Your focus (Collaborator — requirements & spec)
 
 | Area | Files / folders | Your job |
 |------|-----------------|----------|
 | **Capability specs** | `docs/capabilities/CAP-*.md` | Intent, success, user stories, open questions, lock status |
 | **Product decisions log** | `_bmad-output/specs/spec-rentalpro/.memlog.md` | Append every decision (via AI tool) |
 | **Market gaps** | `docs/MARKET-GAP-CHECKLIST.md` | Mark items MVP / Phase 2 / Never |
-| **AI product calls** | `docs/AI-MVP-DECISIONS.md` | Resolve TBD items with founder, then log |
+| **AI product calls** | `docs/AI-MVP-DECISIONS.md` | Resolve TBD items with co-founder, then log |
 | **Constraints / Non-goals / Success** | `_bmad-output/specs/spec-rentalpro/SPEC.md` | Draft sections (AI re-derives from memlog) |
-| **Questions for founder** | GitHub **Issues** you create | See Part 2B below |
+| **Questions / handoffs** | GitHub **Issues** you create | See Part 2B below |
 
-### Founder owns (do not edit without asking)
+### Repo owner focus (edit after alignment)
 
-| Area | Files / folders | Founder’s job |
-|------|-----------------|-----------------|
-| **Vision & business model** | `docs/HANDOFF-TO-CURSOR.md` | Locked — partner builds on, does not rewrite |
+| Area | Files / folders | Repo owner’s job |
+|------|-----------------|------------------|
+| **Vision & business model** | `docs/HANDOFF-TO-CURSOR.md` | Locked baseline — co-founders build on, do not rewrite unilaterally |
 | **Agent / engineering rules** | `AGENTS.md`, `docs/rules/`, `.cursor/rules/` | Engineering conventions |
-| **Merge to main** | Pull requests | Founder reviews and merges your PRs |
-| **Infrastructure locks** | CAP-11, stack choices | Already locked by founder |
-| **Code & architecture** | App code, Prisma, APIs | Not started until after spec/PRD |
-| **Repo admin** | GitHub Settings, collaborators | Founder only |
+| **Merge to main** | Pull requests | Repo owner reviews and merges PRs (for now) |
+| **Infrastructure locks** | CAP-11, stack choices | Already locked — change via partner sync |
+| **Code & architecture** | App code, Prisma, APIs | After spec/PRD phase |
+| **Repo admin** | GitHub Settings, collaborators | Repo owner only |
 
-### Both of you can read everything
+### Both partners can read everything
 
-When unsure: **open a GitHub Issue** and ask before editing a file in the founder-only column.
+When unsure: **open a GitHub Issue** and @mention your co-founder before editing a repo-owner file.
 
 ---
 
-## Part 2B — How to reach the founder and tell him what to do
+## Part 2B — How to reach your co-founder and hand off work
 
-Use **GitHub Issues** as your inbox to the founder. He gets an email notification when you create one.
+Use **GitHub Issues** as your shared inbox. Both partners get email notifications when Issues are created.
 
 ### When to open an Issue
 
 | Situation | Example title |
 |-----------|---------------|
-| You need a **founder decision** | `Founder decision: screening income multiplier for CAP-2` |
+| You need a **joint decision** | `Partner sync: screening income multiplier for CAP-2` |
 | You **locked a CAP** and want review | `Review: CAP-4 accounting draft ready to lock` |
 | You are **blocked** | `Blocked: need answer on deposits — MVP or Phase 2?` |
-| You pushed a **branch/PR** | `PR ready: partner CAP-2 updates for review` |
-| Something is **founder-only** | `Founder action: update HANDOFF with new pricing call` |
+| You pushed a **branch/PR** | `PR ready: partner/cap-2-updates for review` |
+| Something is **repo-owner scope** | `Repo owner: update HANDOFF with new pricing call` |
 
 ### How to create an Issue (in the browser)
 
@@ -157,8 +157,8 @@ Use **GitHub Issues** as your inbox to the founder. He gets an email notificatio
 3. Use this template:
 
 ```markdown
-## What I need from the founder
-[One sentence — e.g. "Pick income multiplier for screening"]
+## What I need from my co-founder
+[One sentence — e.g. "Align on income multiplier for screening"]
 
 ## Context
 - CAP / doc: [e.g. CAP-2, AI-MVP-DECISIONS.md]
@@ -179,15 +179,15 @@ Use **GitHub Issues** as your inbox to the founder. He gets an email notificatio
 ```
 
 4. Click **Submit new issue**
-5. Founder gets notified by email and on GitHub
+5. Repo owner gets notified by email and on GitHub
 
-### How to @mention the founder
+### How to @mention your co-founder
 
-In the Issue comment box, type `@bhagatks` (founder’s GitHub username) to ping him directly.
+In the Issue comment box, type `@bhagatks` (or the repo owner’s GitHub username) to notify them directly.
 
 ### Your push workflow (keeps `main` clean)
 
-Do **not** push directly to `main` until the founder says you can. Use this flow:
+Do **not** push directly to `main` until you and the repo owner agree. Use this flow:
 
 ```
 1. GitHub Desktop → Current branch → New branch
@@ -196,10 +196,10 @@ Do **not** push directly to `main` until the founder says you can. Use this flow
 3. GitHub Desktop → Commit → Push origin
 4. On GitHub.com → "Compare & pull request" banner → Open PR
 5. Open an Issue OR add PR description: "Ready for review — [summary]"
-6. Founder merges → you pull latest in GitHub Desktop (Fetch → Pull)
+6. Repo owner merges → you pull latest in GitHub Desktop (Fetch → Pull)
 ```
 
-**Partner creates branch + PR. Founder merges.** That is the handoff.
+**Co-founder creates branch + PR. Repo owner merges.** That is the handoff.
 
 ---
 
@@ -215,27 +215,27 @@ GitHub Desktop lets you clone and sync the repo with a visual interface — no c
 2. Download and install for Mac or Windows
 3. Sign in with the **same GitHub account** (personal Gmail)
 4. **File → Clone repository**
-5. Select **rentalpro** from the list (or paste the repo URL the founder sends)
+5. Select **rentalpro** from the list (or paste the repo URL your co-founder sends)
 6. Choose a location (e.g. `Documents/rentalpro`) → **Clone**
 7. Confirm the folder contains `docs/` and `_bmad-output/`
 
-**Alternative:** On the repo page in your browser, click green **Code → Download ZIP**, unzip, and open in Cursor. GitHub Desktop is easier for ongoing sync when the founder merges updates.
+**Alternative:** On the repo page in your browser, click green **Code → Download ZIP**, unzip, and open in Cursor. GitHub Desktop is easier for ongoing sync when the repo owner merges updates.
 
 ### Step 1.2 — Setup checklist
 
 - [ ] GitHub account created with **personal Gmail**
-- [ ] Username sent to founder
+- [ ] Username sent to repo owner
 - [ ] Repo invite **accepted**
 - [ ] Project folder on laptop (GitHub Desktop clone or zip)
 - [ ] AI tool installed (Cursor or Claude Code — next sections)
 
-During the first week, you can focus on reading docs and logging decisions. The founder will walk through branch/PR workflow with you on your first merge — details are in Part 2B and Part 1B (section B7).
+During the first week, focus on reading docs and logging decisions. Your co-founder (repo owner) can walk through branch/PR workflow on your first merge — see Part 2B and Part 1B (section B7).
 
 ---
 
 ### Step 1.3 — Pick your AI tool
 
-The founder uses **Cursor** and/or **Claude Code**. Both read the same project files and follow the same rules (`AGENTS.md`, `docs/rules/`). Choose one primary tool — both work with the same prompts in this guide.
+Both partners use **Cursor** and/or **Claude Code**. Both tools read the same project files and follow the same rules (`AGENTS.md`, `docs/rules/`). Choose one primary tool — both work with the same prompts in this guide.
 
 | Tool | Good fit when… | What it looks like |
 |------|----------------|-------------------|
@@ -428,9 +428,9 @@ After you approve doc changes in Cursor or Claude Code:
 4. Write a short summary (e.g. “CAP-4: monthly sign-off flow clarified”)
 5. Click **Commit to partner/cap-4-review** → **Push origin**
 6. GitHub.com shows **Compare & pull request** → open PR
-7. Open a GitHub **Issue** or comment on the PR: `@bhagatks ready for review`
+7. Open a GitHub **Issue** or comment on the PR: `@bhagatks ready for review` (or @mention repo owner)
 
-Founder merges. Then **Fetch origin → Pull** in GitHub Desktop to sync.
+Repo owner merges. Then **Fetch origin → Pull** in GitHub Desktop to sync.
 
 ---
 
@@ -472,7 +472,7 @@ Work through these at your own pace. The Day 1 list below is a suggested startin
 | `docs/MVP-SPRINT-PLAN.md` | Build order (for context; you are not scheduling sprints yet) |
 | `_bmad-output/specs/spec-rentalpro/SPEC.md` | The one-page “contract” summary |
 
-### Out of scope for this phase (founder / engineering)
+### Out of scope for this phase (repo owner / engineering)
 
 These areas exist in the repo but are not the focus while we finish the spec:
 
@@ -549,10 +549,10 @@ docs/                    ← Human-friendly wiki (you read and edit here)
 _bmad-output/            ← Machine contract (agents keep in sync)
 ```
 
-### The decision loop (same as the founder uses)
+### The decision loop (both partners use this)
 
 ```
-1. You and founder (or your AI tool) discuss a decision
+1. You and co-founder (or your AI tool) discuss a decision
 2. Decision gets appended to .memlog.md  ← source of truth
 3. Relevant CAP doc gets updated
 4. SPEC.md gets re-derived from memlog
@@ -568,7 +568,7 @@ We decided: [state your decision clearly].
 Append it to .memlog.md, update the relevant CAP doc, and re-derive SPEC.md.
 ```
 
-The AI tools can apply edits for you — you review and approve, same as the founder’s workflow.
+The AI tools can apply edits for you — you review and approve. Same workflow both partners use.
 
 When ready, commit on a **partner branch** and open a **Pull Request**. See **Part 2B** for the full handoff flow.
 
@@ -603,7 +603,7 @@ Full detail: `docs/HANDOFF-TO-CURSOR.md` and `docs/AI-MVP-DECISIONS.md`.
 3. Log answers via your AI tool (or GitHub issue comments if reading in browser only)
 4. One decision logged = a good day
 
-### Weekly sync with founder (30–45 min)
+### Weekly sync with co-founder (30–45 min)
 
 Agenda template:
 
@@ -633,7 +633,7 @@ Focus on product requirements, not implementation.
 ```
 Review docs/capabilities/CAP-[N]-*.md from a product partner perspective.
 Is Intent clear? Is Success testable?
-List open questions I should align on with the founder.
+List open questions I should align on with my co-founder.
 Focus on product requirements, not implementation.
 ```
 
@@ -675,7 +675,7 @@ Propose 3–5 measurable signals.
 ### Lock a capability
 
 ```
-CAP-[N] requirements look complete after founder review.
+CAP-[N] requirements look complete after co-founder review.
 Mark the CAP doc status as locked, append to .memlog.md, update SPEC.md.
 List any remaining TBD items that do not block lock.
 ```
@@ -691,14 +691,14 @@ Summarize what AppFolio/Buildium do here and how our MVP approach differs.
 
 ## Part 10 — Your first assignment (Day 1)
 
-Complete this before the first working session with the founder.
+Complete this before your first working session together.
 
 ### Task A — Setup + read (45 min)
 
 **Setup (do first):**
 
 - [ ] GitHub account with **personal Gmail**
-- [ ] Username sent to founder → invite accepted
+- [ ] Username sent to repo owner → invite accepted
 - [ ] Repo cloned via GitHub Desktop (or reading in browser)
 
 **Read:**
@@ -718,7 +718,7 @@ For **CAP-2** and **CAP-4**, answer:
 4. One thing that should be a **Non-goal** for MVP
 5. One **Constraint** that must never be broken
 
-### Task C — Send the founder
+### Task C — Message your co-founder
 
 A short message:
 
@@ -735,7 +735,7 @@ A short message:
 | Tue | CAP-4 + CAP-5 | Governance thresholds validated ($500 rule, sign-off flow) |
 | Wed | CAP-7 + CAP-8 | Resident + owner portal MVP scope |
 | Thu | `MARKET-GAP-CHECKLIST.md` | Mark 🔴 items: MVP / Phase 2 / Never |
-| Fri | Constraints session with founder | First draft of Constraints section in SPEC |
+| Fri | Constraints session together | First draft of Constraints section in SPEC |
 
 ---
 
@@ -758,7 +758,7 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 | Do not… | Because… |
 |---------|----------|
-| Skip GitHub account setup | Founder cannot invite you without a username + Gmail |
+| Skip GitHub account setup | Repo owner cannot invite you without username + Gmail |
 | Use a throwaway email | Use **personal Gmail** — invite goes there |
 | Reopen **Why** / business model | Already locked; wastes time |
 | Write requirements without **Success** criteria | Engineers cannot test vibes |
@@ -812,11 +812,11 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 |------|---------|
 | Unfamiliar term | Ask your AI: “Explain [term] in the context of property management SaaS” |
 | Not sure if in scope | Ask: “Is [X] a Constraint, Non-goal, or Capability?” |
-| Need founder to decide something | Open a GitHub **Issue** — see Part 2B template |
-| PR ready for review | Comment `@bhagatks` on the PR + short summary |
-| Not sure if a file is yours to edit | Check **Part 2** table; if founder-owned, open Issue first |
-| GitHub invite not received | Check spam; send founder your exact username + Gmail |
-| Founder unavailable | Open Issue (non-urgent) + note in CAP **Open questions** |
+| Need co-founder input | Open a GitHub **Issue** — see Part 2B template |
+| PR ready for review | @mention repo owner on the PR + short summary |
+| Not sure if a file is yours to edit | Check **Part 2**; if repo-owner scope, open Issue first |
+| GitHub invite not received | Check spam; confirm username + Gmail with repo owner |
+| Co-founder unavailable | Open Issue (non-urgent) + note in CAP **Open questions** |
 | Cursor vs Claude Code | Either works — same prompts, same files |
 | Want the full BMad map | Read `docs/BMAD-REFERENCE.md` (optional, denser) |
 
@@ -825,13 +825,13 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 ## Quick reference card (pin this)
 
 ```
-GITHUB  → Personal Gmail → founder adds Collaborator (Write) → accept invite
+GITHUB  → Personal Gmail → repo owner adds Collaborator (Write) → accept invite
 CLONE   → GitHub Desktop → rentalpro folder
 OPEN    → Cursor or Claude Code Desktop
-READ    → Part 2: know what YOU edit vs founder
-WORK    → CAP docs, memlog, checklist — your files only
-HANDOFF → New branch → commit → push → Pull Request → Issue @founder
-MERGE   → Founder merges PR → you Pull in GitHub Desktop
+READ    → Part 2: co-founder role split (who edits what)
+WORK    → CAP docs, memlog, checklist — your focus area
+HANDOFF → New branch → commit → push → Pull Request → Issue @co-founder
+MERGE   → Repo owner merges PR → you Pull in GitHub Desktop
 ```
 
 **Tool pick:** Cursor = visual · Claude Code Desktop = if you already use Claude · Same prompts either way.
@@ -840,4 +840,6 @@ MERGE   → Founder merges PR → you Pull in GitHub Desktop
 
 ---
 
-*Questions about this guide? Tell the founder, or ask Cursor / Claude Code to update `docs/partner/PARTNER-START-HERE.md` based on your feedback.*
+*Questions about this guide? Sync with your co-founder, or ask Cursor / Claude Code to update `docs/partner/PARTNER-START-HERE.md` based on your feedback.*
+
+**Repo owner checklist:** [PARTNER-REPO-OWNER-CHECKLIST.md](./PARTNER-REPO-OWNER-CHECKLIST.md)
