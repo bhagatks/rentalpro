@@ -148,7 +148,7 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 | M2 | Delinquency & rent collection (late fees, reminders, plans) | 🔴 | **MVP locked** — CAP-4 + CAP-7 · `docs/DELINQUENCY-RULES-ENGINE.md` |
 | M3 | Lease renewals (90-day workflow, renewal e-sign) | 🟡 | **MVP locked** — CAP-2 + Owner approval · `docs/LEASE-RENEWAL-MVP-REQ.md` |
 | M4 | Move-in / move-out inspections (photo checklist) | ⚪ | **MVP locked** — full in + out · `docs/MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md` |
-| M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | 🔴 | CAP-4 sub-feature or third party · **TBD** |
+| M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | 🔴 | **MVP locked** — native CAP-4 · `docs/SECURITY-DEPOSIT-MVP-REQ.md` |
 | M6 | Eviction & legal notice tracking | ⚪ | Phase 2 CAP or Non-goal · **TBD** |
 | M7 | Unified comms hub (resident + owner + vendor + leads inbox) | 🟡 | CAP-7 expand or new CAP · **TBD** |
 | M8 | Owner portal UX (beyond statements — docs, approvals) | 🟡 | Expand CAP-8 · **TBD** |
