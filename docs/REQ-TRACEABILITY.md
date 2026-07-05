@@ -57,7 +57,7 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | **M3** | Lease renewals + Owner approval on increases | ✅ **Locked MVP** | [`LEASE-RENEWAL-MVP-REQ.md`](./LEASE-RENEWAL-MVP-REQ.md) | CAP-2, CAP-8, CAP-5 |
 | **M4** | Move-in / move-out inspections | ✅ **Locked MVP** | [`MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md`](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) | CAP-2, CAP-7, M5 |
 | **M5** | Security deposit native sub-ledger | ✅ **Locked MVP** | [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) | CAP-4, M4 |
-| M6 | Eviction & legal notices | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | TBD |
+| **M6** | Eviction & legal notices | ✅ **Non-goal MVP** | [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) | M2 notices only |
 | M7 | Unified comms hub | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | CAP-7 (TBD) |
 | M8 | Owner portal UX | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | CAP-8 (TBD) |
 | M9 | Open API & webhooks | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | TBD |
@@ -86,8 +86,7 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | Texas §92.019 rules (grace, 10%/12% caps) | Same — Texas RulePack v1 |
 | Agent hard-blocks illegal fees | Same — agent flow + competitive gap |
 | Payment plans with PM approval | Same — Track D D4 |
-| **Attorney review before prod** | Same — **Runbook P1 (prod blocker)** |
-| Attorney brief checklist | Same — Runbook P2 checklist |
+| **Attorney review (all TX)** | [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) | Master checklist + sign-off log |
 
 ### AI agents (Texas MVP)
 

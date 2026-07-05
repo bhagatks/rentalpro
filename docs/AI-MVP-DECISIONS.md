@@ -124,7 +124,7 @@ Pick one primary direction when resuming:
 
 ## Texas compliance checklist (reference)
 
-Required for leasing agent when Texas MVP ships:
+Required for leasing agent when Texas MVP ships. **Master checklist:** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §1.
 
 - [ ] §92.3515 tenant selection criteria notice **before** application fee + signed acknowledgment
 - [ ] FCRA standalone written consent before consumer report

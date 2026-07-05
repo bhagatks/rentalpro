@@ -17,7 +17,7 @@
 | M3 | Lease renewals (90-day workflow, renewal e-sign) | AppFolio Flows, Buildium | 🟡 | **MVP locked** — CAP-2 + Owner approval · [`LEASE-RENEWAL-MVP-REQ.md`](./LEASE-RENEWAL-MVP-REQ.md) |
 | M4 | Move-in / move-out inspections (photo checklist) | DoorLoop AI inspections | ⚪ | **MVP locked** — full in + out · [`MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md`](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) |
 | M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | All trust accounting | 🔴 | **MVP locked** — native CAP-4 · [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) · ⚠️ **check with partner** |
-| M6 | Eviction & legal notice tracking | Buildium, AppFolio | ⚪ | Phase 2 CAP or Non-goal · **TBD** |
+| M6 | Eviction & legal notice tracking | ⚪ | **Non-goal MVP** — partner + attorney checklist · [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) |
 | M7 | Unified comms hub (resident + owner + vendor + leads inbox) | AppFolio Realm-X Messages | 🟡 | CAP-7 expand or new CAP · **TBD** |
 | M8 | Owner portal UX (beyond statements — docs, approvals) | All Tier 2 | 🟡 | Expand CAP-8 · **TBD** |
 | M9 | Open API & webhooks (all tiers) | Rent Manager, matrix G-gap | 🟡 | Constraint or CAP-14 · **TBD** |
