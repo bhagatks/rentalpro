@@ -25,6 +25,117 @@ That is BMad. You lead **requirements** depth on CAPs and spec. Your co-founder 
 
 ---
 
+## BMad intro — what you need on day one
+
+BMad is the **method we use to build RentalPro** — a fixed order of steps so we lock *what* the product does before we design *how* or write code. You do not need the full BMad manual to start; this section covers what matters **right now**.
+
+### Where we are
+
+```
+Ideas → SPEC → PRD → Architecture → Stories → Code
+          ↑
+     YOU ARE HERE (bmad-spec)
+```
+
+| Spec box | Status | Your involvement |
+|----------|--------|------------------|
+| **Why** | ✅ Locked | Read only — do not reopen |
+| **Capabilities** (CAP-1 … CAP-12) | 🔄 Draft | **Main focus** — review, sharpen, lock |
+| **Constraints** | ⏳ Next | You co-lead |
+| **Non-goals** | ⏳ Next | You co-lead |
+| **Success signal** | ⏳ Next | You co-lead |
+
+PRD, architecture, and code come **after** all five boxes are filled. Full workflow reference: [`docs/BMAD-REFERENCE.md`](../BMAD-REFERENCE.md) when you want the deep dive.
+
+### Six terms you will see immediately
+
+| Term | One-line meaning |
+|------|------------------|
+| **SPEC** | One-page product contract (`_bmad-output/specs/spec-rentalpro/SPEC.md`) |
+| **Memlog** | Decision diary — append here **first** (`.memlog.md`) |
+| **CAP** | One capability — must have **Intent** (what) + **Success** (how to test) |
+| **Companion** | Extra detail files (competitive matrix, CAP deep-dives in `docs/capabilities/`) |
+| **Lock** | Requirement is agreed — update memlog + mark CAP status |
+| **Re-derive** | AI updates SPEC from memlog (do not hand-edit SPEC alone) |
+
+### The one loop you will repeat daily
+
+```
+Read CAP doc  →  Discuss / decide  →  Log in memlog  →  Update CAP  →  Re-derive SPEC  →  PR for review
+```
+
+That loop **is** BMad spec work. Everything else in BMad builds on it later.
+
+### Commands to use in Cursor or Claude Code (copy-paste)
+
+These are the prompts you need **immediately** — paste into **Cursor Agent** (`Cmd+I` / `Ctrl+I`) or **Claude Code**:
+
+**1. Orient (start of any session)**
+
+```
+Read _bmad-output/specs/spec-rentalpro/.memlog.md and SPEC.md.
+Where are we in BMad spec phase? What should I focus on today?
+Focus on product requirements, not implementation.
+```
+
+**2. Log a decision (most important — use after every alignment)**
+
+```
+We decided: [state the decision clearly].
+Append to _bmad-output/specs/spec-rentalpro/.memlog.md,
+update the relevant CAP doc in docs/capabilities/,
+and re-derive _bmad-output/specs/spec-rentalpro/SPEC.md.
+Summarize what you changed.
+```
+
+**3. Review one capability**
+
+```
+Review docs/capabilities/CAP-[N]-*.md.
+Is Intent clear? Is Success testable? What's missing for MVP?
+List open questions for co-founder alignment.
+```
+
+**4. Pressure-test a requirement**
+
+```
+Read CAP-[N] and docs/MARKET-GAP-CHECKLIST.md.
+What could go wrong or scope-creep if we ship this as written?
+Suggest Constraints or Non-goals we should add.
+```
+
+**5. Ask what to do next**
+
+```
+Read .memlog.md and docs/partner/PARTNER-START-HERE.md.
+What is the highest-value BMad spec task for the next 30 minutes?
+```
+
+### BMad skills — useful later (not day one)
+
+In Cursor or Claude Code you can also ask for BMad-style help by name:
+
+| Say this | What it does |
+|----------|--------------|
+| “Where are we in BMad?” | Orientation — like `bmad-help` |
+| “Pressure-test this CAP” | Deeper critique — like `bmad-advanced-elicitation` |
+| “Draft Constraints for SPEC” | Workshop the Constraints box |
+| “Compare to AppFolio for CAP-N” | Competitive context from `competitive-matrix.md` |
+
+You do not install these separately — they are **ways of asking** the AI, grounded in our repo rules.
+
+### What to read when you have 15 more minutes
+
+| Order | File | Why |
+|-------|------|-----|
+| 1 | `docs/HANDOFF-TO-CURSOR.md` | Vision + locked business decisions |
+| 2 | `_bmad-output/specs/spec-rentalpro/SPEC.md` | The spec kernel at a glance |
+| 3 | One CAP, e.g. `docs/capabilities/CAP-2-autonomous-leasing.md` | See Intent + Success in practice |
+
+Part 4 below expands the workflow; Part 9 has copy-paste prompts for ongoing work.
+
+---
+
 ## Part 0 — Create your GitHub account (do this first)
 
 GitHub is where the project files live. You need your **own account** so the repo owner can invite you as a Collaborator.
