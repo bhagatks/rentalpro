@@ -40,6 +40,7 @@
 | **M5 Deposits** | [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) P1 | **Yes — prod blocker** | ⬜ |
 | **M6 Eviction** | [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) | Deferred MVP | — |
 | **M1 Syndication** | [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) Track C | Mixed — see §7 | ⬜ |
+| **M7 Comms hub** | [`UNIFIED-COMMS-HUB-MVP-REQ.md`](./UNIFIED-COMMS-HUB-MVP-REQ.md) P1 | Yes — SMS/bulk prod gate | ⬜ |
 | **Cross-cutting** | SPEC Constraints, CAP-10 | Yes — platform letter + notices | ⬜ |
 
 **Partner review (separate from attorney):** [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) P0 (M5), [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) partner checklist (M6 if reopened)
@@ -220,6 +221,25 @@ These are **Mandatory (prod gate)** for M2, listed here for traceability only:
 
 ---
 
+## 9. M7 — Unified comms hub
+
+*Source: `UNIFIED-COMMS-HUB-MVP-REQ.md` P1 — **prod gate for SMS and bulk outbound***
+
+- [ ] **[Mandatory (prod gate)]** TCPA: prior express consent before SMS to prospects/residents/owners/vendors
+- [ ] **[Mandatory (prod gate)]** SMS opt-out (STOP) — honor immediately; no further SMS until re-opt-in
+- [ ] **[Mandatory (prod gate)]** Bulk emergency broadcast — consent basis and required message content (property-wide alerts)
+- [ ] **[Mandatory (prod gate)]** CAN-SPAM: commercial email footers, unsubscribe, sender identification
+- [ ] **[Mandatory (prod gate)]** AI/agent auto-replies must not send **legal notices** freeform — template-only (M2 P3, FR-M7-21)
+- [ ] **[Mandatory (prod gate)]** FHA: agent-generated replies screened or constrained — no discriminatory content
+- [ ] **[Optional (recommended)]** PM takeover / human override — sufficient for liability when staff edits agent draft?
+- [ ] **[Optional (recommended)]** Message retention period for comms threads (align CAP-10 — 7 years recommended)
+- [ ] **[Optional (recommended)]** Recorded consent capture UI copy for SMS at application/lease sign-up
+- [ ] **[Deferred (Phase 2)]** WhatsApp / social DM channels — N/A MVP
+
+*Cross-reference:* Electronic notice sufficiency for delinquency/renewal also in §8 cross-cutting.
+
+---
+
 ## Sign-off log
 
 Record attorney approval per section. All **Mandatory** items in a section must be ✅ before prod enable.
@@ -232,6 +252,7 @@ Record attorney approval per section. All **Mandatory** items in a section must 
 | M4 Inspections | | | | ⬜ | ⬜ |
 | M5 Deposits | | | | ⬜ | ⬜ |
 | M1 Listings | | | | ⬜ | ⬜ |
+| M7 Comms hub | | | | ⬜ | ⬜ |
 | Cross-cutting | | | | ⬜ | ⬜ |
 | M6 Eviction | | | | N/A MVP | — |
 
@@ -246,6 +267,7 @@ Record attorney approval per section. All **Mandatory** items in a section must 
 | [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) | M6 partner + attorney (deferred) |
 | [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) | M5 partner P0 + attorney P1 detail |
 | [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) | M1 Track C compliance tasks |
+| [`UNIFIED-COMMS-HUB-MVP-REQ.md`](./UNIFIED-COMMS-HUB-MVP-REQ.md) | M7 unified inbox + SMS/email/chat |
 | [`AI-MVP-DECISIONS.md`](./AI-MVP-DECISIONS.md) | Leasing/screening locked decisions |
 
 **Maintenance:** When a new M-item or CAP adds a legal requirement, add it here with the correct tag and link from the domain doc.

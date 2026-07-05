@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-05  
 **Purpose:** Features competitors ship that are missing or thin in our 12 CAPs.  
-**Status:** 🔄 M1–M5 locked; M6 non-goal; M7–M10 open. M11–M12 Phase 2 non-goals.
+**Status:** 🔄 M1–M5 + M7 locked; M6 non-goal; M8–M10 open. M11–M12 Phase 2 non-goals.
 
 **Legend:** 🔴 Must clarify for MVP · 🟡 Should add to CAP draft · ⚪ Phase 2 / non-goal candidate
 
@@ -18,7 +18,7 @@
 | M4 | Move-in / move-out inspections (photo checklist) | DoorLoop AI inspections | ⚪ | **MVP locked** — full in + out · [`MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md`](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) |
 | M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | All trust accounting | 🔴 | **MVP locked** — native CAP-4 · [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) · ⚠️ **check with partner** |
 | M6 | Eviction & legal notice tracking | ⚪ | **Non-goal MVP** — partner + attorney checklist · [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) |
-| M7 | Unified comms hub (resident + owner + vendor + leads inbox) | AppFolio Realm-X Messages | 🟡 | CAP-7 expand or new CAP · **TBD** |
+| M7 | Unified comms hub (resident + owner + vendor + leads inbox) | AppFolio Realm-X Messages | 🟡 | **MVP locked** — expand CAP-7 · [`UNIFIED-COMMS-HUB-MVP-REQ.md`](./UNIFIED-COMMS-HUB-MVP-REQ.md) |
 | M8 | Owner portal UX (beyond statements — docs, approvals) | All Tier 2 | 🟡 | Expand CAP-8 · **TBD** |
 | M9 | Open API & webhooks (all tiers) | Rent Manager, matrix G-gap | 🟡 | Constraint or CAP-14 · **TBD** |
 | M10 | Document vault (leases, COIs, notices per unit) | All | 🟡 | CAP-2 partial; general vault · **TBD** |
@@ -38,7 +38,7 @@
 - [ ] ⚪ Renters insurance requirement · **TBD**
 
 ### CAP-3 / CAP-7 Maintenance & resident
-- [ ] 🟡 Bulk resident messaging (emergencies) · **TBD**
+- [x] 🟡 Bulk resident messaging (emergencies) · **MVP** — [`UNIFIED-COMMS-HUB-MVP-REQ.md`](./UNIFIED-COMMS-HUB-MVP-REQ.md) (M7)
 - [ ] ⚪ Maintenance chargeback to tenant · **TBD**
 - [ ] ⚪ Recurring / preventive maintenance · **TBD**
 - [ ] 🟡 Autopay / recurring rent · **TBD**

@@ -32,7 +32,8 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | M4 | [`MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md`](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) | ✅ §1–9 |
 | M5 | [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) | ✅ §1–9 |
 | M6 | [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) | ✅ non-goal + checklists |
-| M7–M10 | TBD on lock | ⬜ |
+| M7 | [`UNIFIED-COMMS-HUB-MVP-REQ.md`](./UNIFIED-COMMS-HUB-MVP-REQ.md) | ✅ §1–9 |
+| M8–M10 | TBD on lock | ⬜ |
 
 ---
 
@@ -58,7 +59,7 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | **M4** | Move-in / move-out inspections | ✅ **Locked MVP** | [`MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md`](./MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md) | CAP-2, CAP-7, M5 |
 | **M5** | Security deposit native sub-ledger | ✅ **Locked MVP** | [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) | CAP-4, M4 |
 | **M6** | Eviction & legal notices | ✅ **Non-goal MVP** | [`EVICTION-NON-GOAL-CHECKLIST.md`](./EVICTION-NON-GOAL-CHECKLIST.md) | M2 notices only |
-| M7 | Unified comms hub | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | CAP-7 (TBD) |
+| **M7** | Unified comms hub (inbox + SMS/email/chat) | ✅ **Locked Full MVP** | [`UNIFIED-COMMS-HUB-MVP-REQ.md`](./UNIFIED-COMMS-HUB-MVP-REQ.md) | CAP-7 expand |
 | M8 | Owner portal UX | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | CAP-8 (TBD) |
 | M9 | Open API & webhooks | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | TBD |
 | M10 | Document vault | ⬜ Open | `MARKET-GAP-CHECKLIST.md` | CAP-2 (TBD) |

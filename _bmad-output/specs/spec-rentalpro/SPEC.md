@@ -151,7 +151,7 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 | M4 | Move-in / move-out inspections (photo checklist) | ⚪ | **MVP locked** — full in + out · `docs/MOVE-IN-OUT-INSPECTIONS-MVP-REQ.md` |
 | M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | 🔴 | **MVP locked** — native CAP-4 · `docs/SECURITY-DEPOSIT-MVP-REQ.md` |
 | M6 | Eviction & legal notice tracking | ⚪ | **Non-goal MVP** — `docs/EVICTION-NON-GOAL-CHECKLIST.md` |
-| M7 | Unified comms hub (resident + owner + vendor + leads inbox) | 🟡 | CAP-7 expand or new CAP · **TBD** |
+| M7 | Unified comms hub (resident + owner + vendor + leads inbox) | 🟡 | **MVP locked** — expand CAP-7 · `docs/UNIFIED-COMMS-HUB-MVP-REQ.md` |
 | M8 | Owner portal UX (beyond statements — docs, approvals) | 🟡 | Expand CAP-8 · **TBD** |
 | M9 | Open API & webhooks (all tiers) | 🟡 | Constraint or CAP-14 or Phase 2 · **TBD** |
 | M10 | Document vault (leases, COIs, notices per unit) | 🟡 | CAP-2 partial; general vault · **TBD** |
