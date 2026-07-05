@@ -145,7 +145,7 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 | ID | Feature | Priority | TBD action |
 |----|---------|----------|------------|
 | M1 | Listings & marketing syndication (Zillow, etc.) | ⚪ | **Full MVP** — see `docs/SYNDICATION-MVP-RUNBOOK.md` |
-| M2 | Delinquency & rent collection (late fees, reminders, plans) | 🔴 | CAP-4 or CAP-7 sub-feature · **TBD** |
+| M2 | Delinquency & rent collection (late fees, reminders, plans) | 🔴 | **MVP locked** — CAP-4 + CAP-7 · `docs/DELINQUENCY-RULES-ENGINE.md` |
 | M3 | Lease renewals (90-day workflow, renewal e-sign) | 🟡 | CAP-2 sub-feature · **TBD** |
 | M4 | Move-in / move-out inspections (photo checklist) | ⚪ | New sub-feature or Phase 2 · **TBD** |
 | M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | 🔴 | CAP-4 sub-feature or third party · **TBD** |

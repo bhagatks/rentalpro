@@ -13,7 +13,7 @@
 | ID | Feature | Market | Priority | TBD action |
 |----|---------|--------|----------|------------|
 | M1 | Listings & marketing syndication (Zillow, etc.) | AppFolio, DoorLoop, Entrata | ⚪ | **Full MVP** — [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) |
-| M2 | Delinquency & rent collection (late fees, reminders, plans) | All Tier 2 | 🔴 | CAP-4 or CAP-7 sub-feature · **TBD** |
+| M2 | Delinquency & rent collection (late fees, reminders, plans) | All Tier 2 | 🔴 | **MVP locked** — CAP-4 + CAP-7 · [`DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) |
 | M3 | Lease renewals (90-day workflow, renewal e-sign) | AppFolio Flows, Buildium | 🟡 | CAP-2 sub-feature · **TBD** |
 | M4 | Move-in / move-out inspections (photo checklist) | DoorLoop AI inspections | ⚪ | New sub-feature or Phase 2 · **TBD** |
 | M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | All trust accounting | 🔴 | CAP-4 sub-feature · **TBD** |
@@ -45,7 +45,7 @@
 
 ### CAP-4 Autonomous accounting
 - [ ] 🔴 Security deposit sub-ledger · **TBD** (M5)
-- [ ] 🔴 Late fee auto-assessment · **TBD** (M2)
+- [x] 🔴 Late fee auto-assessment · **MVP** — [`DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) (M2)
 - [ ] 🟡 Management fee auto-calculation · **TBD**
 - [ ] 🟡 Bank reconciliation UI · **TBD**
 - [ ] ⚪ AP / vendor bills (non-WO) · **TBD**

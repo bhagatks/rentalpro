@@ -1,11 +1,86 @@
 # Delinquency Rules Engine — State Rules + PM Customization
 
 **Created:** 2026-07-05  
-**Status:** draft — M2 architecture  
+**Owner:** Founder + eng lead  
+**Status:** active — **M2 locked** MVP (CAP-4 + CAP-7 + Rules Engine)  
 **MVP state:** Texas (`TX`)  
 **CAPs:** CAP-4 (ledger/fees), CAP-5 (escalation), CAP-7 (resident comms), CAP-10 (audit)
 
-> **Problem:** Delinquency rules vary by state. PMs need customization (fee amounts, reminder cadence, payment plans). The platform must enforce **what cannot be violated** (law) while allowing **what PMs can tune** (business policy) — and block the agent from illegal actions.
+> **One doc for M2 architecture + time-sensitive tasks.** Update Status in the runbook as you go; append decisions to `.memlog.md`.
+
+---
+
+## M2 Runbook — prerequisites & parallel tracks
+
+**⚠️ BLOCKER:** Do not ship delinquency automation to production until **P1** (Texas attorney review) is ✅.
+
+### Critical path
+
+```
+WEEK 1 ──► Eng draft StateRulePack-TX.json from §92.019
+           Eng attorney brief (P2) — send RulePack + notice templates
+
+WEEK 2–4 ► Attorney review + revisions (P1) ← BLOCKER for prod
+           Build rule validation engine (B1) in parallel
+
+WEEK 3–5 ► OrgDelinquencyPolicy UI + save validation (B2)
+           Reminder templates after attorney approves wording (P3)
+
+WEEK 5–6 ► Delinquency agent + ledger posting (B3, B4)
+           CAP-10 decision traces for every fee assess/block
+
+WEEK 6+  ► Pilot with lab org; only after P1 ✅
+```
+
+### Master task tracker
+
+Status: `⬜ todo` · `🔄 in progress` · `✅ done` · `🅿️ blocked`
+
+#### Track P — Prerequisites (legal — start Week 1)
+
+| ID | Task | Owner | Start by | Est. | Blocker? | Status | Notes |
+|----|------|-------|----------|------|----------|--------|-------|
+| P1 | **Texas attorney review** of `StateRulePack-TX` + notice templates | Founder → TX RE attorney | **Week 1** | 2–4 wk | **YES — prod gate** | ⬜ | §92.019 caps, grace, 2026 Notice to Pay; fee assessment logic |
+| P2 | Prepare attorney brief package | Eng + Founder | Week 1 | 2 days | — | ⬜ | RulePack JSON, 3-layer model doc, sample org policies at boundary |
+| P3 | **Attorney-approved notice templates** (reminder, late fee assessed, formal notice) | Attorney → Eng | After P1 | 1 wk | YES for auto-send | ⬜ | SMS/email copy; no auto-send until approved |
+| P4 | Confirm 2026 first-delinquency Notice to Pay requirements | Attorney | Week 1 | — | — | ⬜ | Template only; eviction workflow M6 Phase 2 |
+| P5 | Document attorney sign-off version | Eng | After P1 | 1 day | — | ⬜ | `StateRulePack-TX` version + `approvedBy` + date in repo |
+
+#### Track B — Build (parallel — sandbox OK before P1)
+
+| ID | Task | Owner | Start by | Depends on | Status | Notes |
+|----|------|-------|----------|------------|--------|-------|
+| B1 | `StateRulePack-TX.json` + validation engine | Eng | Week 1 | — | ⬜ | Hard-block illegal fee configs |
+| B2 | `OrgDelinquencyPolicy` UI with bound validation | Eng | Week 2 | B1 | ⬜ | Show 🔒 fields from state pack |
+| B3 | Delinquency agent daily job + rule evaluation | Eng | Week 3 | B1, B2 | ⬜ | Lease → Org → State order |
+| B4 | CAP-4 late fee ledger posting + waive flow | Eng | Week 4 | B3 | ⬜ | PM waive requires reason → CAP-10 |
+| B5 | CAP-7 reminder SMS/email sequences | Eng | Week 4 | P3 for prod | ⬜ | Dev with placeholder copy until P3 |
+| B6 | Payment plan offer + CAP-5 approval queue | Eng | Week 5 | B3 | ⬜ | PM approval required MVP |
+| B7 | `structureUnitCount` on Property (≤4 vs >4 cap) | Eng | Week 1 | CAP-1 | ⬜ | Required for TX-LF-003/004 |
+| B8 | Block maintenance if delinquent (org toggle) | Eng | Week 3 | CAP-3 | ⬜ | Default on per AI-MVP-DECISIONS |
+
+#### Track D — Locked decisions (M2)
+
+| ID | Decision | Locked value |
+|----|----------|--------------|
+| D1 | M2 scope | **MVP — CAP-4 + CAP-7** with 3-layer Rules Engine |
+| D2 | RulePack authority | **Platform enforces; PM can only be stricter** |
+| D3 | Missing lease late-fee clause | **Block auto-fee; PM manual with liability ack** |
+| D4 | Payment plans | **MVP with CAP-5 PM approval** |
+| D5 | Prod gate | **P1 attorney review required before production** |
+| D6 | Differentiator | **Agent hard-blocks illegal fees** (auditable in CAP-10) |
+
+#### Attorney brief checklist (P2)
+
+Send to Texas RE attorney:
+
+- [ ] `StateRulePack-TX` draft (rules TX-LF-001 through TX-PAY-001 in this doc)
+- [ ] Three-layer model diagram (State → Org → Lease)
+- [ ] Sample org policies: 8% fee (valid), 15% fee (blocked), 1-day grace (blocked)
+- [ ] Reminder + formal notice draft templates
+- [ ] Question: 2026 Notice to Pay Rent or Vacate — required wording for first delinquency in term
+- [ ] Question: NSF/bounced check fee limits for TX residential
+- [ ] Request: written sign-off on `StateRulePack-TX` version number for production
 
 ---
 
@@ -163,15 +238,15 @@ Daily job: for each active lease where rent due and balance > 0
 
 ---
 
-## Open decisions (founder — M2)
+## Locked decisions (M2 — 2026-07-05)
 
-| ID | Question | Options | Recommendation |
-|----|----------|---------|----------------|
-| M2-1 | Scope | CAP-4 only / CAP-4+7 / Phase 2 | **CAP-4 + CAP-7** with Rules Engine |
-| M2-2 | RulePack authority | Platform-only / PM can opt into stricter | **Platform enforces; PM can only be stricter** |
-| M2-3 | Invalid lease (no late fee clause) | Block fee / PM override with ack | **Block auto-fee; PM manual with liability ack** |
-| M2-4 | Payment plans | MVP yes / Phase 2 | **MVP with PM approval (CAP-5)** |
-| M2-5 | Attorney review | Before TX ship | **Required — add to runbook** |
+| ID | Decision | Value |
+|----|----------|-------|
+| M2-1 | Scope | **CAP-4 + CAP-7** with Rules Engine |
+| M2-2 | RulePack authority | Platform enforces; PM can only be stricter |
+| M2-3 | Invalid lease (no late fee clause) | Block auto-fee; PM manual with liability ack |
+| M2-4 | Payment plans | MVP with CAP-5 PM approval |
+| M2-5 | Prod prerequisite | **Texas attorney review (Runbook P1) before production** |
 
 ---
 

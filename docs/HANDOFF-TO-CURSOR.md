@@ -1,15 +1,15 @@
 # RentalPro.ai: Handoff to Cursor
 
-**Last updated:** 2026-07-05 (M1 Full MVP runbook; M2–M10 still open)  
-**Status:** Spec kernel complete — walking M1–M10; M1 locked Full MVP  
-**Next session:** Continue M2–M10 picks → lock remaining CAPs → bmad-prd
+**Last updated:** 2026-07-05 (M1 + M2 locked; M3–M10 open)  
+**Status:** Walking M1–M10 — M1 syndication + M2 delinquency locked  
+**Next session:** Continue M3–M10 → lock remaining CAPs → bmad-prd
 
 ## Pick up here
 
 1. Read [`docs/README.md`](./README.md) — CAP status table  
-2. **M1 syndication:** [`docs/SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) — single tracker for Day 1 approvals + build  
-3. Continue **M2–M10** open questions in [`MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md)  
-4. Optional: `resume screening` or `lock CAP-N` in Cursor chat  
+2. **M1:** [`docs/SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md)  
+3. **M2:** [`docs/DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) — **P1 attorney review = prod blocker**  
+4. Continue **M3–M10** in [`MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md)  
 5. Lock remaining CAP micro-specs → **bmad-prd**
 
 **Stack direction (not locked in spec):** Vercel + Supabase + Clerk

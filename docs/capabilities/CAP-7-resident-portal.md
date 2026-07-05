@@ -76,7 +76,7 @@
 See `docs/MARKET-GAP-CHECKLIST.md`.
 
 - [ ] Autopay / recurring rent
-- [ ] Delinquency notices & payment plans (M2) 🔴
+- [x] Delinquency notices & payment plans (M2) — [`DELINQUENCY-RULES-ENGINE.md`](../DELINQUENCY-RULES-ENGINE.md)
 - [ ] Bulk resident messaging (emergencies)
 - [ ] Announcements / community feed
 
