@@ -1,0 +1,6 @@
+---
+description: BMad spec workflow — lock WHAT before HOW
+alwaysApply: true
+---
+
+@docs/rules/bmad-spec.md

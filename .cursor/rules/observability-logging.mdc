@@ -1,0 +1,6 @@
+---
+description: Mandatory structured logging for new features and agent workflows
+alwaysApply: true
+---
+
+@docs/rules/observability-logging.md
