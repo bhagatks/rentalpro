@@ -6,6 +6,8 @@
 **Locked:** 2026-07-05  
 **MVP state:** Texas (`TX`)
 
+> **Attorney review (Mandatory items):** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §4. Combine brief with M5 §5.
+
 > **Companion req doc for M4.** Full move-in + move-out checklists with photos, comparison report, deposit deduction handoff to M5.
 
 ---

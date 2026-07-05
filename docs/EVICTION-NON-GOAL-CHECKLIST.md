@@ -5,7 +5,7 @@
 **Market gap:** M6  
 **MVP coverage without M6:** M2 delinquency + Notice to Pay template (TX 2026 first delinquency) — **not** full eviction workflow
 
-> **Partner + attorney review required before any M6 scope change.** Attorney items: [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §6 + checklist below when reopening M6.
+> **Partner + attorney review required before any M6 scope change.** Attorney items (tagged Mandatory / Deferred): [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §6 + checklist below when reopening M6.
 
 ---
 

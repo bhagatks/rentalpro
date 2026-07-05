@@ -5,6 +5,8 @@
 **Status:** active — time-sensitive parallel tracks  
 **SPEC:** M1 locked Full MVP · CAP-2 sub-feature · Listing Package + Syndication Hub
 
+> **Attorney review (Mandatory / Optional items):** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §7 · Track C below.
+
 > **One doc for everything time-sensitive AND full build requirements.** External partner gates, build tasks, legal checks, user stories, flows, and acceptance criteria — so nothing from spec sessions is lost at story time.
 
 ---

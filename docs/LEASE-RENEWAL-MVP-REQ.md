@@ -6,6 +6,8 @@
 **Locked:** 2026-07-05  
 **MVP state:** Texas (`TX`)
 
+> **Attorney review (Mandatory items):** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §3.
+
 > **Companion req doc for M3.** All 9 sections filled — use when writing renewal stories/PRD. Chat is not the system of record.
 
 ---

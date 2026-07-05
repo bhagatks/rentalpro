@@ -133,7 +133,7 @@ Same 3-layer model; new `StateRulePack-{ST}.json` per state with attorney review
 
 ## M2 Runbook — prerequisites & parallel tracks
 
-> **Prod gate:** Do not ship delinquency automation to production until **P1** (Texas attorney review) is ✅. **Master checklist:** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §2.
+> **Prod gate:** Do not ship delinquency automation to production until **P1** (Texas attorney review) is ✅. **Master checklist (Mandatory items):** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §2.
 
 ### Critical path
 

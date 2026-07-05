@@ -16,7 +16,7 @@
 | [AI-MVP-DECISIONS.md](./AI-MVP-DECISIONS.md) | AI agent decisions — locked + TBD (Texas MVP) |
 | [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | M1–M5 locked; M6 non-goal; M7–M10 open |
 | [SYNDICATION-MVP-RUNBOOK.md](./SYNDICATION-MVP-RUNBOOK.md) | **M1 Full MVP** — time-sensitive syndication tasks (single tracker) |
-| [ATTORNEY-REVIEW-CHECKLIST.md](./ATTORNEY-REVIEW-CHECKLIST.md) | **Master Texas attorney review** — all M-areas + sign-off log |
+| [ATTORNEY-REVIEW-CHECKLIST.md](./ATTORNEY-REVIEW-CHECKLIST.md) | **Master Texas attorney review** — all M-areas; **Mandatory vs Optional** tags + sign-off log |
 | [EVICTION-NON-GOAL-CHECKLIST.md](./EVICTION-NON-GOAL-CHECKLIST.md) | **M6** — non-goal; partner checklist (+ attorney §6 when reopened) |
 | [SHARING-OPTIONS.md](./SHARING-OPTIONS.md) | How to share this with your partner (wiki, site, Notion) |
 

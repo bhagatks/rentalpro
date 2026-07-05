@@ -124,16 +124,16 @@ Pick one primary direction when resuming:
 
 ## Texas compliance checklist (reference)
 
-Required for leasing agent when Texas MVP ships. **Master checklist:** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §1.
+Required for leasing agent when Texas MVP ships. **Master checklist (Mandatory vs Optional tags):** [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §1.
 
-- [ ] §92.3515 tenant selection criteria notice **before** application fee + signed acknowledgment
-- [ ] FCRA standalone written consent before consumer report
-- [ ] Adverse action notice with specific reasons if denied
-- [ ] Flood disclosure — **both landlord and tenant sign** (SB 2349, effective 2025)
-- [ ] Lead-based paint disclosure if built before 1978
-- [ ] Owner/agent identity in lease (§92.201)
-- [ ] Tenant repair remedies in bold/underlined (§92.056)
-- [ ] FHA protected classes excluded from all agent inputs and criteria
+- [ ] **[Mandatory]** §92.3515 tenant selection criteria notice **before** application fee + signed acknowledgment
+- [ ] **[Mandatory]** FCRA standalone written consent before consumer report
+- [ ] **[Mandatory]** Adverse action notice with specific reasons if denied
+- [ ] **[Mandatory]** Flood disclosure — **both landlord and tenant sign** (SB 2349, effective 2025)
+- [ ] **[Conditional]** Lead-based paint disclosure if built before 1978
+- [ ] **[Mandatory]** Owner/agent identity in lease (§92.201)
+- [ ] **[Mandatory]** Tenant repair remedies in bold/underlined (§92.056)
+- [ ] **[Mandatory]** FHA protected classes excluded from all agent inputs and criteria
 
 ---
 
