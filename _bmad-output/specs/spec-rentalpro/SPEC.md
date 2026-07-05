@@ -2,8 +2,10 @@
 id: SPEC-rentalpro
 companions:
   - competitive-matrix.md
+  - ../../../docs/AI-MVP-DECISIONS.md
 sources:
   - ../../docs/HANDOFF-TO-CURSOR.md
+  - ../../docs/AI-MVP-DECISIONS.md
 ---
 
 > **Canonical contract.** This SPEC and the files in `companions:` are the complete, preservation-validated contract for what to build, test, and validate.
@@ -62,7 +64,7 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
   - **intent:** Every autonomous agent action produces an immutable audit record sufficient for tax, legal, and fair-housing review.
   - **success:** An auditor can trace any autonomous leasing or maintenance decision to inputs, policy applied, actions taken, and human overrides within 60 seconds.
 
-- **CAP-11**
+- **CAP-11** *(micro-spec locked — see `docs/capabilities/CAP-11-multi-tenant-saas.md`)*
   - **intent:** The platform operates as multi-tenant B2B SaaS with per-PM-company data isolation, white-label branding, and independent configuration.
   - **success:** Two PM companies on the platform cannot access each other's data; each presents distinct branding to their owners and residents in a penetration test.
 
@@ -88,11 +90,16 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 - Entrata's "Autonomous Property Management™" targets enterprise multifamily; RentalPro targets independent PM companies (approx. 10–500 units).
 - MVP accounting requires human monthly sign-off before distributions (per locked HANDOFF decision).
 - Seam, Stripe, and Plaid are the intended integration partners (architecture phase finalizes).
+- **MVP jurisdiction:** Texas only (federal FHA/FCRA + Texas Property Code); expand state-by-state after validation. AI agent detail in `docs/AI-MVP-DECISIONS.md`.
+- **MVP stack direction:** Vercel (Next.js) + Supabase (PostgreSQL + RLS + Storage) + Clerk (auth); Postgres portable to AWS/GCP at scale.
+- **MVP communication:** Chat, SMS, email — no voice calls.
+- **CAP-11 locked:** Clerk orgs, single DB + RLS, subdomain branding (`{slug}.rentalpro.ai`); custom domain Phase 2.
 
 ## Open Questions
 
-- Does CAP-2 include AI-generated lease documents, or only pre-qualify + verify + key issuance?
-- Does CAP-3 include full vendor contract management, or triage-and-dispatch only for MVP?
+- Screening criteria defaults and industry-breaking screening thesis — **parked** (see `docs/AI-MVP-DECISIONS.md`).
+- Required audit retention period and export format for tax/legal purposes — pending CAP-10 micro-spec.
 - Are security deposits and escrow handled natively or routed to a third party?
-- MVP compliance scope: federal FHA screening rules only, or specific state jurisdictions?
-- Required audit retention period and export format for tax/legal purposes?
+- ~~Does CAP-2 include AI-generated lease documents?~~ → **Resolved:** AI fills PM template + platform Texas starter; PM reviews before e-sign (not greenfield generation).
+- ~~Does CAP-3 include full vendor management end-to-end?~~ → **Resolved:** Full maintenance lifecycle for MVP.
+- ~~MVP compliance scope?~~ → **Resolved:** Texas only for MVP.

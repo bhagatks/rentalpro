@@ -1,10 +1,8 @@
 # RentalPro.ai: Handoff to Cursor
 
-**Date:** 2026-07-04  
-**Status:** Mid-spec (bmad-spec guided mode)  
-**Next Step:** Competitive research → Finalize Capabilities → Complete spec
-
----
+**Last updated:** 2026-07-05  
+**Status:** Mid-spec — CAP-11 locked; AI decisions partial (screening parked)  
+**Next Step:** CAP-10/CAP-5 micro-specs OR resume screening → lock Constraints / Non-goals / Success signal
 
 ## Project Overview
 
@@ -121,19 +119,29 @@ Tenant uploads video of issue → AI diagnoses problem
 
 ### ✅ COMPLETED
 - **Why:** Locked (force, target, lever, escalation model)
+- **Competitive research:** 17 platforms in `competitive-matrix.md`
+- **Capabilities kernel:** 12 CAPs drafted in `SPEC.md`
+- **CAP-11 micro-spec:** Locked (`docs/capabilities/CAP-11-multi-tenant-saas.md`)
+- **AI MVP decisions (partial):** Locked + TBD in `docs/AI-MVP-DECISIONS.md` (screening parked)
 
 ### 🔄 IN PROGRESS
-- **Capabilities:** Waiting for competitive research findings
+- **Capabilities:** CAP-1–10, CAP-12 micro-specs not started; 12 CAPs in SPEC still draft
+- **AI agents:** Texas leasing/maintenance decisions locked; screening TBD
 
 ### ⏳ PENDING
 - **Constraints:** Non-negotiables (compliance, multi-tenancy, accounting accuracy)
-- **Non-goals:** Explicit out-of-scope
+- **Non-goals:** Explicit out-of-scope (native apps Phase 2, voice Phase 2, etc.)
 - **Success Signal:** How we know it's working
+- **CAP-10, CAP-5:** Foundation micro-specs
 
 ### 📁 ARTIFACTS
 - **Spec workspace:** `_bmad-output/specs/spec-rentalpro/`
-  - `SPEC.md` (skeleton)
+  - `SPEC.md` (kernel — synced with memlog)
+  - `competitive-matrix.md`
   - `.memlog.md` (decision log)
+- **Partner wiki:** `docs/`
+  - `AI-MVP-DECISIONS.md` — AI locked + TBD
+  - `capabilities/CAP-11-multi-tenant-saas.md` — locked
 - **Brief workspace:** `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/`
 - **Reference:** `docs/BMAD-REFERENCE.md` (BMad keyword guide)
 
