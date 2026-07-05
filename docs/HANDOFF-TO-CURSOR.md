@@ -8,9 +8,9 @@
 
 1. Read [`docs/README.md`](./README.md) — CAP status table  
 2. Review locked **Constraints, Non-goals, Success signal** in [`SPEC.md`](../_bmad-output/specs/spec-rentalpro/SPEC.md)  
-3. Review [`docs/MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md) — M1–M12 assigned  
-4. Optional: `resume screening` or `lock CAP-N` in Cursor chat  
-5. Next phase: **bmad-prd** (expand spec into detailed requirements)
+3. Review [`docs/MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md) — **M1–M10 open questions** (pick before CAP lock)
+4. Optional: `resume screening` or `lock CAP-N` in Cursor chat
+5. Resolve M1–M10 → then lock remaining CAP micro-specs → **bmad-prd**
 
 **Stack direction (not locked in spec):** Vercel + Supabase + Clerk
 

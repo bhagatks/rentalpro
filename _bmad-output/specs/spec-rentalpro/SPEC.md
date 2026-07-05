@@ -85,31 +85,26 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 7. **Communication channels: chat, SMS, email only.** No voice calls or IVR in MVP.
 8. **Required integration partners.** Seam (smart access), Stripe (payments/identity/Connect), Plaid (bank feeds). Architecture phase may add alternates; MVP workflows assume these APIs.
 9. **Subdomain branding only in MVP.** `{slug}.rentalpro.ai` per PM company; custom domain and full white-label are Phase 2. (CAP-11)
-10. **MVP market parity floor.** Security deposit sub-ledger (CAP-4), delinquency/late-fee automation (CAP-4 + CAP-7), guest-card CRM pipeline (CAP-2), and document vault per unit (CAP-2) are in MVP scope — not optional add-ons.
 
 ## Non-goals
 
-*Locked 2026-07-05 — guided session. Explicit out-of-scope for MVP.*
+*Locked 2026-07-05 — guided session. Explicit out-of-scope for MVP. Market-gap items M1–M10 are **open questions** — not pre-assigned here.*
 
 | Area | Non-goal | Rationale |
 |------|----------|-----------|
 | **Platform** | Native iOS/Android apps | Responsive web only; mobile apps Phase 2 |
 | **Platform** | Custom domain white-label | Subdomain MVP sufficient; CNAME + SSL Phase 2 |
 | **Platform** | Enterprise SAML/SSO | Clerk orgs sufficient; Auth0/SAML when enterprise deals require |
-| **Platform** | Open API & webhooks for third parties | Internal APIs only; public API Phase 2 |
 | **Platform** | Bidirectional sync with legacy PMS (AppFolio, Yardi) | Import-onboarding only (CAP-1); no live sync |
 | **Geography** | States outside Texas | Expand state-by-state after Texas validation |
-| **Leasing** | Listing syndication (Zillow, Apartments.com, etc.) | CAP-2 handles inquiry-to-lease; syndication Phase 2 (M1) |
-| **Leasing** | Self-showing / tour scheduling with pre-lease access | CAP-12 covers post-lease keys; tours Phase 2 (M12) |
 | **Leasing** | Renters insurance requirement enforcement | Phase 2 |
-| **Operations** | Move-in / move-out inspection checklists | Phase 2 (M4) |
-| **Operations** | Eviction & legal notice tracking | Phase 2 (M6); PM handles outside platform |
 | **Operations** | Recurring / preventive maintenance schedules | Phase 2 |
 | **Operations** | Maintenance chargeback to tenant | Phase 2 |
-| **Accounting** | 1099 / vendor & owner tax reporting | Phase 2 (M11) |
 | **Accounting** | AP / vendor bills outside work orders | Phase 2 |
 | **Comms** | Voice calls / IVR | Chat/SMS/email only |
 | **Comms** | Community feed / announcements | Phase 2 |
+| **Leasing** | Self-showing / tour scheduling with pre-lease access | CAP-12 covers post-lease keys; tours Phase 2 (M12) |
+| **Accounting** | 1099 / vendor & owner tax reporting | Phase 2 (M11) |
 
 ## Success signal
 
@@ -144,10 +139,25 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 
 - Screening criteria defaults and industry-breaking screening thesis — **parked** (see `docs/AI-MVP-DECISIONS.md`).
 - Required audit retention period and export format for tax/legal purposes — recommend 7 years; pending CAP-10 lock.
-- ~~**Market parity gaps (M1–M12)**~~ → **Resolved:** Assigned in `docs/MARKET-GAP-CHECKLIST.md`; MVP floor in Constraints #10.
-- ~~Are security deposits handled natively?~~ → **Resolved:** Native sub-ledger in CAP-4 (Constraint #10).
-- ~~New CAPs vs expand existing?~~ → **Resolved:** Expand CAP-2, 4, 7, 8; no new CAPs for MVP.
-- ~~Phase 2 non-goals~~ → **Resolved:** Locked in Non-goals table above.
+
+### Market parity gaps M1–M10 (founder pick before CAP lock)
+
+| ID | Feature | Priority | TBD action |
+|----|---------|----------|------------|
+| M1 | Listings & marketing syndication (Zillow, etc.) | ⚪ | MVP sub-feature, Phase 2, or Non-goal · **TBD** |
+| M2 | Delinquency & rent collection (late fees, reminders, plans) | 🔴 | CAP-4 or CAP-7 sub-feature · **TBD** |
+| M3 | Lease renewals (90-day workflow, renewal e-sign) | 🟡 | CAP-2 sub-feature · **TBD** |
+| M4 | Move-in / move-out inspections (photo checklist) | ⚪ | New sub-feature or Phase 2 · **TBD** |
+| M5 | Security deposit lifecycle (trust sub-ledger, TX 30-day return) | 🔴 | CAP-4 sub-feature or third party · **TBD** |
+| M6 | Eviction & legal notice tracking | ⚪ | Phase 2 CAP or Non-goal · **TBD** |
+| M7 | Unified comms hub (resident + owner + vendor + leads inbox) | 🟡 | CAP-7 expand or new CAP · **TBD** |
+| M8 | Owner portal UX (beyond statements — docs, approvals) | 🟡 | Expand CAP-8 · **TBD** |
+| M9 | Open API & webhooks (all tiers) | 🟡 | Constraint or CAP-14 or Phase 2 · **TBD** |
+| M10 | Document vault (leases, COIs, notices per unit) | 🟡 | CAP-2 partial; general vault · **TBD** |
+
+- New CAPs (13–15) vs expand existing CAPs for market gaps? — **TBD**
+- Are security deposits handled natively (CAP-4 sub-ledger) or third party? — **TBD** (M5)
+- ~~Phase 2 non-goals for M11/M12~~ → **Resolved:** M11 (1099), M12 (tours) locked as Non-goals above.
 - ~~Does CAP-2 include AI-generated lease documents?~~ → **Resolved:** AI fills PM template + platform Texas starter; PM reviews before e-sign.
 - ~~Does CAP-3 include full vendor management end-to-end?~~ → **Resolved:** Full maintenance lifecycle for MVP.
 - ~~MVP compliance scope?~~ → **Resolved:** Texas only for MVP.
