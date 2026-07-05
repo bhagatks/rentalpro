@@ -2,6 +2,24 @@
 
 When you change architecture, entry flows, major modules, or user-visible behavior, update docs in the same change — do not defer to chat-only notes.
 
+## Full requirement capture standard
+
+Every locked market gap (M1–M10) and locked CAP must have a **companion req doc** with all sections below filled before bmad-prd or dev stories. Use [`docs/templates/MARKET-GAP-REQ-TEMPLATE.md`](../templates/MARKET-GAP-REQ-TEMPLATE.md).
+
+| # | Section | Purpose |
+|---|---------|---------|
+| 1 | Problem & rationale | Why — survives months later when building |
+| 2 | Product vision | What + differentiator vs competitors |
+| 3 | User stories | WHO wants WHAT |
+| 4 | End-to-end flows | Happy path + Basic vs Pro + edge cases |
+| 5 | Functional requirements | FR-IDs, testable |
+| 6 | Non-functional requirements | Performance, tenancy, audit |
+| 7 | Data model & integrations | Entities, APIs, third parties |
+| 8 | Acceptance criteria | Checkboxes for QA / story done |
+| 9 | Runbook | Time-sensitive tasks, prerequisites, blockers |
+
+**Rule:** If it was discussed in chat and affects build behavior, it goes in sections 1–8 — not chat-only.
+
 ## Change → doc mapping
 
 | Change type | Update |

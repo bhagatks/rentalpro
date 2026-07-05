@@ -6,7 +6,128 @@
 **MVP state:** Texas (`TX`)  
 **CAPs:** CAP-4 (ledger/fees), CAP-5 (escalation), CAP-7 (resident comms), CAP-10 (audit)
 
-> **One doc for M2 architecture + time-sensitive tasks.** Update Status in the runbook as you go; append decisions to `.memlog.md`.
+> **One doc for M2 full requirements + time-sensitive tasks.** Architecture, user stories, acceptance criteria, state rules, and runbook — so nothing from spec sessions is lost when writing stories.
+
+---
+
+## Full requirements (read this when building M2)
+
+### 1. Problem & rationale
+
+Delinquency rules vary by **state** (grace periods, fee caps, notice requirements). PM companies need **customization** (fee amounts, reminder cadence, payment plans) on top of legal minimums. Competitors (AppFolio, Buildium) let PMs configure late fees but **do not hard-block illegal configs** — PMs can accidentally violate §92.019 and face $100 + 3× fee penalties. RentalPro's agent must **refuse** illegal assessments and log every decision (CAP-10).
+
+**Founder vision (locked):** Per-state **StateRulePack** (immutable legal bounds) + **OrgDelinquencyPolicy** (PM config within bounds) + **LeaseTerms** (per lease). PM can customize what law allows; platform blocks what law forbids.
+
+### 2. Product vision
+
+Three-layer evaluation on every delinquency action:
+
+```
+LeaseTerms → OrgDelinquencyPolicy → StateRulePack → ALLOW | BLOCK | ESCALATE
+```
+
+**Differentiator:** Agent hard-blocks illegal late fees with auditable trace. AppFolio/Buildium document "consult legal counsel" — RentalPro enforces at runtime.
+
+### 3. User stories
+
+| Actor | Story |
+|-------|-------|
+| PM admin | I configure late fee %, grace days, and reminder schedule within Texas legal limits; platform rejects invalid saves. |
+| PM admin | I see 🔒 fields I cannot weaken (e.g. 2-day minimum grace in TX). |
+| PM admin | I waive a late fee with required reason; action logged in CAP-10. |
+| PM admin | I approve payment plan offers from agent (CAP-5 queue). |
+| Resident | I receive SMS/email reminders on schedule; I see late fee on ledger when legally assessable. |
+| Resident | I accept a payment plan through portal after PM approval. |
+| Delinquency Agent | I evaluate lease + org + state rules daily; post fee or block with trace. |
+| Delinquency Agent | I never assess fee if lease lacks late fee clause (TX). |
+| Accountant | Late fees appear auto-categorized in CAP-4 ledger. |
+| Maintenance Agent | I block dispatch if org toggle `blockMaintenanceIfDelinquent` and tenant delinquent (CAP-3). |
+
+### 4. End-to-end flows
+
+**Happy path — rent late, fee legally assessable:**
+
+1. Rent due 1st; unpaid after grace (max of state 2 days, org grace, lease grace).
+2. Delinquency Agent runs daily job for lease.
+3. Rule engine: lease has late fee clause ✓, fee ≤ TX cap ✓, structureUnitCount determines 10% vs 12%.
+4. Post late fee to CAP-4 ledger; notify resident via CAP-7 (template P3-approved in prod).
+5. Reminders fire on org schedule (day 1, 3, 7…).
+6. CAP-10 DecisionTrace: `{ rulePackVersion, policyVersion, rulesApplied, outcome: FEE_POSTED }`.
+
+**Block path — illegal fee:**
+
+1. PM org policy set to 15% fee; property has ≤4 units (12% cap).
+2. Agent computes fee → exceeds TX-LF-003 → **BLOCK**.
+3. PM admin alerted; no ledger post; trace logs `BLOCK_REASON: TX-LF-003`.
+
+**Block path — no lease clause:**
+
+1. Lease imported without late fee language.
+2. Agent **BLOCK** auto-assess (TX-LF-001); PM may manual assess with liability acknowledgment.
+
+**Payment plan path:**
+
+1. Agent proposes plan (max months from org policy) → CAP-5 ApprovalRequest.
+2. PM approves → resident accepts in CAP-7 portal → schedule created in CAP-4.
+
+**Edge paths:**
+
+| Trigger | Behavior |
+|---------|----------|
+| Partial rent payment | Org policy: apply fee regardless / waive if above threshold / pro-rate |
+| Initial + daily fee exceeds combined cap | BLOCK (TX-LF-005) |
+| Fee above safe harbor | WARN + block auto; PM manual + legal flag (TX-LF-006) |
+| First delinquency in lease term (2026 TX) | Generate Notice to Pay template; no auto-eviction (M6 Phase 2) |
+| Resident pays before fee posts | Cancel fee assessment for that cycle |
+| PM waives fee | Require reason; CAP-10 override log |
+| Delinquent + maintenance request | Escalate to PM if `blockMaintenanceIfDelinquent` (default on) |
+
+### 5. Functional requirements
+
+| ID | Requirement | MVP |
+|----|-------------|-----|
+| FR-M2-01 | `StateRulePack-TX.json` with rules TX-LF-001 through TX-PAY-001 | ✅ |
+| FR-M2-02 | Rule validation engine: hard-block on violation | ✅ |
+| FR-M2-03 | OrgDelinquencyPolicy UI with bound validation on save | ✅ |
+| FR-M2-04 | Per-property override (optional stricter policy) | ✅ |
+| FR-M2-05 | LeaseTerms import: late fee clause, due day, grace | ✅ |
+| FR-M2-06 | Daily delinquency agent job | ✅ |
+| FR-M2-07 | CAP-4 auto late fee ledger posting | ✅ |
+| FR-M2-08 | CAP-7 SMS/email reminder sequences | ✅ |
+| FR-M2-09 | Payment plan offer + CAP-5 approval | ✅ |
+| FR-M2-10 | PM fee waive with required reason → CAP-10 | ✅ |
+| FR-M2-11 | `structureUnitCount` on Property for 10%/12% cap | ✅ |
+| FR-M2-12 | Block maintenance if delinquent (org toggle) | ✅ |
+| FR-M2-13 | Notice to Pay template generation (2026 TX first delinquency) | ✅ |
+| FR-M2-14 | **Prod gate:** no auto-fee in prod until attorney sign-off (P1) | ✅ |
+
+### 6. Non-functional requirements
+
+| ID | Requirement |
+|----|-------------|
+| NFR-M2-01 | Every fee assess/block/waive → CAP-10 trace with rulePackVersion |
+| NFR-M2-02 | RulePack version pinned on each DelinquencyEvent |
+| NFR-M2-03 | Org policy save returns field-level errors citing state rule ID |
+| NFR-M2-04 | Daily job completes for 10k leases in <15 min |
+| NFR-M2-05 | No delinquency logic runs without resolved `organizationId` |
+
+### 7. Acceptance criteria
+
+- [ ] Org policy 8% fee on ≤4-unit property saves successfully
+- [ ] Org policy 15% fee on ≤4-unit property rejected with TX-LF-003 error
+- [ ] Org grace 1 day rejected; grace 3 days accepted (TX min 2)
+- [ ] Lease without late fee clause → agent blocks auto-fee
+- [ ] Initial $50 + daily $10 fees blocked if combined > 12% rent
+- [ ] Fee posted → appears in CAP-4 ledger; resident notified
+- [ ] PM waive → fee reversed/adjusted; reason in CAP-10
+- [ ] Payment plan requires CAP-5 approval before resident sees offer
+- [ ] Delinquent tenant maintenance blocked when toggle on
+- [ ] **Prod:** StateRulePack-TX has attorney sign-off record (P5)
+- [ ] **Prod:** Auto-sent notices use P3-approved templates only
+
+### 8. State expansion (post-Texas)
+
+Same 3-layer model; new `StateRulePack-{ST}.json` per state with attorney review. PM org enables only states they operate in. CA/NY/FL/WA = Phase 2 (complex late fee frameworks).
 
 ---
 

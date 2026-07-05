@@ -5,7 +5,175 @@
 **Status:** active — time-sensitive parallel tracks  
 **SPEC:** M1 locked Full MVP · CAP-2 sub-feature · Listing Package + Syndication Hub
 
-> **One doc for everything time-sensitive.** External partner gates, build tasks, and legal checks run in parallel. Update the Status column as you go; append decisions to `.memlog.md`.
+> **One doc for everything time-sensitive AND full build requirements.** External partner gates, build tasks, legal checks, user stories, flows, and acceptance criteria — so nothing from spec sessions is lost at story time.
+
+---
+
+## Full requirements (read this when building M1)
+
+### 1. Problem & rationale
+
+PM companies manually re-enter unit data on Zillow, Apartments.com, and dozens of ILS sites. Competitors (Buildium, DoorLoop, TurboTenant) offer "one-click syndication" but still require humans to fill listing forms and click publish. RentalPro's APM thesis requires **vacant → listed → inquiry → lease → key** with minimal staff — syndication is the **front door** to CAP-2 autonomous leasing, not a bolt-on marketing feature.
+
+**Founder vision (locked):** SaaS-native **Listing Package** — one unified form pre-filled from portfolio (CAP-1), all info needed for every ILS, **one Submit publishes everywhere**. Not copying legacy "listing form" UX; pre-populate from data you already have.
+
+### 2. Product vision
+
+```
+Portfolio (CAP-1) → Listing Package (auto-built) → One Submit → Syndication Hub → all ILS
+                                                              ↓
+                                                    Inbound leads → CAP-2 Leasing Agent
+```
+
+**Differentiator vs market:**
+
+| Market (Buildium, DoorLoop, MagicDoor) | RentalPro |
+|----------------------------------------|-----------|
+| PM re-enters unit data into listing form | Pre-filled from CAP-1 portfolio |
+| Human writes description | AI generates; PM approves (Basic) or auto if complete (Pro) |
+| Human clicks publish per vacancy | Listing Agent triggers on `unit.status → vacant` |
+| Leads sit in CRM inbox | Leasing Agent qualifies 24/7 |
+| Single-tenant | White-label per PM org (CAP-11) |
+| Syndication assists staff | Syndication feeds autonomous leasing loop |
+
+### 3. User stories
+
+| Actor | Story |
+|-------|-------|
+| PM admin | I review a pre-filled Listing Package (not a blank form), edit gaps, select syndication targets, and publish with one Submit. |
+| PM admin | I see per-platform status (Zillow live, Apartments.com pending) and inquiry counts per source. |
+| PM admin (Basic) | I approve Listing Package before it publishes externally. |
+| PM admin (Pro) | Package auto-publishes when complete (photos + rent + description) without my click. |
+| Listing Agent | When a unit goes vacant, I auto-build Listing Package from CAP-1 data and AI copy. |
+| Prospect | I find the unit on Zillow or `{pmco}.rentalpro.ai/units/{id}` and chat with Leasing Agent 24/7. |
+| Leasing Agent | Every inbound lead (any source) becomes a CAP-2 `Lead` with `source` attribution. |
+| Platform ops | I see syndication errors per org and failed feed syncs. |
+
+### 4. End-to-end flows
+
+**Autonomous (Pro — package complete):**
+
+1. Lease ends → `unit.status = vacant` (CAP-1).
+2. Listing Agent builds Listing Package from unit/property/photos; AI writes headline + description.
+3. Governance (CAP-5): Pro + complete checklist → auto-publish; else approval queue.
+4. Syndication Hub fans out: org page (instant), MITS feed URL, Zillow API, Apartments.com (when approved).
+5. Prospect inquires on any platform → normalized `Lead` → CAP-2 guest card.
+6. Leasing Agent runs inquiry → apply → lease → CAP-12 key.
+7. Lease signed → auto-unpublish all feeds (B9).
+
+**Basic plan:** Steps 3–4 require PM admin approval before external publish.
+
+**Edge paths:**
+
+| Trigger | Behavior |
+|---------|----------|
+| Missing photos | Block external publish; org page optional with placeholder |
+| Missing rent amount | Block publish; prompt PM |
+| Zillow feed error | Retry; show Error in dashboard; org page still live |
+| Apartments.com not approved yet | Publish to Zillow + org page only |
+| Oregon property | Zillow third-party syndication blocked — flag PM (N/A Texas MVP) |
+| Multifamily 4+ units on Apartments.com | May require PM paid advertising account — surface in UI |
+| Lead webhook format mismatch | Log raw payload; alert ops; never lose lead |
+
+### 5. Functional requirements
+
+| ID | Requirement | MVP |
+|----|-------------|-----|
+| FR-M1-01 | Listing Package entity with schema below; pre-fill ≥80% fields from CAP-1 | ✅ |
+| FR-M1-02 | Review UI: PM edits only gaps; not blank form | ✅ |
+| FR-M1-03 | One Submit → Syndication Hub publishes to selected targets | ✅ |
+| FR-M1-04 | MITS XML feed URL per org (canonical outbound format) | ✅ |
+| FR-M1-05 | Org listing page `{slug}.rentalpro.ai/units/{id}` — no external approval | ✅ |
+| FR-M1-06 | Zillow Rentals Feed integration (after A1–A5 approval) | ✅ |
+| FR-M1-07 | Apartments.com vendor feed (after A6 partnership) | ✅ parallel |
+| FR-M1-08 | Lead webhook normalizes all sources → CAP-2 `Lead` | ✅ |
+| FR-M1-09 | Listing Agent auto-builds package on vacancy event | ✅ |
+| FR-M1-10 | AI listing copy generation with fair housing review (C3) | ✅ |
+| FR-M1-11 | Auto-unpublish all targets when unit leased | ✅ |
+| FR-M1-12 | Syndication dashboard: status, last sync, inquiries per source | ✅ |
+| FR-M1-13 | Basic: CAP-5 approval before publish | ✅ |
+| FR-M1-14 | Pro: auto-publish when completeness checklist met | ✅ |
+| FR-M1-15 | RentSync/Showdigs interim path if Zillow delayed (A8/A9) | Optional |
+
+### 6. Non-functional requirements
+
+| ID | Requirement |
+|----|-------------|
+| NFR-M1-01 | All listing data scoped by `organizationId`; feeds never cross orgs |
+| NFR-M1-02 | Every publish/unpublish logged in CAP-10 |
+| NFR-M1-03 | Feed generation completes in <30s for 100 units |
+| NFR-M1-04 | Lead webhook responds 200 within 5s; async processing |
+| NFR-M1-05 | Photos served via Supabase Storage CDN URLs in feed |
+| NFR-M1-06 | Idempotent publish — re-submit updates, does not duplicate listings |
+
+### 7. Architecture & integrations
+
+**Syndication Hub (internal):**
+
+```
+POST /api/orgs/current/listings/:unitId/publish
+  → validate ListingPackage
+  → for each target in syndication.targets:
+       org_page     → render immediately
+       mits_feed    → regenerate org feed XML
+       zillow       → push via Rentals Feed API (post-approval)
+       apartments_com → push via partner feed (post-approval)
+  → update syndication.status per target
+```
+
+**Lead inbound:**
+
+```
+POST /api/webhooks/leads/zillow | /apartments | /org-form
+  → normalize to Lead { source, unitId, name, email, phone, message, listingPackageId }
+  → create CAP-2 guest card
+  → trigger Leasing Agent
+```
+
+**Stack (from SPEC assumptions):**
+
+| Layer | Tool | Role |
+|-------|------|------|
+| Trigger | Inngest / Supabase webhook | `unit.status → vacant` |
+| Content AI | Claude/GPT | Listing copy |
+| Photos | Supabase Storage | CDN URLs in MITS/Zillow payload |
+| Outbound | MITS XML + Zillow Rentals Feed API | Syndication |
+| Inbound | Webhook routes | Lead normalization |
+
+**Competitor syndication reference:**
+
+| Platform | Pattern |
+|----------|---------|
+| Buildium | One-click to Zillow Group, Apartments.com, Apartment List, Zumper |
+| DoorLoop | Listing generator + AI description |
+| MagicDoor | Single unit record → MITS → multi-ILS; auto-delist on off-market |
+| TurboTenant | 50+ sites via syndication partner |
+| Avail | One listing → 19 partner sites |
+
+RentalPro uses **MITS as canonical** + direct Zillow + org page Day 1.
+
+### 8. Acceptance criteria
+
+- [ ] Unit goes vacant → Listing Package auto-created with CAP-1 data pre-filled
+- [ ] PM admin sees review screen; one Submit publishes to org page + selected ILS
+- [ ] MITS feed URL validates against spec; Zillow sandbox accepts feed (post A4)
+- [ ] Inbound Zillow lead creates CAP-2 Lead with `source: zillow` within 5 min
+- [ ] Inbound org page chat creates Lead with `source: org_page`
+- [ ] Lease signed → all syndication targets show Delisted within next sync cycle
+- [ ] Basic plan: publish blocked until PM approves in CAP-5 queue
+- [ ] Pro plan: auto-publish when photos + rent + description present
+- [ ] Fair housing: discriminatory listing copy blocked before publish
+- [ ] Dashboard shows per-platform Live/Pending/Error + inquiry count
+- [ ] Two orgs cannot see each other's listings (CAP-11 isolation)
+
+### 9. External approvals (summary — detail in Track A below)
+
+| Partner | Timeline | Blocker for |
+|---------|----------|-------------|
+| Zillow Rentals Feed | 1–2 wk apply + 4–6 wk test | Zillow/Trulia/HotPads |
+| Zillow Lead API | Parallel with feed | Zillow inbound leads |
+| Apartments.com vendor | Weeks–months | Apartments.com network |
+| Org listing page | None | Day 1 |
 
 ---
 

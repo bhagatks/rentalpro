@@ -20,6 +20,16 @@ When we align in a guided session:
 
 **Chat is not the system of record.** If it's aligned but not in `docs/` or `_bmad-output/`, it doesn't exist for engineering or PRD.
 
+## Full requirement docs (M1–M10)
+
+Each locked market gap has a **companion req doc** with 9 sections (problem, vision, stories, flows, FRs, NFRs, data/API, acceptance criteria, runbook). Template: [`templates/MARKET-GAP-REQ-TEMPLATE.md`](./templates/MARKET-GAP-REQ-TEMPLATE.md).
+
+| ID | Full requirements doc | Sections complete? |
+|----|----------------------|-------------------|
+| M1 | [`SYNDICATION-MVP-RUNBOOK.md`](./SYNDICATION-MVP-RUNBOOK.md) | ✅ §1–9 |
+| M2 | [`DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) | ✅ §1–9 |
+| M3–M10 | TBD on lock | ⬜ |
+
 ---
 
 ## Session decisions → canonical docs

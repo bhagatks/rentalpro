@@ -8,7 +8,8 @@
 
 | Doc | What it is |
 |-----|------------|
-| [**REQ-TRACEABILITY.md**](./REQ-TRACEABILITY.md) | **Chat → req docs map** — where every aligned decision lives |
+| [REQ-TRACEABILITY.md](./REQ-TRACEABILITY.md) | **Chat → req docs map** — where every aligned decision lives |
+| [templates/MARKET-GAP-REQ-TEMPLATE.md](./templates/MARKET-GAP-REQ-TEMPLATE.md) | **9-section template** for full M1–M10 requirements |
 | [HANDOFF-TO-CURSOR.md](./HANDOFF-TO-CURSOR.md) | Vision, business model, locked decisions |
 | [BMAD-REFERENCE.md](./BMAD-REFERENCE.md) | How we build (spec → PRD → architecture → code) |
 | [MVP-SPRINT-PLAN.md](./MVP-SPRINT-PLAN.md) | Build order, MVP scope, 24/7 sprint map |
