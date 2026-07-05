@@ -24,22 +24,22 @@
 
 ## Capability deep-dives (micro-level)
 
-One page per capability. Fill these **before** coding each module.
+One page per capability. **Gate:** sections 1–3 and 7 filled before coding.
 
-| CAP | Title | Doc |
-|-----|-------|-----|
-| CAP-1 | Portfolio onboarding | [capabilities/CAP-1-portfolio-onboarding.md](./capabilities/CAP-1-portfolio-onboarding.md) |
-| CAP-2 | Autonomous leasing | [capabilities/CAP-2-autonomous-leasing.md](./capabilities/CAP-2-autonomous-leasing.md) |
-| CAP-3 | Autonomous maintenance | [capabilities/CAP-3-autonomous-maintenance.md](./capabilities/CAP-3-autonomous-maintenance.md) |
-| CAP-4 | Autonomous accounting | [capabilities/CAP-4-autonomous-accounting.md](./capabilities/CAP-4-autonomous-accounting.md) |
-| CAP-5 | Governance rails | [capabilities/CAP-5-governance-rails.md](./capabilities/CAP-5-governance-rails.md) |
-| CAP-6 | Per-module autonomy toggles | [capabilities/CAP-6-module-toggles.md](./capabilities/CAP-6-module-toggles.md) |
-| CAP-7 | Resident portal | [capabilities/CAP-7-resident-portal.md](./capabilities/CAP-7-resident-portal.md) |
-| CAP-8 | Owner reporting | [capabilities/CAP-8-owner-reporting.md](./capabilities/CAP-8-owner-reporting.md) |
-| CAP-9 | Vendor management | [capabilities/CAP-9-vendor-management.md](./capabilities/CAP-9-vendor-management.md) |
-| CAP-10 | Audit trail | [capabilities/CAP-10-audit-trail.md](./capabilities/CAP-10-audit-trail.md) |
-| CAP-11 | Multi-tenant SaaS | [capabilities/CAP-11-multi-tenant-saas.md](./capabilities/CAP-11-multi-tenant-saas.md) |
-| CAP-12 | Smart access (Seam) | [capabilities/CAP-12-smart-access.md](./capabilities/CAP-12-smart-access.md) |
+| CAP | Title | Status | Doc |
+|-----|-------|--------|-----|
+| CAP-1 | Portfolio onboarding | draft | [CAP-1-portfolio-onboarding.md](./capabilities/CAP-1-portfolio-onboarding.md) |
+| CAP-2 | Autonomous leasing | draft 🅿️ screening | [CAP-2-autonomous-leasing.md](./capabilities/CAP-2-autonomous-leasing.md) |
+| CAP-3 | Autonomous maintenance | draft | [CAP-3-autonomous-maintenance.md](./capabilities/CAP-3-autonomous-maintenance.md) |
+| CAP-4 | Autonomous accounting | draft | [CAP-4-autonomous-accounting.md](./capabilities/CAP-4-autonomous-accounting.md) |
+| CAP-5 | Governance rails | draft | [CAP-5-governance-rails.md](./capabilities/CAP-5-governance-rails.md) |
+| CAP-6 | Per-module autonomy toggles | draft | [CAP-6-module-toggles.md](./capabilities/CAP-6-module-toggles.md) |
+| CAP-7 | Resident portal | draft | [CAP-7-resident-portal.md](./capabilities/CAP-7-resident-portal.md) |
+| CAP-8 | Owner reporting | draft | [CAP-8-owner-reporting.md](./capabilities/CAP-8-owner-reporting.md) |
+| CAP-9 | Vendor management | draft | [CAP-9-vendor-management.md](./capabilities/CAP-9-vendor-management.md) |
+| CAP-10 | Audit trail | draft | [CAP-10-audit-trail.md](./capabilities/CAP-10-audit-trail.md) |
+| CAP-11 | Multi-tenant SaaS | **locked** | [CAP-11-multi-tenant-saas.md](./capabilities/CAP-11-multi-tenant-saas.md) |
+| CAP-12 | Smart access (Seam) | draft | [CAP-12-smart-access.md](./capabilities/CAP-12-smart-access.md) |
 
 ## How docs relate to BMad
 

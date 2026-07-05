@@ -22,9 +22,9 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 
 ## Capabilities
 
-*Draft — review in guided mode before locking.*
+*Draft — 12 CAP micro-specs in `docs/capabilities/` (CAP-11 locked; others draft).*
 
-- **CAP-1**
+- **CAP-1** *(draft — `docs/capabilities/CAP-1-portfolio-onboarding.md`)*
   - **intent:** A PM company can onboard a new client portfolio (properties, units, owners, tenants, vendors) into an isolated tenant workspace with imported historical records.
   - **success:** A PM admin uploads a 50-unit portfolio and sees all units, active leases, and vendor records accessible in their branded workspace within one business day of import completion.
 
