@@ -115,6 +115,7 @@ Pick one primary direction when resuming:
 |------|--------|
 | CAP-10 audit trail micro-spec | Draft — `docs/capabilities/CAP-10-audit-trail.md` |
 | CAP-5 governance rails micro-spec | Draft — `docs/capabilities/CAP-5-governance-rails.md` |
+| **Market parity vs AppFolio/Buildium** | **TBD — `docs/MARKET-GAP-CHECKLIST.md`** |
 | Basic vs Pro per-module matrix | Partially locked in HANDOFF; detail TBD |
 | Agent orchestration (Inngest etc.) | Parked with infra discussion |
 | AWS/GCP migration | Parked with infra discussion |

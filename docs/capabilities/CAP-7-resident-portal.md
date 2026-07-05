@@ -71,6 +71,15 @@
 - [ ] PWA install prompt — Phase 2?
 - [ ] SMS thread provider (Twilio)?
 
+## Market parity sub-features (TBD)
+
+See `docs/MARKET-GAP-CHECKLIST.md`.
+
+- [ ] Autopay / recurring rent
+- [ ] Delinquency notices & payment plans (M2) 🔴
+- [ ] Bulk resident messaging (emergencies)
+- [ ] Announcements / community feed
+
 ## Decisions log
 
 | Date | Decision |

@@ -84,6 +84,16 @@
 - [ ] E-sign provider?
 - [ ] Pro auto-send exact-match rules?
 
+## Market parity sub-features (TBD)
+
+See `docs/MARKET-GAP-CHECKLIST.md`.
+
+- [ ] Guest card / CRM pipeline (lead stages, source tracking)
+- [ ] Listing pages & syndication (M1)
+- [ ] Tour / self-showing scheduling (M12)
+- [ ] Lease renewal workflow (M3)
+- [ ] Renters insurance requirement
+
 ## Decisions log
 
 | Date | Decision |

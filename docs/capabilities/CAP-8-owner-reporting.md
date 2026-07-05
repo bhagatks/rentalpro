@@ -69,6 +69,14 @@
 - [ ] Automated owner payout via Stripe or statement-only MVP?
 - [ ] Statement PDF export?
 
+## Market parity sub-features (TBD)
+
+See `docs/MARKET-GAP-CHECKLIST.md`.
+
+- [ ] Dedicated owner portal login (M8)
+- [ ] Owner approval for capital repairs
+- [ ] ACH distribution execution
+
 ## Decisions log
 
 | Date | Decision |

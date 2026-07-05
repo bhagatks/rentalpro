@@ -9,7 +9,8 @@
 1. Read [`docs/README.md`](./README.md) — CAP status table  
 2. Review [`docs/AI-MVP-DECISIONS.md`](./AI-MVP-DECISIONS.md) — locked AI + screening TBD  
 3. Optional: `resume screening` or `lock CAP-10` in Cursor chat  
-4. PR open: [github.com/bhagatks/rentalpro/pull/2](https://github.com/bhagatks/rentalpro/pull/2) — merge when ready  
+4. Review **`docs/MARKET-GAP-CHECKLIST.md`** — assign 🔴 MVP gaps (deposits, delinquency, renewals)  
+5. PR merged to main — work on `main` only  
 
 **Stack direction (not locked in spec):** Vercel + Supabase + Clerk
 

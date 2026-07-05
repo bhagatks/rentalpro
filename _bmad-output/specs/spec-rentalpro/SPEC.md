@@ -99,7 +99,10 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 
 - Screening criteria defaults and industry-breaking screening thesis — **parked** (see `docs/AI-MVP-DECISIONS.md`).
 - Required audit retention period and export format for tax/legal purposes — pending CAP-10 micro-spec.
-- Are security deposits and escrow handled natively or routed to a third party?
+- **Market parity gaps (M1–M12)** — delinquency, security deposits, renewals, listings, open API, etc. — **TBD** (see `docs/MARKET-GAP-CHECKLIST.md`).
+- Are security deposits handled natively (CAP-4 sub-ledger) or third party? — **TBD**
+- New CAPs (13–15) vs expand existing CAPs for market gaps? — **TBD**
+- Phase 2 non-goals: evictions, syndication, 1099, inspections — **TBD** (Constraints session)
 - ~~Does CAP-2 include AI-generated lease documents?~~ → **Resolved:** AI fills PM template + platform Texas starter; PM reviews before e-sign (not greenfield generation).
 - ~~Does CAP-3 include full vendor management end-to-end?~~ → **Resolved:** Full maintenance lifecycle for MVP.
 - ~~MVP compliance scope?~~ → **Resolved:** Texas only for MVP.
