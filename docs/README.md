@@ -8,7 +8,7 @@
 
 | Doc | What it is |
 |-----|------------|
-| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Partner onboarding — GitHub, BMad, Cursor + Claude Code |
+| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Partner onboarding — GitHub, BMad install, Cursor + Claude Code |
 | [PARTNER-GITHUB-SETUP.md](./partner/PARTNER-GITHUB-SETUP.md) | GitHub invite and clone — both partners |
 
 ## Start here
