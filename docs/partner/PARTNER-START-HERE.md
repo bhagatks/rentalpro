@@ -1,10 +1,10 @@
 # RentalPro.ai — Partner Start Guide
 
-**For:** Co-founders (requirements & spec)  
+**For:** Partners  
 **Last updated:** 2026-07-05  
 **Focus:** GitHub setup, Cursor + Claude Code, BMad workflow  
 
-Welcome. This guide walks you through each step — account setup, repo access, tools, and how we divide work between **co-founders**. Your product and domain experience is what this phase needs; the steps below make the mechanics clear.
+Welcome. This guide walks through account setup, repo access, tools, and how we work together on RentalPro. The steps below make the mechanics clear.
 
 **First step:** Create a GitHub account with your **personal Gmail** (Part 0).
 
@@ -21,7 +21,7 @@ Your focus in this phase:
 3. **Decide** what belongs in MVP vs later
 4. **Record** decisions so the team and AI agents have a single source of truth
 
-That is BMad. You lead **requirements** depth on CAPs and spec. Your co-founder (repo owner) handles **merge, repo admin, and engineering locks** for now. You both use Cursor or Claude Code to update documentation — on different files with clear ownership (see Part 2).
+That is BMad. You both use Cursor or Claude Code to update documentation, align on decisions, and open PRs for each other to review (see Part 2).
 
 ---
 
@@ -41,9 +41,9 @@ Ideas → SPEC → PRD → Architecture → Stories → Code
 |----------|--------|------------------|
 | **Why** | ✅ Locked | Read only — do not reopen |
 | **Capabilities** (CAP-1 … CAP-12) | 🔄 Draft | **Main focus** — review, sharpen, lock |
-| **Constraints** | ⏳ Next | You co-lead |
-| **Non-goals** | ⏳ Next | You co-lead |
-| **Success signal** | ⏳ Next | You co-lead |
+| **Constraints** | ⏳ Next | Lead together |
+| **Non-goals** | ⏳ Next | Lead together |
+| **Success signal** | ⏳ Next | Lead together |
 
 PRD, architecture, and code come **after** all five boxes are filled. Full workflow reference: [`docs/BMAD-REFERENCE.md`](../BMAD-REFERENCE.md) when you want the deep dive.
 
@@ -93,7 +93,7 @@ Summarize what you changed.
 ```
 Review docs/capabilities/CAP-[N]-*.md.
 Is Intent clear? Is Success testable? What's missing for MVP?
-List open questions for co-founder alignment.
+List open questions to align on with your partner.
 ```
 
 **4. Pressure-test a requirement**
@@ -138,7 +138,7 @@ Part 4 below expands the workflow; Part 9 has copy-paste prompts for ongoing wor
 
 ## Part 0 — Create your GitHub account (do this first)
 
-GitHub is where the project files live. You need your **own account** so the repo owner can invite you as a Collaborator.
+GitHub is where the project files live. You need your **own account** so your **other partner** can invite you as a Collaborator.
 
 **Use your personal Gmail.** Do not skip account creation — no Notion-only or zip-only workaround for this project.
 
@@ -147,24 +147,25 @@ GitHub is where the project files live. You need your **own account** so the rep
 1. Go to [https://github.com/signup](https://github.com/signup)
 2. Enter your **personal Gmail address** (the one you check daily)
 3. Create a password → verify email → complete signup
-4. Pick a **username** (e.g. `johnsmith-pm`) — send this to your co-founder (repo owner)
+4. Pick a **username** (e.g. `johnsmith-pm`) — send this to your **other partner**
 5. Skip team/enterprise prompts unless asked — free account is fine
 
-### Step 0.2 — Tell your co-founder (repo owner)
+### Step 0.2 — Tell your other partner
 
 Send a message like:
 
 > GitHub username: `[your-username]`  
 > Email: `[your-personal-gmail@gmail.com]`
 
-The repo owner will invite you to the **rentalpro** private repo as a **Collaborator**.
+Your partner will invite you to the **rentalpro** private repo as a **Collaborator**.  
+Details: [PARTNER-GITHUB-SETUP.md](./PARTNER-GITHUB-SETUP.md)
 
 ### Step 0.3 — Accept the invite
 
 1. Check your Gmail inbox (and spam) for an email from GitHub
 2. Subject is usually: “You've been invited to collaborate on …”
 3. Click **View invitation** → **Accept invitation**
-4. You should now see the repo at `github.com/bhagatks/rentalpro` (or similar)
+4. You should now see the **rentalpro** repo on GitHub
 
 ### Step 0.4 — Bookmark these GitHub pages
 
@@ -178,76 +179,61 @@ You can **read docs in the browser** on day one even before installing anything 
 
 ---
 
-## Part 0B — Repo owner: add co-founder as Collaborator
+## Part 0B — Adding your partner on GitHub
 
-**If you need access:** send your GitHub username to your co-founder who owns the repo.  
-**Repo owner co-founder:** follow these steps to invite them.
+**Need access?** Send your GitHub username to your **other partner**.  
+**Created the repo?** Follow the invite steps below (or see [PARTNER-GITHUB-SETUP.md](./PARTNER-GITHUB-SETUP.md)).
 
 ### What “Collaborator” means
 
-| | Co-founder (Collaborator) | Repo owner |
-|--|---------------------------|------------|
-| **Can do** | Read repo, edit docs, push branches, open Issues & PRs | Everything + merge to `main`, repo settings, invites |
-| **Cannot do** | Change repo settings, invite others, delete repo | — |
-| **Access level needed** | **Write** (not Read-only) | Owner |
+Both partners get **Write** access. That means read, edit, branch, PR, and merge — with the habit of reviewing each other’s PRs before merging to `main`.
 
-### Repo owner steps (5 minutes)
+### Invite steps (whoever created the repository)
 
-1. Open the repo in a browser: `https://github.com/bhagatks/rentalpro`
-2. Click **Settings** (top tab — only visible to owner)
+1. Open the **rentalpro** repo on GitHub
+2. Click **Settings** (top tab)
 3. Left sidebar → **Collaborators** (under “Access”)
-   - If GitHub asks for your password or 2FA, complete verification
+   - Complete password or 2FA if GitHub asks
 4. Click **Add people**
-5. Type the co-founder’s **GitHub username** (exact spelling)
+5. Type your partner’s **GitHub username** (exact spelling)
 6. Select role: **Write** → click **Add [username] to this repository**
-7. GitHub sends an invite email to the co-founder’s Gmail
+7. GitHub sends an invite email to your partner’s Gmail
 
-**Done when:** Co-founder confirms they accepted the invite and can open the repo.
+**Done when:** Your partner confirms they accepted the invite and can open the repo.
 
 ### If the invite does not arrive
 
 | Check | Action |
 |-------|--------|
-| Wrong username | Co-founder sends profile URL: `github.com/[username]` |
-| Spam folder | Co-founder searches inbox for “GitHub” |
-| Pending invite | Settings → Collaborators → see “Pending invite” → **Resend invitation** |
-| Still stuck | 10-min screenshare: co-founder shares screen on github.com |
+| Wrong username | Partner sends profile URL: `github.com/[username]` |
+| Spam folder | Search inbox for “GitHub” |
+| Pending invite | Settings → Collaborators → **Resend invitation** |
+| Still stuck | Quick screenshare on github.com |
 
 ---
 
-## Part 2 — Who updates what (co-founder role split)
+## Part 2 — Files we work on (this phase)
 
-Both of you are partners. This table splits **files and responsibilities** — not rank. Align on anything in the repo-owner column before editing.
+Both partners work from the same repo. Align on a change before editing locked baseline files.
 
-### Your focus (Collaborator — requirements & spec)
-
-| Area | Files / folders | Your job |
-|------|-----------------|----------|
+| Area | Files / folders | What we do |
+|------|-----------------|------------|
 | **Capability specs** | `docs/capabilities/CAP-*.md` | Intent, success, user stories, open questions, lock status |
 | **Product decisions log** | `_bmad-output/specs/spec-rentalpro/.memlog.md` | Append every decision (via AI tool) |
 | **Market gaps** | `docs/MARKET-GAP-CHECKLIST.md` | Mark items MVP / Phase 2 / Never |
-| **AI product calls** | `docs/AI-MVP-DECISIONS.md` | Resolve TBD items with co-founder, then log |
-| **Constraints / Non-goals / Success** | `_bmad-output/specs/spec-rentalpro/SPEC.md` | Draft sections (AI re-derives from memlog) |
-| **Questions / handoffs** | GitHub **Issues** you create | See Part 2B below |
+| **AI decisions** | `docs/AI-MVP-DECISIONS.md` | Resolve TBD items together, then log |
+| **Spec kernel** | `_bmad-output/specs/spec-rentalpro/SPEC.md` | Draft Constraints / Non-goals / Success (AI re-derives from memlog) |
+| **Vision & business model** | `docs/HANDOFF-TO-CURSOR.md` | Locked baseline — align before changing |
+| **Engineering rules** | `AGENTS.md`, `docs/rules/` | Align before changing |
+| **Handoffs** | GitHub **Issues** and **PRs** | See Part 2B |
 
-### Repo owner focus (edit after alignment)
+Code and architecture folders matter **after** spec and PRD — not the focus right now.
 
-| Area | Files / folders | Repo owner’s job |
-|------|-----------------|------------------|
-| **Vision & business model** | `docs/HANDOFF-TO-CURSOR.md` | Locked baseline — co-founders build on, do not rewrite unilaterally |
-| **Agent / engineering rules** | `AGENTS.md`, `docs/rules/`, `.cursor/rules/` | Engineering conventions |
-| **Merge to main** | Pull requests | Repo owner reviews and merges PRs (for now) |
-| **Infrastructure locks** | CAP-11, stack choices | Already locked — change via partner sync |
-| **Code & architecture** | App code, Prisma, APIs | After spec/PRD phase |
-| **Repo admin** | GitHub Settings, collaborators | Repo owner only |
-
-### Both partners can read everything
-
-When unsure: **open a GitHub Issue** and @mention your co-founder before editing a repo-owner file.
+When unsure: **open a GitHub Issue** and @mention your partner.
 
 ---
 
-## Part 2B — How to reach your co-founder and hand off work
+## Part 2B — How to reach your other partner
 
 Use **GitHub Issues** as your shared inbox. Both partners get email notifications when Issues are created.
 
@@ -259,16 +245,16 @@ Use **GitHub Issues** as your shared inbox. Both partners get email notification
 | You **locked a CAP** and want review | `Review: CAP-4 accounting draft ready to lock` |
 | You are **blocked** | `Blocked: need answer on deposits — MVP or Phase 2?` |
 | You pushed a **branch/PR** | `PR ready: partner/cap-2-updates for review` |
-| Something is **repo-owner scope** | `Repo owner: update HANDOFF with new pricing call` |
+| Something needs **alignment on HANDOFF or engineering files** | `Partner sync: update HANDOFF with new pricing call` |
 
 ### How to create an Issue (in the browser)
 
-1. Go to `https://github.com/bhagatks/rentalpro`
+1. Go to the **rentalpro** repo on GitHub
 2. Click **Issues** tab → green **New issue**
 3. Use this template:
 
 ```markdown
-## What I need from my co-founder
+## What I need from my partner
 [One sentence — e.g. "Align on income multiplier for screening"]
 
 ## Context
@@ -290,27 +276,27 @@ Use **GitHub Issues** as your shared inbox. Both partners get email notification
 ```
 
 4. Click **Submit new issue**
-5. Repo owner gets notified by email and on GitHub
+5. Your partner gets notified by email and on GitHub
 
-### How to @mention your co-founder
+### How to @mention your partner
 
-In the Issue comment box, type `@bhagatks` (or the repo owner’s GitHub username) to notify them directly.
+In the Issue comment box, type `@` plus your partner’s GitHub username to notify them.
 
 ### Your push workflow (keeps `main` clean)
 
-Do **not** push directly to `main` until you and the repo owner agree. Use this flow:
+Use a **branch and Pull Request** for doc changes — review before merging to `main`:
 
 ```
 1. GitHub Desktop → Current branch → New branch
    Name: partner/cap-2-screening  (use descriptive names)
 2. Make doc changes with Cursor / Claude Code
 3. GitHub Desktop → Commit → Push origin
-4. On GitHub.com → "Compare & pull request" banner → Open PR
-5. Open an Issue OR add PR description: "Ready for review — [summary]"
-6. Repo owner merges → you pull latest in GitHub Desktop (Fetch → Pull)
+4. On GitHub.com → "Compare & pull request" → Open PR
+5. @mention your partner: "Ready for review — [summary]"
+6. Partner merges → Fetch → Pull in GitHub Desktop
 ```
 
-**Co-founder creates branch + PR. Repo owner merges.** That is the handoff.
+**Branch → PR → review → merge.** That is the handoff between partners.
 
 ---
 
@@ -326,21 +312,21 @@ GitHub Desktop lets you clone and sync the repo with a visual interface — no c
 2. Download and install for Mac or Windows
 3. Sign in with the **same GitHub account** (personal Gmail)
 4. **File → Clone repository**
-5. Select **rentalpro** from the list (or paste the repo URL your co-founder sends)
+5. Select **rentalpro** from the list (or paste the repo URL your partner sends)
 6. Choose a location (e.g. `Documents/rentalpro`) → **Clone**
 7. Confirm the folder contains `docs/` and `_bmad-output/`
 
-**Alternative:** On the repo page in your browser, click green **Code → Download ZIP**, unzip, and open in Cursor. GitHub Desktop is easier for ongoing sync when the repo owner merges updates.
+**Alternative:** On the repo page in your browser, click green **Code → Download ZIP**, unzip, and open in Cursor. GitHub Desktop is easier when you sync updates after merges.
 
 ### Step 1.2 — Setup checklist
 
 - [ ] GitHub account created with **personal Gmail**
-- [ ] Username sent to repo owner
+- [ ] Username sent to your other partner
 - [ ] Repo invite **accepted**
 - [ ] Project folder on laptop (GitHub Desktop clone or zip)
 - [ ] AI tool installed (Cursor or Claude Code — next sections)
 
-During the first week, focus on reading docs and logging decisions. Your co-founder (repo owner) can walk through branch/PR workflow on your first merge — see Part 2B and Part 1B (section B7).
+During the first week, focus on reading docs and logging decisions. Walk through branch/PR workflow together on the first merge — see Part 2B and Part 1B (section B7).
 
 ---
 
@@ -402,7 +388,7 @@ The center editor shows file contents when you select a doc from the tree.
 **First message to paste:**
 
 ```
-I am the product partner on RentalPro.ai, focused on requirements and spec.
+I am a partner on RentalPro.ai, focused on requirements and spec.
 Read docs/partner/PARTNER-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
 Summarize where we are in the project and recommend my highest-value next step.
 Focus on product requirements, not implementation.
@@ -512,7 +498,7 @@ Same project folder, same prompts as the rest of this guide.
 Paste this as your first message (Desktop, Terminal, or extension):
 
 ```
-I am the product partner on RentalPro.ai, focused on requirements and spec.
+I am a partner on RentalPro.ai, focused on requirements and spec.
 Read docs/partner/PARTNER-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
 Summarize where we are in the project and recommend my highest-value next step.
 Focus on product requirements, not implementation.
@@ -539,9 +525,9 @@ After you approve doc changes in Cursor or Claude Code:
 4. Write a short summary (e.g. “CAP-4: monthly sign-off flow clarified”)
 5. Click **Commit to partner/cap-4-review** → **Push origin**
 6. GitHub.com shows **Compare & pull request** → open PR
-7. Open a GitHub **Issue** or comment on the PR: `@bhagatks ready for review` (or @mention repo owner)
+7. Open a GitHub **Issue** or comment on the PR and @mention your partner: `ready for review`
 
-Repo owner merges. Then **Fetch origin → Pull** in GitHub Desktop to sync.
+Your partner merges. Then **Fetch origin → Pull** in GitHub Desktop to sync.
 
 ---
 
@@ -583,7 +569,7 @@ Work through these at your own pace. The Day 1 list below is a suggested startin
 | `docs/MVP-SPRINT-PLAN.md` | Build order (for context; you are not scheduling sprints yet) |
 | `_bmad-output/specs/spec-rentalpro/SPEC.md` | The one-page “contract” summary |
 
-### Out of scope for this phase (repo owner / engineering)
+### Out of scope for this phase (engineering)
 
 These areas exist in the repo but are not the focus while we finish the spec:
 
@@ -592,9 +578,9 @@ These areas exist in the repo but are not the focus while we finish the spec:
 
 ---
 
-## Part 4 — BMad workflow overview
+## Part 4 — BMad workflow (expanded)
 
-BMad is a **step-by-step order** for building a product. Think of it as a checklist you must complete before coding.
+This section builds on the **BMad intro** above. BMad is the step-by-step order we follow before engineering starts.
 
 ```
 Ideas  →  SPEC  →  PRD  →  Architecture  →  Stories  →  Code
@@ -663,7 +649,7 @@ _bmad-output/            ← Machine contract (agents keep in sync)
 ### The decision loop (both partners use this)
 
 ```
-1. You and co-founder (or your AI tool) discuss a decision
+1. You and your partner (or your AI tool) discuss a decision
 2. Decision gets appended to .memlog.md  ← source of truth
 3. Relevant CAP doc gets updated
 4. SPEC.md gets re-derived from memlog
@@ -714,7 +700,7 @@ Full detail: `docs/HANDOFF-TO-CURSOR.md` and `docs/AI-MVP-DECISIONS.md`.
 3. Log answers via your AI tool (or GitHub issue comments if reading in browser only)
 4. One decision logged = a good day
 
-### Weekly sync with co-founder (30–45 min)
+### Weekly sync with your partner (30–45 min)
 
 Agenda template:
 
@@ -733,7 +719,7 @@ Use these in **Cursor Agent** (`Cmd+I` / `Ctrl+I`) or **Claude Code** (Desktop, 
 ### Orientation
 
 ```
-I am the product partner on RentalPro.ai, focused on requirements and spec.
+I am a partner on RentalPro.ai, focused on requirements and spec.
 Read docs/partner/PARTNER-START-HERE.md and .memlog.md.
 What is the single highest-value thing I should do in the next 30 minutes?
 Focus on product requirements, not implementation.
@@ -742,9 +728,9 @@ Focus on product requirements, not implementation.
 ### Review one capability
 
 ```
-Review docs/capabilities/CAP-[N]-*.md from a product partner perspective.
+Review docs/capabilities/CAP-[N]-*.md.
 Is Intent clear? Is Success testable?
-List open questions I should align on with my co-founder.
+List open questions to align on with my partner.
 Focus on product requirements, not implementation.
 ```
 
@@ -786,7 +772,7 @@ Propose 3–5 measurable signals.
 ### Lock a capability
 
 ```
-CAP-[N] requirements look complete after co-founder review.
+CAP-[N] requirements look complete after partner review.
 Mark the CAP doc status as locked, append to .memlog.md, update SPEC.md.
 List any remaining TBD items that do not block lock.
 ```
@@ -809,7 +795,7 @@ Complete this before your first working session together.
 **Setup (do first):**
 
 - [ ] GitHub account with **personal Gmail**
-- [ ] Username sent to repo owner → invite accepted
+- [ ] Username sent to your other partner → invite accepted
 - [ ] Repo cloned via GitHub Desktop (or reading in browser)
 
 **Read:**
@@ -829,7 +815,7 @@ For **CAP-2** and **CAP-4**, answer:
 4. One thing that should be a **Non-goal** for MVP
 5. One **Constraint** that must never be broken
 
-### Task C — Message your co-founder
+### Task C — Message your partner
 
 A short message:
 
@@ -869,7 +855,7 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 | Do not… | Because… |
 |---------|----------|
-| Skip GitHub account setup | Repo owner cannot invite you without username + Gmail |
+| Skip GitHub account setup | Your partner cannot invite you without username + Gmail |
 | Use a throwaway email | Use **personal Gmail** — invite goes there |
 | Reopen **Why** / business model | Already locked; wastes time |
 | Write requirements without **Success** criteria | Engineers cannot test vibes |
@@ -923,11 +909,11 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 |------|---------|
 | Unfamiliar term | Ask your AI: “Explain [term] in the context of property management SaaS” |
 | Not sure if in scope | Ask: “Is [X] a Constraint, Non-goal, or Capability?” |
-| Need co-founder input | Open a GitHub **Issue** — see Part 2B template |
-| PR ready for review | @mention repo owner on the PR + short summary |
-| Not sure if a file is yours to edit | Check **Part 2**; if repo-owner scope, open Issue first |
-| GitHub invite not received | Check spam; confirm username + Gmail with repo owner |
-| Co-founder unavailable | Open Issue (non-urgent) + note in CAP **Open questions** |
+| Need partner input | Open a GitHub **Issue** — see Part 2B template |
+| PR ready for review | @mention your partner on the PR + short summary |
+| Not sure about editing a file | Check **Part 2** — open an Issue to align first |
+| GitHub invite not received | Check spam; confirm username + Gmail with your partner |
+| Partner unavailable | Open Issue (non-urgent) + note in CAP **Open questions** |
 | Cursor vs Claude Code | Either works — same prompts, same files |
 | Want the full BMad map | Read `docs/BMAD-REFERENCE.md` (optional, denser) |
 
@@ -936,13 +922,13 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 ## Quick reference card (pin this)
 
 ```
-GITHUB  → Personal Gmail → repo owner adds Collaborator (Write) → accept invite
+GITHUB  → Personal Gmail → partner sends invite (Write) → accept
 CLONE   → GitHub Desktop → rentalpro folder
 OPEN    → Cursor or Claude Code Desktop
-READ    → Part 2: co-founder role split (who edits what)
-WORK    → CAP docs, memlog, checklist — your focus area
-HANDOFF → New branch → commit → push → Pull Request → Issue @co-founder
-MERGE   → Repo owner merges PR → you Pull in GitHub Desktop
+READ    → Part 2: files we work on this phase
+WORK    → CAP docs, memlog, checklist
+HANDOFF → New branch → commit → push → Pull Request → @partner
+MERGE   → Partner reviews → merge → Fetch → Pull
 ```
 
 **Tool pick:** Cursor = visual · Claude Code Desktop = if you already use Claude · Same prompts either way.
@@ -951,6 +937,6 @@ MERGE   → Repo owner merges PR → you Pull in GitHub Desktop
 
 ---
 
-*Questions about this guide? Sync with your co-founder, or ask Cursor / Claude Code to update `docs/partner/PARTNER-START-HERE.md` based on your feedback.*
+*Questions about this guide? Sync with your partner, or ask Cursor / Claude Code to update `docs/partner/PARTNER-START-HERE.md` based on your feedback.*
 
-**Repo owner checklist:** [PARTNER-REPO-OWNER-CHECKLIST.md](./PARTNER-REPO-OWNER-CHECKLIST.md)
+**GitHub invite steps:** [PARTNER-GITHUB-SETUP.md](./PARTNER-GITHUB-SETUP.md)

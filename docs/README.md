@@ -4,12 +4,12 @@
 **Audience:** Founders, engineers, partners  
 **Status:** Pre-MVP spec phase
 
-## For co-founders
+## For partners
 
 | Doc | What it is |
 |-----|------------|
-| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Co-founder onboarding — GitHub, roles, Cursor + Claude Code |
-| [PARTNER-REPO-OWNER-CHECKLIST.md](./partner/PARTNER-REPO-OWNER-CHECKLIST.md) | Repo owner co-founder: add Collaborator, merge PRs, role split |
+| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Partner onboarding — GitHub, BMad, Cursor + Claude Code |
+| [PARTNER-GITHUB-SETUP.md](./partner/PARTNER-GITHUB-SETUP.md) | GitHub invite and clone — both partners |
 
 ## Start here
 
