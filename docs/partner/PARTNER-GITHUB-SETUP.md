@@ -22,7 +22,7 @@ Message template:
 
 ## If you created the repo — invite your partner
 
-1. Open the **rentalpro** repository on GitHub
+1. Open [github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro)
 2. **Settings** → **Collaborators**
 3. **Add people** → enter your partner’s GitHub username
 4. Role: **Write** → confirm

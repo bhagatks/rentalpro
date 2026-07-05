@@ -8,6 +8,8 @@ Welcome. This guide walks through account setup, repo access, tools, and how we 
 
 **First step:** Create a GitHub account with your **personal Gmail** (Part 0).
 
+**Repository:** [https://github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro) (private — your partner sends the invite)
+
 ---
 
 ## What you are helping with
