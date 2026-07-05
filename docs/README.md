@@ -8,7 +8,7 @@
 
 | Doc | What it is |
 |-----|------------|
-| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Step-by-step onboarding — no GitHub, Cursor + Claude Code, no coding required |
+| [PARTNER-START-HERE.md](./partner/PARTNER-START-HERE.md) | Partner onboarding — GitHub (personal Gmail), Cursor + Claude Code |
 
 ## Start here
 

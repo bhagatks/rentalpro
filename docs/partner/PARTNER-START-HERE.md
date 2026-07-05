@@ -1,10 +1,9 @@
 # RentalPro.ai — Partner Start Guide
 
 **Audience:** Non-technical partner  
-**Last updated:** 2026-07-05 (Cursor + Claude Code)  
+**Last updated:** 2026-07-05 (GitHub + Cursor + Claude Code)  
 **You do not need to know how to code.**  
-**You do not need GitHub.**  
-**You do not need git, Terminal, or pull requests.**
+**You do need a GitHub account** — create one with your **personal Gmail** (Step 1 below).
 
 This guide walks you from zero to contributing the same way the founder has been working in BMad — through conversation, decisions, and written requirements.
 
@@ -25,71 +24,79 @@ That is BMad. You are the requirements half. The founder + AI tools (Cursor or C
 
 ---
 
-## Part 0 — Before anything else (no GitHub needed)
+## Part 0 — Create your GitHub account (do this first)
 
-You can start **today** without GitHub, without cloning, and without knowing what a repo is.
+GitHub is where the project files live. You need your **own account** so the founder can invite you to the repo.
 
-### What the founder sends you (pick one)
+**Use your personal Gmail.** Do not skip account creation — no Notion-only or zip-only workaround for this project.
 
-| What you get | How you use it | When to move on |
-|--------------|----------------|-----------------|
-| **Notion link** | Read + comment in Notion | When ready for AI tool on laptop |
-| **Google Drive folder** | Read docs, reply in a shared Google Doc | Same |
-| **Zip file of the project** | Unzip to Desktop → open in Cursor or Claude Code | Best path to full BMad workflow |
-| **30-min screenshare** | Founder walks you through reading list | Anytime |
+### Step 0.1 — Sign up
 
-**Ask the founder for:** a Notion link or zip file. That is enough for week one.
+1. Go to [https://github.com/signup](https://github.com/signup)
+2. Enter your **personal Gmail address** (the one you check daily)
+3. Create a password → verify email → complete signup
+4. Pick a **username** (e.g. `johnsmith-pm`) — you will send this to the founder
+5. Skip team/enterprise prompts unless asked — free account is fine
 
-GitHub is optional and can come later. The founder will merge your decisions into the real project files.
+### Step 0.2 — Tell the founder
 
----
+Send a message like:
 
-## Part 1 — Get set up (do this first)
+> GitHub username: `[your-username]`  
+> Email: `[your-personal-gmail@gmail.com]`
 
-### Step 1: Three phases (start where you are)
+The founder will invite you to the **rentalpro** private repo.
 
-```
-Phase A — Read only     →  Notion or Google Drive (no install)
-Phase B — AI on laptop  →  Zip folder + Cursor or Claude Code
-Phase C — Later         →  GitHub access (optional, founder adds when ready)
-```
+### Step 0.3 — Accept the invite
 
-**Start at Phase A.** Do not wait for GitHub.
+1. Check your Gmail inbox (and spam) for an email from GitHub
+2. Subject is usually: “You've been invited to collaborate on …”
+3. Click **View invitation** → **Accept invitation**
+4. You should now see the repo at `github.com/bhagatks/rentalpro` (or similar)
 
----
+### Step 0.4 — Bookmark these GitHub pages
 
-### Step 2: Phase A — Read only (Day 1, zero install)
+| Page | URL | What it is |
+|------|-----|------------|
+| Repo home | `github.com/[org]/rentalpro` | All project files in the browser |
+| This guide | `docs/partner/PARTNER-START-HERE.md` | Click through: docs → partner |
+| Handoff | `docs/HANDOFF-TO-CURSOR.md` | Vision + locked decisions |
 
-The founder shares these files (Notion, Drive, or PDF):
-
-| Read first | Why |
-|------------|-----|
-| This guide (`PARTNER-START-HERE.md`) | How to work |
-| `docs/HANDOFF-TO-CURSOR.md` | Vision + locked decisions |
-| `docs/AI-MVP-DECISIONS.md` | What AI will / will not do in MVP |
-| `docs/capabilities/CAP-2-autonomous-leasing.md` | Example feature spec |
-| `docs/capabilities/CAP-4-autonomous-accounting.md` | Second example |
-
-**Your output:** Write answers in a Google Doc or Notion comments. Send the founder a short summary. That counts as contributing.
+You can **read docs in the browser** on day one even before installing anything else.
 
 ---
 
-### Step 3: Phase B — Get the project folder (no GitHub)
+## Part 1 — Get the project on your laptop
 
-Ask the founder to **zip the project** and send it (email, Drive, Dropbox, AirDrop).
+After GitHub access works, get a local copy for Cursor or Claude Code.
 
-**On your computer:**
+### Step 1.1 — Install GitHub Desktop (recommended — no Terminal)
 
-1. Download the zip file
-2. Double-click to unzip
-3. You should see a folder (often named `rentalpro`) containing `docs/` and `_bmad-output/`
-4. Remember where it lives (e.g. Desktop → `rentalpro`)
+GitHub Desktop is a simple app to download the repo without typing commands.
 
-**You still do not need GitHub.** When you make decisions with Cursor or Claude Code, tell the founder: “I updated the docs locally — please sync.” The founder copies changes into git.
+1. Go to [https://desktop.github.com](https://desktop.github.com)
+2. Download and install for Mac or Windows
+3. Sign in with the **same GitHub account** (personal Gmail)
+4. **File → Clone repository**
+5. Select **rentalpro** from the list (or paste the repo URL the founder sends)
+6. Choose a location (e.g. `Documents/rentalpro`) → **Clone**
+7. You now have a folder on your computer with `docs/` and `_bmad-output/`
+
+**Alternative (browser only, no install):** On the repo page, click green **Code → Download ZIP**, unzip, open in Cursor. Re-download when the founder says there are updates — GitHub Desktop is easier long-term.
+
+### Step 1.2 — Setup checklist
+
+- [ ] GitHub account created with **personal Gmail**
+- [ ] Username sent to founder
+- [ ] Repo invite **accepted**
+- [ ] Project folder on laptop (GitHub Desktop clone or zip)
+- [ ] AI tool installed (Cursor or Claude Code — next sections)
+
+You do **not** need to learn git commands, branches, or pull requests yet. Focus on reading docs and logging decisions; the founder helps with git sync early on.
 
 ---
 
-### Step 4: Pick your AI tool
+### Step 1.3 — Pick your AI tool
 
 The founder uses **Cursor** and/or **Claude Code**. Both read the same project files and follow the same rules (`AGENTS.md`, `docs/rules/`). Pick one — you do not need both.
 
@@ -119,7 +126,7 @@ Cursor is a code editor with AI built in. You will use it like a **smart assista
 
 1. Launch Cursor
 2. **File → Open Folder…**
-3. Select the unzipped `rentalpro` folder (e.g. on your Desktop)
+3. Select your cloned `rentalpro` folder (e.g. `Documents/rentalpro` from GitHub Desktop)
 4. In the left sidebar you should see folders like `docs`, `_bmad-output`
 
 **Tour of the screen (you only need 2 areas):**
@@ -185,21 +192,21 @@ Official docs: [code.claude.com/docs](https://code.claude.com/docs/en/overview)
 
 ### B1. Pick how you will run Claude Code
 
-| Surface | Non-technical friendly? | Needs GitHub? |
-|---------|---------------------------|---------------|
-| **Desktop app** | ⭐ Best | No — open local folder |
-| **Terminal CLI** | Medium | No — open local folder |
-| **Extension inside Cursor** | Good | No |
-| **Web** ([claude.ai/code](https://claude.ai/code)) | Good | Yes — connects to GitHub repos |
+| Surface | Non-technical friendly? | Notes |
+|---------|---------------------------|-------|
+| **Desktop app** | ⭐ Best | Open local clone from GitHub Desktop |
+| **Terminal CLI** | Medium | `cd` into cloned folder, type `claude` |
+| **Extension inside Cursor** | Good | Same folder as Cursor |
+| **Web** ([claude.ai/code](https://claude.ai/code)) | Good | Sign in with GitHub — uses repo directly |
 
-**Without GitHub:** use **Desktop app** or **Terminal** with the unzipped folder.
+**Recommended:** Clone with GitHub Desktop, then open that folder in Claude Code Desktop or Cursor.
 
 ### B2. Install — Desktop app (recommended for you)
 
 1. Download Claude desktop: [claude.ai/download](https://claude.ai/download)
 2. Install and sign in (Claude Pro, Max, Team, or Enterprise)
 3. Open the app → click the **Code** tab
-4. **Open folder** → select the unzipped `rentalpro` folder
+4. **Open folder** → select your cloned `rentalpro` folder (from GitHub Desktop)
 5. Start a session — Claude Code can now see your docs
 
 Paid Claude subscription required for Code features.
@@ -221,11 +228,11 @@ irm https://claude.ai/install.ps1 | iex
 **Then start working:**
 
 ```bash
-cd ~/Desktop/rentalpro
+cd ~/Documents/rentalpro
 claude
 ```
 
-(Change the path to wherever you unzipped the folder.)
+(Change the path to wherever GitHub Desktop cloned the repo.)
 
 First run opens a browser to log in. After that, type plain English at the prompt.
 
@@ -274,15 +281,17 @@ Claude Code **always asks before editing files**. That is good for you.
 
 You do not need to understand the diff line-by-line — ask: “Summarize what you changed in plain English.”
 
-### B7. After you edit files locally (no GitHub)
+### B7. Saving your work back to GitHub
 
-Tell the founder one of these:
+After you approve doc changes in Cursor or Claude Code:
 
-- “I updated CAP-2 and memlog on my machine — can you pull/sync?”
-- Send the changed files back (zip or Drive)
-- Screenshare and walk through what you decided
+1. Open **GitHub Desktop**
+2. You should see changed files listed on the left
+3. Write a short summary (e.g. “CAP-2: locked screening income rule”)
+4. Click **Commit to main** (or ask founder which branch)
+5. Click **Push origin**
 
-The founder handles git. You focus on decisions.
+**Not comfortable pushing yet?** Tell the founder: “I updated files locally — can you review and push?” Early on, that is fine.
 
 ---
 
@@ -420,7 +429,7 @@ Append it to .memlog.md, update the relevant CAP doc, and re-derive SPEC.md.
 
 You never need to edit those files by hand — that is what Cursor Agent or Claude Code is for.
 
-**No GitHub?** Still log decisions the same way in your local folder. Tell the founder to sync when done.
+When ready, commit and push via **GitHub Desktop** so the founder sees your changes in the repo.
 
 ---
 
@@ -450,7 +459,7 @@ Full detail: `docs/HANDOFF-TO-CURSOR.md` and `docs/AI-MVP-DECISIONS.md`.
 
 1. Open one CAP doc
 2. Read **Intent**, **Success**, and **Open questions**
-3. Add comments (Notion/Drive) or tell your AI tool your answers
+3. Log answers via your AI tool (or GitHub issue comments if reading in browser only)
 4. One decision logged = a good day
 
 ### Weekly sync with founder (30–45 min)
@@ -543,14 +552,22 @@ In plain English: what do AppFolio/Buildium do here, and what are we doing diffe
 
 Complete this before the first working session with the founder.
 
-### Task A — Read (45 min)
+### Task A — Setup + read (45 min)
+
+**Setup (do first):**
+
+- [ ] GitHub account with **personal Gmail**
+- [ ] Username sent to founder → invite accepted
+- [ ] Repo cloned via GitHub Desktop (or reading in browser)
+
+**Read:**
 
 - [ ] `docs/HANDOFF-TO-CURSOR.md`
 - [ ] `docs/AI-MVP-DECISIONS.md`
 - [ ] `docs/capabilities/CAP-2-autonomous-leasing.md`
 - [ ] `docs/capabilities/CAP-4-autonomous-accounting.md`
 
-### Task B — Answer (Notion, Google Doc, or AI chat)
+### Task B — Answer (AI chat or GitHub comment)
 
 For **CAP-2** and **CAP-4**, answer:
 
@@ -600,13 +617,14 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 | Do not… | Because… |
 |---------|----------|
-| Wait for GitHub to start reading | Notion/Drive/zip is enough for Day 1 |
+| Skip GitHub account setup | Founder cannot invite you without a username + Gmail |
+| Use a throwaway email | Use **personal Gmail** — invite goes there |
 | Reopen **Why** / business model | Already locked; wastes time |
 | Write requirements without **Success** criteria | Engineers cannot test vibes |
 | Edit `SPEC.md` directly without memlog | Gets overwritten; decision is lost |
 | Jump to “let’s build X” | Spec phase is not finished |
 | Worry about database or APIs | Architecture comes after PRD |
-| Treat Notion/Drive as source of truth | Git + memlog win; mirrors are for reading |
+| Treat copies outside GitHub as source of truth | Repo + memlog win |
 
 ---
 
@@ -614,6 +632,9 @@ When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SP
 
 | Term | Meaning |
 |------|---------|
+| **GitHub** | Where project files live; you need an account (personal Gmail) |
+| **GitHub Desktop** | Simple app to clone and push — no Terminal commands |
+| **Repo** | The project folder on GitHub (rentalpro) |
 | **Cursor** | AI code editor — visual app with chat/Agent panel |
 | **Claude Code** | Anthropic’s AI agent — Desktop app, Terminal, or extension |
 | **Agent mode** | AI can edit project files (use this for BMad updates) |
@@ -651,7 +672,7 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 | Stuck on terminology | Ask your AI: “Explain [term] like I am new to proptech” |
 | Not sure if in scope | Ask: “Is [X] a Constraint, Non-goal, or Capability?” |
 | Founder unavailable | Leave questions in CAP **Open questions** via Agent / Claude Code |
-| No GitHub yet | Read in Notion/Drive; use zip + Cursor/Claude Code for edits |
+| GitHub invite not received | Check spam; confirm username + Gmail with founder |
 | Cursor vs Claude Code | Either works — same prompts, same files |
 | Want the full BMad map | Read `docs/BMAD-REFERENCE.md` (optional, denser) |
 
@@ -660,13 +681,13 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 ## Quick reference card (pin this)
 
 ```
-PHASE A → Read in Notion/Drive (no install)
-PHASE B → Unzip folder → Cursor Agent or Claude Code Desktop
+GITHUB  → Personal Gmail account → accept invite → clone with GitHub Desktop
+OPEN    → Cursor or Claude Code Desktop → open rentalpro folder
 READ    → docs/HANDOFF-TO-CURSOR.md + one CAP doc
 THINK   → Intent clear? Success testable? Open questions?
 DECIDE  → Talk to founder or AI
 LOG     → “Append to .memlog.md, update CAP, re-derive SPEC.md”
-SYNC    → Tell founder to merge your local changes (no GitHub required)
+PUSH    → GitHub Desktop → Commit → Push origin
 ```
 
 **Tool pick:** Cursor = visual · Claude Code Desktop = if you already use Claude · Same prompts either way.
