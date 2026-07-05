@@ -6,6 +6,8 @@
 **Locked:** 2026-07-05  
 **MVP state:** Texas (`TX`)
 
+> **Partner review:** Confirm native CAP-4 trust sub-ledger approach, Texas TREC/trust account setup, and Stripe trust vs operating split with partner before prod — see Runbook **P0**.
+
 > **Companion req doc for M5.** Native trust sub-ledger in CAP-4 — same pattern as AppFolio, Buildium, DoorLoop. Not third-party escrow for MVP.
 
 ---
