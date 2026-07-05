@@ -167,13 +167,13 @@ Details: [PARTNER-GITHUB-SETUP.md](./PARTNER-GITHUB-SETUP.md)
 1. Check your Gmail inbox (and spam) for an email from GitHub
 2. Subject is usually: “You've been invited to collaborate on …”
 3. Click **View invitation** → **Accept invitation**
-4. You should now see the **rentalpro** repo on GitHub
+4. You should now see the repo: [github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro)
 
 ### Step 0.4 — Bookmark these GitHub pages
 
 | Page | URL | What it is |
 |------|-----|------------|
-| Repo home | `github.com/[org]/rentalpro` | All project files in the browser |
+| **Repo home** | [github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro) | All project files in the browser |
 | This guide | `docs/partner/PARTNER-START-HERE.md` | Click through: docs → partner |
 | Handoff | `docs/HANDOFF-TO-CURSOR.md` | Vision + locked decisions |
 
@@ -192,7 +192,7 @@ Both partners get **Write** access. That means read, edit, branch, PR, and merge
 
 ### Invite steps (whoever created the repository)
 
-1. Open the **rentalpro** repo on GitHub
+1. Open [github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro)
 2. Click **Settings** (top tab)
 3. Left sidebar → **Collaborators** (under “Access”)
    - Complete password or 2FA if GitHub asks
@@ -251,7 +251,7 @@ Use **GitHub Issues** as your shared inbox. Both partners get email notification
 
 ### How to create an Issue (in the browser)
 
-1. Go to the **rentalpro** repo on GitHub
+1. Go to [github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro)
 2. Click **Issues** tab → green **New issue**
 3. Use this template:
 
@@ -314,7 +314,7 @@ GitHub Desktop lets you clone and sync the repo with a visual interface — no c
 2. Download and install for Mac or Windows
 3. Sign in with the **same GitHub account** (personal Gmail)
 4. **File → Clone repository**
-5. Select **rentalpro** from the list (or paste the repo URL your partner sends)
+5. Select **rentalpro** from the list — or paste: `https://github.com/bhagatks/rentalpro`
 6. Choose a location (e.g. `Documents/rentalpro`) → **Clone**
 7. Confirm the folder contains `docs/` and `_bmad-output/`
 
