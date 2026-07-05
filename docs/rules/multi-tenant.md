@@ -37,15 +37,18 @@ Every PM company operates in an **isolated tenant workspace**. Data, branding, g
 - Audit records are tenant-scoped and immutable
 - Retention meets tax/legal requirements per tenant jurisdiction (TBD in Constraints phase)
 
-## Schema conventions (Prisma)
+## Schema conventions (Drizzle)
 
-When models are created:
+> ORM decision superseded 2026-07-05 by ARCHITECTURE-SPINE AD-2/AD-11 (`_bmad-output/planning-artifacts/architecture/architecture-rentalpro-2026-07-05/`): Drizzle over Prisma — first-class Postgres RLS support.
 
-- Use `@id @default(cuid())` for string IDs or `@default(autoincrement())` for integers
-- Include `createdAt` and `updatedAt` on all models
-- Define both sides of relations with `@relation`
-- Add `@@index` on `organizationId` and frequently queried fields
-- Use `@@unique` for tenant-scoped uniqueness (e.g., `@@unique([organizationId, slug])`)
+When tables are created:
+
+- IDs are UUIDv7, database-generated
+- Include `created_at` and `updated_at` on all tables
+- Add an index on `organization_id` and frequently queried fields
+- Tenant-scoped uniqueness is composite (e.g. unique on `(organization_id, slug)`)
+- Every tenant-scoped table carries a `FORCE ROW LEVEL SECURITY` policy on `organization_id = current_setting('app.current_org_id')::uuid`
+- App connects as a non-superuser role; the Supabase service-role key never appears in application code paths
 
 ## What NOT to do
 

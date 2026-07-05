@@ -325,6 +325,8 @@ Daily job: for each active lease where rent due and balance > 0
        IF daysPastDue IN org.reminders → send template
        IF paymentPlan pending → wait for CAP-5 approval
   6. Write DecisionTrace: { rulePackVersion, policyVersion, leaseId, outcome }
+     — trace commits atomically with the ledger post (before the notify), never after
+       (erratum 2026-07-05 per ARCHITECTURE-SPINE AD-6)
 ```
 
 ---
