@@ -1,0 +1,6 @@
+---
+description: Multi-tenant SaaS isolation and governance rules
+alwaysApply: true
+---
+
+@docs/rules/multi-tenant.md

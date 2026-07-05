@@ -40,10 +40,20 @@ One page per capability. Fill these **before** coding each module.
 | CAP-11 | Multi-tenant SaaS | [capabilities/CAP-11-multi-tenant-saas.md](./capabilities/CAP-11-multi-tenant-saas.md) |
 | CAP-12 | Smart access (Seam) | [capabilities/CAP-12-smart-access.md](./capabilities/CAP-12-smart-access.md) |
 
+## Agent & engineering rules
+
+| Doc | What it is |
+|-----|------------|
+| [AGENTS.md](../AGENTS.md) | Agent entry point — project identity, locked decisions, conventions |
+| [docs/rules/](./rules/) | Shared rules (BMad, docs, multi-tenant, logging, testing) |
+| [.cursor/rules/](../.cursor/rules/) | Cursor rule files (`@include` docs/rules/) |
+| [EASYSUBMIT-RULES-CAPTURE.md](./EASYSUBMIT-RULES-CAPTURE.md) | Reference archive of EasySubmit's rule pattern (source project) |
+
 ## How docs relate to BMad
 
 ```
 docs/           → Human wiki (you + partner read this)
+docs/rules/     → Shared agent rules (canonical for Cursor + Claude Code)
 _bmad-output/   → Machine contract (agents + PRD consume this)
 ```
 

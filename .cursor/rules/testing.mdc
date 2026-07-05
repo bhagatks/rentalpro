@@ -1,0 +1,6 @@
+---
+description: Unit test coverage and testing conventions
+alwaysApply: true
+---
+
+@docs/rules/testing.md
