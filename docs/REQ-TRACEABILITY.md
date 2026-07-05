@@ -86,7 +86,8 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | Texas §92.019 rules (grace, 10%/12% caps) | Same — Texas RulePack v1 |
 | Agent hard-blocks illegal fees | Same — agent flow + competitive gap |
 | Payment plans with PM approval | Same — Track D D4 |
-| **Attorney review (all TX)** | [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) | Master checklist + sign-off log |
+| **Attorney review before prod** | `DELINQUENCY-RULES-ENGINE.md` Runbook P1 + [`ATTORNEY-REVIEW-CHECKLIST.md`](./ATTORNEY-REVIEW-CHECKLIST.md) §2 |
+| Attorney brief checklist | Same — Runbook P2 |
 
 ### AI agents (Texas MVP)
 
