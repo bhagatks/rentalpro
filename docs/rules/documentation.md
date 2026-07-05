@@ -7,6 +7,9 @@ When you change architecture, entry flows, major modules, or user-visible behavi
 | Change type | Update |
 |---|---|
 | Spec kernel (Why, Capabilities, Constraints) | `_bmad-output/specs/spec-rentalpro/SPEC.md` + `.memlog.md` |
+| Market gap decision (M1–M10) | Companion req doc + `MARKET-GAP-CHECKLIST.md` + `REQ-TRACEABILITY.md` + `.memlog.md` |
+| Time-sensitive MVP tasks / external approvals | `docs/*-RUNBOOK.md` or runbook section in domain doc |
+| Domain rules engine (state compliance, etc.) | `docs/*-RULES-ENGINE.md` + affected CAP docs |
 | Competitive research / market positioning | `_bmad-output/specs/spec-rentalpro/competitive-matrix.md` |
 | Capability deep-dive locked | Matching `docs/capabilities/CAP-N-*.md` + `.memlog.md` |
 | Architecture / major module / entry flow | `docs/ARCHITECTURE.md` (when created) — changelog row with date + one-line summary |

@@ -8,11 +8,12 @@
 
 | Doc | What it is |
 |-----|------------|
+| [**REQ-TRACEABILITY.md**](./REQ-TRACEABILITY.md) | **Chat → req docs map** — where every aligned decision lives |
 | [HANDOFF-TO-CURSOR.md](./HANDOFF-TO-CURSOR.md) | Vision, business model, locked decisions |
 | [BMAD-REFERENCE.md](./BMAD-REFERENCE.md) | How we build (spec → PRD → architecture → code) |
 | [MVP-SPRINT-PLAN.md](./MVP-SPRINT-PLAN.md) | Build order, MVP scope, 24/7 sprint map |
 | [AI-MVP-DECISIONS.md](./AI-MVP-DECISIONS.md) | AI agent decisions — locked + TBD (Texas MVP) |
-| [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | Market parity gaps M1–M10 — open questions |
+| [MARKET-GAP-CHECKLIST.md](./MARKET-GAP-CHECKLIST.md) | Market parity M1–M10 — M1/M2 locked; M3–M10 open |
 | [SYNDICATION-MVP-RUNBOOK.md](./SYNDICATION-MVP-RUNBOOK.md) | **M1 Full MVP** — time-sensitive syndication tasks (single tracker) |
 | [DELINQUENCY-RULES-ENGINE.md](./DELINQUENCY-RULES-ENGINE.md) | **M2** — state rules + PM customization (3-layer model) |
 | [SHARING-OPTIONS.md](./SHARING-OPTIONS.md) | How to share this with your partner (wiki, site, Notion) |
