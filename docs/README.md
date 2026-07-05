@@ -8,7 +8,7 @@
 
 | Doc | What it is |
 |-----|------------|
-| [PRODUCT-DIRECTOR-START-HERE.md](./partner/PRODUCT-DIRECTOR-START-HERE.md) | Step-by-step onboarding — no GitHub or coding required to start |
+| [PRODUCT-DIRECTOR-START-HERE.md](./partner/PRODUCT-DIRECTOR-START-HERE.md) | Step-by-step onboarding — Cursor + Claude Code, no coding required |
 
 ## Start here
 

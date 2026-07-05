@@ -1,7 +1,7 @@
 # RentalPro.ai — Product Director Start Guide
 
 **Audience:** Non-technical product partner  
-**Last updated:** 2026-07-05  
+**Last updated:** 2026-07-05 (Cursor + Claude Code)  
 **You do not need to know how to code.**  
 **You do not need GitHub on day one.**
 
@@ -20,7 +20,7 @@ Your job is to:
 3. **Decide** what is in MVP vs not
 4. **Write down** decisions so engineers and AI agents do not guess later
 
-That is BMad. You are the requirements half. The founder + Cursor handle the file updates.
+That is BMad. You are the requirements half. The founder + AI tools (Cursor or Claude Code) handle the file updates.
 
 ---
 
@@ -35,46 +35,232 @@ Pick **one** path with the founder. You only need one.
 | **A. GitHub access** | You are okay learning “click to read a file” | Invites you to the private repo; you open files in the browser |
 | **B. Notion mirror** | You want a clean wiki with comments | Founder imports `docs/` into Notion and shares a link |
 | **C. Google Drive / PDF export** | You want zero new tools tonight | Founder exports key docs; you read and reply in a shared doc |
-| **D. Cursor on your laptop** | You want the full experience like the founder | Founder helps you install Cursor and open the project folder |
+| **D. AI tool on your laptop** | You want the full experience like the founder | Founder helps you install Cursor or Claude Code and open the project folder |
 
-**Recommended for non-technical partners:** Start with **B (Notion)** or **C (Drive)** to read. Move to **D (Cursor)** once you are comfortable.
+**Recommended for non-technical partners:** Start with **B (Notion)** or **C (Drive)** to read. Move to **D (AI tool)** once you are comfortable.
 
 You do **not** need to understand git, branches, or pull requests to contribute product decisions.
 
 ---
 
-### Step 2: Install Cursor (when you are ready)
+### Step 2: Pick your AI tool
 
-Cursor is a code editor with an AI chat built in. The founder uses it like a **smart PM assistant that also updates documents**.
+The founder uses **Cursor** and/or **Claude Code**. Both read the same project files and follow the same rules (`AGENTS.md`, `docs/rules/`). Pick one — you do not need both.
 
-1. Go to [https://cursor.com](https://cursor.com)
-2. Download Cursor for your computer (Mac or Windows)
-3. Sign up / log in
-4. Ask the founder to either:
-   - **Clone the repo for you** on a call (easiest), or
-   - **Send you the project folder** as a zip (works for reading; founder syncs your decisions back to git)
+| Tool | Best for you if… | Looks like… |
+|------|------------------|-------------|
+| **Cursor** (recommended for non-technical) | You want a normal app with folders on the left and chat on the right | VS Code + AI chat panel |
+| **Claude Code Desktop** | You already pay for Claude (Pro/Max/Team) and want a standalone app | Claude app → **Code** tab |
+| **Claude Code Terminal** | You are comfortable in Terminal / command line | Text window where you type to Claude |
+| **Claude in Cursor** (extension) | You use Cursor but want Claude as the model | Cursor + “Claude Code” extension |
 
-**Open the project in Cursor:**
-
-1. File → Open Folder
-2. Select the `rentalpro` (or similarly named) folder
-3. You should see folders like `docs/` and `_bmad-output/`
+**If unsure:** use **Cursor**. It is the most visual and closest to “chat with your project folder.”
 
 ---
 
-### Step 3: Open your first chat in Cursor
+## Part 1A — Cursor setup (step by step)
 
-1. Press `Cmd+L` (Mac) or `Ctrl+L` (Windows) — or click the chat panel
-2. Make sure **Agent** mode is selected (not just Ask)
-3. Paste this as your first message:
+Cursor is a code editor with AI built in. You will use it like a **smart PM assistant that also updates documents**.
+
+### A1. Install Cursor
+
+1. Go to [https://cursor.com](https://cursor.com)
+2. Download for Mac or Windows
+3. Create an account and sign in
+4. Choose a plan (Free works to start; Pro gives more AI usage)
+
+### A2. Get the project folder on your computer
+
+Ask the founder to do **one** of these on a quick call:
+
+| Method | What happens |
+|--------|--------------|
+| **Founder clones for you** | They open Terminal, run `git clone`, you get a folder named `rentalpro` |
+| **Founder sends a zip** | You unzip it; founder later copies your decisions back to git |
+| **You get GitHub access** | Founder invites you; you click green **Code → Download ZIP** (no git commands needed) |
+
+You should end up with a folder that contains `docs/` and `_bmad-output/`.
+
+### A3. Open the project in Cursor
+
+1. Launch Cursor
+2. **File → Open Folder…**
+3. Select the `rentalpro` folder
+4. In the left sidebar you should see folders like `docs`, `_bmad-output`
+
+**Tour of the screen (you only need 2 areas):**
+
+| Area | Where | What you use it for |
+|------|-------|---------------------|
+| File tree | Left sidebar | Open markdown docs to read |
+| Agent / Chat | Right panel | Talk to AI — **this is your main workspace** |
+
+You can ignore the center “code” area unless you want to read a file there.
+
+### A4. Open your first chat
+
+**Option 1 — Agent mode (best for updating docs):**
+
+1. Press `Cmd+I` (Mac) or `Ctrl+I` (Windows) — or click the Agent icon
+2. Confirm mode is **Agent** (not Ask / Plan)
+3. Paste your first message (see below)
+
+**Option 2 — Chat mode (best for questions only, no file edits):**
+
+1. Press `Cmd+L` (Mac) or `Ctrl+L` (Windows)
+2. Use **Ask** mode if you only want answers, not file changes
+
+**First message to paste:**
 
 ```
 I am the product director partner on RentalPro.ai. I am non-technical.
 Read docs/partner/PRODUCT-DIRECTOR-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
 In plain English: where are we in the project, and what should I do first?
+Do not suggest code — only product requirements.
 ```
 
-The AI will summarize the project and give you a concrete first task.
+### A5. Cursor shortcuts to remember
+
+| Action | Mac | Windows |
+|--------|-----|---------|
+| Open Agent (edits files) | `Cmd+I` | `Ctrl+I` |
+| Open Chat | `Cmd+L` | `Ctrl+L` |
+| Reference a file in chat | Type `@` then filename | Same |
+| Accept a change | Click **Accept** on the diff | Same |
+| Reject a change | Click **Reject** | Same |
+
+**Tip:** When the agent proposes edits, **read the summary first**, then Accept. You are approving product decisions, not code.
+
+### A6. Cursor modes (simple guide)
+
+| Mode | Use when… | Edits files? |
+|------|-----------|--------------|
+| **Agent** | “Log this decision and update the CAP doc” | Yes |
+| **Ask** | “Explain CAP-4 to me in plain English” | No |
+| **Plan** | Big multi-file change — review plan first | After you approve |
+
+For BMad spec work, use **Agent** most of the time.
+
+---
+
+## Part 1B — Claude Code setup (step by step)
+
+Claude Code is Anthropic’s AI coding agent. It reads your project folder, edits markdown files, and asks before changing anything. Same job as Cursor Agent — different app.
+
+Official docs: [code.claude.com/docs](https://code.claude.com/docs/en/overview)
+
+### B1. Pick how you will run Claude Code
+
+| Surface | Non-technical friendly? | Notes |
+|---------|---------------------------|-------|
+| **Desktop app** | ⭐ Best | Download app → Code tab → open folder |
+| **Terminal CLI** | Medium | Type `claude` in Terminal |
+| **Web** ([claude.ai/code](https://claude.ai/code)) | Good | No install; needs GitHub connected |
+| **Extension inside Cursor** | Good | Install “Claude Code” extension in Cursor |
+
+### B2. Install — Desktop app (recommended for you)
+
+1. Download Claude desktop: [claude.ai/download](https://claude.ai/download)
+2. Install and sign in (Claude Pro, Max, Team, or Enterprise)
+3. Open the app → click the **Code** tab
+4. **Open folder** → select the `rentalpro` project folder
+5. Start a session — Claude Code can now see your docs
+
+Paid Claude subscription required for Code features.
+
+### B3. Install — Terminal (if founder prefers CLI)
+
+**Mac / Linux / WSL — one command:**
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+**Windows PowerShell:**
+
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+**Then start working:**
+
+```bash
+cd /path/to/rentalpro
+claude
+```
+
+First run opens a browser to log in. After that, type plain English at the prompt.
+
+**Useful terminal commands (copy-paste):**
+
+| Command | What it does |
+|---------|--------------|
+| `claude` | Start a session in current folder |
+| `claude -c` | Continue your last conversation |
+| `/help` | List commands (type inside Claude Code) |
+| `/clear` | Start fresh conversation |
+| `/exit` | Quit |
+
+**Never used Terminal before?** Ask the founder for a 10-minute screenshare, or use the **Desktop app** instead.
+
+### B4. Install — Claude Code inside Cursor (optional)
+
+If you already use Cursor but want Claude Code specifically:
+
+1. Open Cursor
+2. Extensions (`Cmd+Shift+X` / `Ctrl+Shift+X`)
+3. Search **Claude Code** → Install
+4. Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`) → **Claude Code: Open in New Tab**
+
+Same project folder, same prompts as the rest of this guide.
+
+### B5. Open your first session in Claude Code
+
+Paste this as your first message (Desktop, Terminal, or extension):
+
+```
+I am the product director partner on RentalPro.ai. I am non-technical.
+Read docs/partner/PRODUCT-DIRECTOR-START-HERE.md and docs/HANDOFF-TO-CURSOR.md.
+In plain English: where are we in the project, and what should I do first?
+Do not suggest code — only product requirements.
+```
+
+### B6. Approving changes in Claude Code
+
+Claude Code **always asks before editing files**. That is good for you.
+
+1. Claude shows what it wants to change
+2. Read the summary in plain English
+3. Approve or reject
+4. For spec work, approve updates to `docs/`, `.memlog.md`, and CAP files
+
+You do not need to understand the diff line-by-line — ask: “Summarize what you changed in plain English.”
+
+### B7. Claude Code commands you might use
+
+| Type this | When |
+|-----------|------|
+| `/help` | Forgot what’s available |
+| `/clear` | New topic — fresh chat |
+| `what does this project do?` | Orientation |
+| `commit my doc changes with message: …` | After a session (founder can also handle git) |
+
+---
+
+## Part 1C — Cursor vs Claude Code (same task, both tools)
+
+The **prompts are identical**. Only the button / window differs.
+
+| Task | Cursor | Claude Code |
+|------|--------|-------------|
+| Open project | File → Open Folder | Desktop: Code tab → Open folder · Terminal: `cd rentalpro && claude` |
+| Ask a question (read-only) | `Cmd+L` → **Ask** mode | Type question at prompt |
+| Update a doc | `Cmd+I` → **Agent** mode | Type request; approve edit |
+| Point at one file | `@filename` in chat | “Read docs/capabilities/CAP-2…” or `@` if supported |
+| Start over | New chat / `Cmd+N` | `/clear` |
+| Continue yesterday | Chat history in sidebar | `claude -c` or Desktop session history |
+
+**Both tools read the same rules:** `AGENTS.md` and files in `docs/rules/`. You do not configure anything extra.
 
 ---
 
@@ -177,7 +363,7 @@ _bmad-output/            ← Machine contract (agents keep in sync)
 ### The decision loop (same as the founder uses)
 
 ```
-1. You and founder (or Cursor) discuss a decision
+1. You and founder (or your AI tool) discuss a decision
 2. Decision gets appended to .memlog.md  ← source of truth
 3. Relevant CAP doc gets updated
 4. SPEC.md gets re-derived from memlog
@@ -186,14 +372,14 @@ _bmad-output/            ← Machine contract (agents keep in sync)
 **File:** `_bmad-output/specs/spec-rentalpro/.memlog.md`  
 This is the **decision diary**. Every lock gets a dated line.
 
-**You can say to Cursor:**
+**Say this in Cursor (Agent) or Claude Code:**
 
 ```
 We decided: [your decision in plain English].
 Append it to .memlog.md, update the relevant CAP doc, and re-derive SPEC.md.
 ```
 
-You never need to edit those files by hand — that is what Cursor is for.
+You never need to edit those files by hand — that is what Cursor Agent or Claude Code is for.
 
 ---
 
@@ -223,7 +409,7 @@ Full detail: `docs/HANDOFF-TO-CURSOR.md` and `docs/AI-MVP-DECISIONS.md`.
 
 1. Open one CAP doc
 2. Read **Intent**, **Success**, and **Open questions**
-3. Add comments (Notion/Drive) or tell Cursor your answers
+3. Add comments (Notion/Drive) or tell your AI tool your answers
 4. One decision logged = a good day
 
 ### Weekly sync with founder (30–45 min)
@@ -238,9 +424,9 @@ Agenda template:
 
 ---
 
-## Part 8 — Copy-paste prompts for Cursor
+## Part 8 — Copy-paste prompts (Cursor + Claude Code)
 
-Use these exactly. Replace the `[brackets]`.
+Use these in **Cursor Agent** (`Cmd+I` / `Ctrl+I`) or **Claude Code** (Desktop, Terminal, or extension). Replace the `[brackets]`.
 
 ### Orientation
 
@@ -322,7 +508,7 @@ Complete this before the first working session with the founder.
 - [ ] `docs/capabilities/CAP-2-autonomous-leasing.md`
 - [ ] `docs/capabilities/CAP-4-autonomous-accounting.md`
 
-### Task B — Answer (write in Notion, Google Doc, or Cursor chat)
+### Task B — Answer (write in Notion, Google Doc, or your AI chat)
 
 For **CAP-2** and **CAP-4**, answer:
 
@@ -364,7 +550,7 @@ These are explicitly unresolved. Your product judgment is needed.
 | Audit depth | How much detail for tax/legal? | CAP-10 |
 | Owner experience | Minimum viable owner report for MVP? | CAP-8 |
 
-When you pick an answer, log it via Cursor (memlog → CAP → SPEC).
+When you pick an answer, log it via Cursor or Claude Code (memlog → CAP → SPEC).
 
 ---
 
@@ -385,6 +571,9 @@ When you pick an answer, log it via Cursor (memlog → CAP → SPEC).
 
 | Term | Meaning |
 |------|---------|
+| **Cursor** | AI code editor — visual app with chat/Agent panel |
+| **Claude Code** | Anthropic’s AI agent — Desktop app, Terminal, or extension |
+| **Agent mode** | AI can edit project files (use this for BMad updates) |
 | **APM** | Autonomous Property Management — AI runs ops, humans govern by exception |
 | **BMad** | Our structured workflow: spec → PRD → architecture → code |
 | **CAP** | Capability — one thing the product can do (CAP-1 … CAP-12) |
@@ -416,9 +605,10 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 
 | Need | Do this |
 |------|---------|
-| Stuck on terminology | Ask Cursor: “Explain [term] like I am new to proptech” |
+| Stuck on terminology | Ask your AI: “Explain [term] like I am new to proptech” |
 | Not sure if in scope | Ask: “Is [X] a Constraint, Non-goal, or Capability?” |
-| Founder unavailable | Leave questions in CAP **Open questions** section via Cursor |
+| Founder unavailable | Leave questions in CAP **Open questions** via Agent / Claude Code |
+| Cursor vs Claude Code | Either works — same prompts, same files |
 | Want the full BMad map | Read `docs/BMAD-REFERENCE.md` (optional, denser) |
 
 ---
@@ -428,13 +618,15 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 ```
 READ  →  docs/HANDOFF-TO-CURSOR.md + one CAP doc
 THINK →  Intent clear? Success testable? Open questions?
-DECIDE→  Talk to founder or Cursor
+DECIDE→  Talk to founder or AI (Cursor Agent / Claude Code)
 LOG   →  “Append to .memlog.md, update CAP, re-derive SPEC.md”
 REPEAT→  Next CAP
 ```
+
+**Tool pick:** Cursor = visual · Claude Code Desktop = if you already use Claude · Same prompts either way.
 
 **You are not behind. You are exactly who this phase needs.**
 
 ---
 
-*Questions about this guide? Tell the founder or paste into Cursor: “Update docs/partner/PRODUCT-DIRECTOR-START-HERE.md based on my question: …”*
+*Questions about this guide? Tell the founder or paste into Cursor / Claude Code: “Update docs/partner/PRODUCT-DIRECTOR-START-HERE.md based on my question: …”*
