@@ -9,6 +9,7 @@
 | Doc | What it is |
 |-----|------------|
 | [ARCHITECTURE-OVERVIEW.md](./ARCHITECTURE-OVERVIEW.md) | **Architecture walkthrough** — stack, boundaries, why (spine: `_bmad-output/planning-artifacts/architecture/`) |
+| [architecture/README.md](./architecture/README.md) | **Technical architecture reference** — schema, API, event catalog, flows, integrations |
 | [REQ-TRACEABILITY.md](./REQ-TRACEABILITY.md) | **Chat → req docs map** — where every aligned decision lives |
 | [templates/MARKET-GAP-REQ-TEMPLATE.md](./templates/MARKET-GAP-REQ-TEMPLATE.md) | **9-section template** for full M1–M10 requirements |
 | [HANDOFF-TO-CURSOR.md](./HANDOFF-TO-CURSOR.md) | Vision, business model, locked decisions |

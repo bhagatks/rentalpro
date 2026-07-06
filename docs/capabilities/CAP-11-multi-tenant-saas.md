@@ -143,3 +143,46 @@ Infrastructure CAP — no business escalation. Security events:
 | 2026-07-05 | Tenancy: single PostgreSQL DB + RLS; `organizationId` on every tenant-scoped table |
 | 2026-07-05 | Org provisioning: hybrid (ops provisions PM companies; lab org pre-seeded) |
 | 2026-07-05 | "Powered by RentalPro" shown on MVP portals; `showPoweredBy` toggle for Phase 2 |
+
+## Architecture
+
+CAP-11 is AD-2 promoted to a capability. This section maps the CAP's existing isolation stack (above) to the spine's exact wording and adds the AD-16 storage-tenancy layer, which this doc predates and does not otherwise cover.
+
+**Owning modules**
+
+- `packages/db` — org-scoped Drizzle client factory; the only client used by request and background paths (per AD-2, `core` never opens its own connection).
+- Subdomain middleware (`apps/web`) — resolves `organizationId` from `{slug}.rentalpro.ai`, never from request body/params.
+- `core/*` (all domain modules) — receive `organizationId` from the resolved session/event envelope; code that cannot resolve an org context fails rather than falling back.
+- `packages/api` — tRPC root-router middleware enforces org context on every procedure (AD-3's single client-data-channel rule funnels through here).
+- Supabase Storage policies — org-prefixed private buckets (AD-16), the storage-layer counterpart to Postgres RLS.
+
+**Governing decisions**
+
+| AD | Constrains |
+| --- | --- |
+| AD-2 | Core rule for this CAP: `organizationId` resolved server-side only (Clerk claim / subdomain middleware); org-scoped Drizzle client runs `SET LOCAL app.current_org_id` in the same transaction; all tenant tables carry `FORCE ROW LEVEL SECURITY`; app connects as a **non-superuser app role**; the **Supabase service-role key is banned in application code** (migrations/ops tooling only); background jobs receive `organizationId` in the event envelope (AD-14) and open the same scoped client |
+| AD-16 | Storage tenancy: every stored object lives at `org/{organizationId}/{domain}/{entityId}/{fileId}` in **private buckets only**; Supabase Storage policies mirror RLS on the org prefix; uploads/downloads use **short-lived signed URLs issued only by tRPC procedures** — no public buckets, no direct client-to-storage access |
+| AD-3 | Storage access is one of the few sanctioned non-tRPC surfaces (signed URLs), but issuance itself must go through `packages/api` — no client-originated channel bypasses the router stack |
+| AD-14 | Background/Inngest jobs carry `organizationId` in the mandatory event envelope so async paths open the correctly scoped client and storage prefix |
+| AD-17 | Cross-tenant access attempts and RLS violations are alert-rule triggers from day 1, routed to platform ops |
+
+**Isolation stack extended with storage (AD-16)**
+
+```mermaid
+flowchart TD
+    A[1. Subdomain middleware resolves org] --> B[2. Clerk session carries orgId]
+    B --> C[3. App layer filters all queries by organizationId]
+    C --> D["4. SET LOCAL app.current_org_id before DB queries"]
+    D --> E["5. PostgreSQL RLS enforces row visibility<br/>(non-superuser app role; FORCE ROW LEVEL SECURITY)"]
+    E --> F["6. Storage: org/{organizationId}/{domain}/{entityId}/{fileId}<br/>in private buckets (AD-16)"]
+    F --> G["7. Storage policies mirror RLS on org prefix<br/>no public buckets"]
+    G --> H["8. Signed URLs issued only by tRPC procedures<br/>(short-lived, sanctioned surface per AD-3)"]
+
+    style F fill:#f9f,stroke:#333
+    style G fill:#f9f,stroke:#333
+    style H fill:#f9f,stroke:#333
+```
+
+**Cross-CAP dependencies**
+
+CAP-11's tenancy backstop underlies every table in the schema — there is no tenant-scoped entity in the Capability → Architecture Map that isn't gated by AD-2's RLS layer, and no stored file (CAP-2 leases, CAP-3/M4 photos, M7 attachments, CAP-10 trace-referenced files) that isn't gated by AD-16's storage prefix. CAP-5 governance defaults, CAP-6 module toggles, and CAP-4 Stripe Connect accounts are all `OrganizationSettings`/`Organization` rows scoped by this same isolation stack. CAP-10 depends on CAP-11 for scoping every `AuditEvent`; CAP-11 depends on CAP-10 to log and alert on cross-tenant access attempts and RLS violations (AD-17).

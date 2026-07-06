@@ -82,6 +82,55 @@
 - [ ] Retention: 7 years vs 3 years?
 - [ ] PDF formal audit report — Phase 2?
 
+## Architecture
+
+CAP-10 is AD-6 promoted to a capability: `core/trace` is the sole write path for `DecisionTrace`/`AuditEvent` rows, and every other CAP's side effects route through it.
+
+**Owning modules**
+
+- `core/trace` — the only module permitted to write `DecisionTrace` and `AuditEvent`; exposes `trace.start`, `trace.policy`, `trace.reasoning`, `trace.action`/`trace.escalation`, `trace.override`, `trace.complete`. Side-effect helpers elsewhere in `core` require a `traceId` argument so an untraced call doesn't typecheck.
+- `core/governance` — traces its own verdicts (`ALLOW | ESCALATE | BLOCK`) inside `evaluate()`; callers never re-trace.
+- `core/rules` — traces rules-engine outcomes (StateRulePack version pinned per AD-8) inside its own evaluation, not at call sites.
+- `agents/*` (Inngest functions) — every autonomous workflow step that performs a side effect calls `core/trace` before/atomically with that effect.
+- tRPC routers: `governance` (approval resolution), plus read-only `audit` procedures backing the API surface above (`GET .../audit/traces/:traceId`, `.../audit/events`, `.../audit/export`, platform `security` feed).
+
+**Governing decisions**
+
+| AD | Constrains |
+| --- | --- |
+| AD-6 | Core rule for this CAP: `core/trace` is the only write path; intent event commits atomically with (or before) the side effect, result event shares `traceId`; no UPDATE/DELETE (DB grants); 7-year retention surviving tenant offboarding |
+| AD-2 | Every `AuditEvent`/`DecisionTrace` row is `organizationId`-scoped and RLS-enforced like any tenant table |
+| AD-4 | Inngest workflow steps are the primary producers of intent/result trace pairs — guard+mutate inside one scoped txn, traced as one intent event |
+| AD-5 | Governance verdicts (`ALLOW/ESCALATE/BLOCK`) are traced inside `core/governance.evaluate()`, referenced here as `trace.policy` |
+| AD-8 | Rules-engine outcomes trace the `StateRulePack` version pinned on the event, per the 3-layer evaluation order |
+| AD-13 | Approval resolution (`trace.override`) is recorded by the single-transition `ApprovalRequest` state machine, traced once per resolution |
+| AD-16 | Files referenced by a `DecisionTrace` inherit trace retention (7 years, delete-blocked) — the `file` row, not the trace, is what expires later or never |
+
+**Trace write pattern**
+
+```mermaid
+sequenceDiagram
+    participant Caller as agents/* or core/governance
+    participant Trace as core/trace
+    participant DB as AuditEvent (append-only)
+    participant Ext as External system (Seam/Stripe/etc.)
+
+    Caller->>Trace: trace.start(traceId, trigger, inputs, orgId)
+    Trace->>DB: INSERT intent event (sequence n)
+    Caller->>Trace: trace.policy / trace.reasoning (same traceId)
+    Trace->>DB: INSERT intent event (sequence n+1..)
+    Caller->>Caller: execute side effect (atomic with intent commit)
+    Caller->>Ext: perform external action
+    Ext-->>Caller: outcome (sync or async webhook)
+    Caller->>Trace: trace.action/trace.escalation + trace.complete (result event, same traceId)
+    Trace->>DB: INSERT result event (sequence n+k)
+    Note over DB: UPDATE/DELETE blocked by DB grants, not app logic
+```
+
+**Cross-CAP dependencies**
+
+`core/trace` is called by every governed CAP's agent/governance code — it is the fan-in point of the whole platform: CAP-2 leasing decisions and lease-signing steps, CAP-3/CAP-9 maintenance dispatch and vendor selection, CAP-4 ledger postings and delinquency assessments, CAP-5 every governance verdict, CAP-12 key issuance/revocation, M1 listing syndication, M4 inspection comparisons. CAP-10 in turn depends on CAP-11 for tenant scoping (every trace row is `organizationId`-bound and RLS-protected) and on AD-16's `file` table when a trace references stored documents (e.g., signed leases, inspection photos) — those files inherit the trace's 7-year retention.
+
 ## Decisions log
 
 | Date | Decision |
