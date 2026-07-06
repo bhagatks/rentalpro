@@ -81,8 +81,8 @@
 
 See `docs/MARKET-GAP-CHECKLIST.md`.
 
-- [ ] Security deposit lifecycle — collect, trust sub-ledger, itemize, TX 30-day return (M5) 🔴
-- [ ] Delinquency & late fee auto-assessment (M2) 🔴
+- [x] Security deposit sub-ledger (M5) — [`SECURITY-DEPOSIT-MVP-REQ.md`](../SECURITY-DEPOSIT-MVP-REQ.md) · ⚠️ check with partner
+- [x] Delinquency & late fee auto-assessment (M2) — [`DELINQUENCY-RULES-ENGINE.md`](../DELINQUENCY-RULES-ENGINE.md)
 - [ ] Management fee auto-calculation
 - [ ] Bank reconciliation UI
 - [ ] 1099 generation (M11) — Phase 2 candidate

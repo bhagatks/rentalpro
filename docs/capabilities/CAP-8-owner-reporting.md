@@ -74,7 +74,8 @@
 See `docs/MARKET-GAP-CHECKLIST.md`.
 
 - [ ] Dedicated owner portal login (M8)
-- [ ] Owner approval for capital repairs
+- [x] Owner approval for renewal rent increases above threshold (M3) — [`LEASE-RENEWAL-MVP-REQ.md`](../LEASE-RENEWAL-MVP-REQ.md)
+- [ ] Owner approval for capital repairs (M8)
 - [ ] ACH distribution execution
 
 ## Decisions log
