@@ -1,7 +1,7 @@
 # RentalPro.ai — Partner Start Guide
 
 **For:** Partners  
-**Last updated:** 2026-07-05  
+**Last updated:** 2026-07-06  
 **Focus:** GitHub setup, Cursor + Claude Code, BMad workflow  
 
 Welcome. This guide walks through account setup, repo access, tools, and how we work together on RentalPro. The steps below make the mechanics clear.
@@ -9,6 +9,8 @@ Welcome. This guide walks through account setup, repo access, tools, and how we 
 **First step:** Create a GitHub account with your **personal Gmail** (Part 0).
 
 **Repository:** [https://github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro) (private — your partner sends the invite)
+
+**Install BMad:** Jump to [Installing BMad for RentalPro](#installing-bmad-for-rentalpro) — no separate app; clone the repo and open it in Cursor or Claude Code.
 
 ---
 
@@ -167,14 +169,120 @@ That **is** our BMad installation — committed to git, same for both partners.
 
 ### Setup steps (in order)
 
+| Step | What | Where |
+|------|------|-------|
+| 1 | GitHub account + partner invite | Part 0 |
+| 2 | Clone `rentalpro` | Part 1 |
+| 3 | Install Cursor or Claude Code | Part 1A or 1B |
+| 4 | Open the project folder | Part 1A (A2) or 1B (B2) |
+| 5 | Verify BMad files + test prompt | Below |
+| 6 | First BMad session | “Orient” prompt above |
+
+### Step-by-step: install BMad for RentalPro
+
+Follow these in order. **You do not need Node.js, Python, or `npx bmad-method install`** for this project — BMad is already committed in the repo.
+
+#### Step 1 — GitHub account and repo access
+
+1. Create a GitHub account with your **personal Gmail** → [Part 0](#part-0--create-your-github-account-do-this-first)
+2. Send your GitHub **username** to your other partner
+3. Accept the **Collaborator** invite when it arrives in Gmail
+4. Confirm you can open [github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro) in your browser
+
+**Done when:** You see the repo in GitHub (even if you have not cloned yet).
+
+#### Step 2 — Clone the repository (this installs BMad files)
+
+BMad for RentalPro lives **inside the git repo**. Cloning is the install.
+
+1. Install [GitHub Desktop](https://desktop.github.com) (recommended) → [Part 1, Step 1.1](#step-11--install-github-desktop-recommended)
+2. Sign in with the **same GitHub account** you used for the invite
+3. **File → Clone repository** → select **rentalpro** (or paste `https://github.com/bhagatks/rentalpro`)
+4. Choose a folder location (e.g. `Documents/rentalpro`) → **Clone**
+5. When the clone finishes, open that folder on disk and confirm you see `docs/` and `_bmad-output/`
+
+**Alternative:** On GitHub.com → **Code → Download ZIP**, unzip, and open the folder in Cursor. GitHub Desktop is easier for syncing after your partner merges PRs.
+
+**Done when:** Your laptop has a local `rentalpro` folder with `_bmad-output/specs/spec-rentalpro/SPEC.md`.
+
+#### Step 3 — Install Cursor or Claude Code
+
+Pick **one** primary tool (both work with the same prompts):
+
+| Tool | Install guide |
+|------|---------------|
+| **Cursor** (recommended) | [Part 1A — A1](#a1-install-cursor) |
+| **Claude Code Desktop** | [Part 1B — B2](#b2-install--desktop-app-recommended-starting-point) |
+| **Claude Code Terminal** (optional) | [Part 1B — B3](#b3-install--terminal-optional) |
+
+**Done when:** The app is installed and you can sign in.
+
+#### Step 4 — Open the `rentalpro` folder in your AI tool
+
+Opening the **project root** (not a parent folder) loads BMad rules automatically.
+
+**Cursor:**
+
+1. **File → Open Folder…**
+2. Select your cloned `rentalpro` folder (e.g. `Documents/rentalpro`)
+3. Left sidebar should show `docs`, `_bmad-output`, `AGENTS.md`, `.cursor`
+
+**Claude Code Desktop:**
+
+1. Open the app → **Code** tab
+2. **Open folder** → select the same `rentalpro` folder
+
+**Claude Code Terminal:**
+
+```bash
+cd ~/Documents/rentalpro   # use your actual clone path
+claude
 ```
-1. GitHub account + partner invite     →  Part 0
-2. Clone rentalpro (GitHub Desktop)    →  Part 1
-3. Install Cursor or Claude Code       →  Part 1A or 1B
-4. File → Open Folder → rentalpro      →  same parts
-5. Verify checklist below              →  this section
-6. Paste “Orient” prompt from above    →  first BMad session
+
+**Done when:** The file tree shows `_bmad-output/specs/spec-rentalpro/`.
+
+#### Step 5 — Confirm BMad files are present
+
+In your file tree (or Finder / Explorer), verify these paths exist:
+
+| Path | What it is |
+|------|------------|
+| `_bmad-output/specs/spec-rentalpro/SPEC.md` | Spec kernel (five boxes) |
+| `_bmad-output/specs/spec-rentalpro/.memlog.md` | Decision log — append here first |
+| `docs/rules/bmad-spec.md` | BMad workflow rules for this project |
+| `docs/BMAD-REFERENCE.md` | Full BMad reference (optional deep read) |
+| `AGENTS.md` | Rules Cursor / Claude Code read automatically |
+| `.cursor/rules/` | Cursor rule files (load when folder is open) |
+
+If any path is missing, you may have cloned the wrong repo or an old zip — **Fetch → Pull** in GitHub Desktop or re-clone from [github.com/bhagatks/rentalpro](https://github.com/bhagatks/rentalpro).
+
+**Done when:** All six paths exist locally.
+
+#### Step 6 — Run your first BMad session (verification)
+
+1. Open **Agent** mode in Cursor (`Cmd+I` / `Ctrl+I`) or start a Claude Code session
+2. Confirm the session root is the **rentalpro** folder (not your home directory)
+3. Paste the **Orient** prompt from the [BMad intro](#commands-to-use-in-cursor-or-claude-code-copy-paste) section (or the test prompt below)
+4. Read the AI’s summary — it should mention **bmad-spec**, **CAPs**, and/or **Constraints**
+
+**Test prompt:**
+
 ```
+Read _bmad-output/specs/spec-rentalpro/.memlog.md and SPEC.md.
+Where are we in BMad spec phase? What should I focus on today?
+```
+
+**Done when:** The AI orients you to the spec phase without you explaining the project from scratch.
+
+#### Step 7 — You are ready for daily BMad work
+
+Use the decision loop from the [BMad intro](#the-one-loop-you-will-repeat-daily):
+
+```
+Read CAP doc  →  Discuss / decide  →  Log in memlog  →  Update CAP  →  Re-derive SPEC  →  PR for review
+```
+
+Save changes on a **partner branch** and open a PR — see [Part 2B](#part-2b--how-to-reach-your-other-partner).
 
 ### Verify BMad is working
 
@@ -196,7 +304,14 @@ If the AI summarizes the spec phase and mentions CAPs or Constraints, **BMad is 
 
 ### Do not run (unless your partner asks)
 
-You may see **`npx bmad-method install`** online — that is the upstream [BMad Method](https://github.com/bmad-code-org/BMAD-METHOD) installer. **RentalPro does not use it.** Our BMad setup is already in this repo. Running the global installer can add duplicate config and confuse the project.
+You may see **`npx bmad-method install`** in upstream docs — that is the official [BMad Method](https://github.com/bmad-code-org/BMAD-METHOD) installer for **new projects**. **RentalPro does not use it.** Our BMad setup is already in this repo (`_bmad-output/`, `docs/rules/bmad-spec.md`, `AGENTS.md`, `.cursor/rules/`). Running the global installer can add duplicate `_bmad/` folders and confuse the project.
+
+| Upstream install | RentalPro install |
+|------------------|-------------------|
+| `npx bmad-method install` in terminal | Clone `rentalpro` from GitHub |
+| Requires Node.js v20+ | No Node.js required |
+| Creates `_bmad/` and IDE rules | Files already in repo |
+| For greenfield projects | For this partner workflow |
 
 If unsure, ask your partner before running any install command in the project folder.
 
@@ -872,6 +987,8 @@ Complete this before your first working session together.
 - [ ] GitHub account with **personal Gmail**
 - [ ] Username sent to your other partner → invite accepted
 - [ ] Repo cloned via GitHub Desktop (or reading in browser)
+- [ ] Cursor or Claude Code installed → `rentalpro` folder opened
+- [ ] BMad verified — `SPEC.md` + `.memlog.md` open; Orient prompt works (see [Installing BMad](#installing-bmad-for-rentalpro))
 
 **Read:**
 
@@ -998,8 +1115,9 @@ Then the project moves to **PRD** (more detailed user stories). You will still l
 
 ```
 GITHUB  → Personal Gmail → partner sends invite (Write) → accept
-CLONE   → GitHub Desktop → rentalpro folder
-OPEN    → Cursor or Claude Code Desktop
+CLONE   → GitHub Desktop → rentalpro folder (= BMad install)
+OPEN    → Cursor or Claude Code Desktop → Open Folder → rentalpro
+VERIFY  → SPEC.md + .memlog.md exist → paste Orient prompt
 READ    → Part 2: files we work on this phase
 WORK    → CAP docs, memlog, checklist
 HANDOFF → New branch → commit → push → Pull Request → @partner
