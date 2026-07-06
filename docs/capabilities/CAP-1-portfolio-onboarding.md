@@ -15,7 +15,7 @@
 | Actor | Story |
 |-------|-------|
 | PM admin | I import properties/units via CSV or manual entry. |
-| PM admin | I attach owners to properties and set management fee %. |
+| PM admin | I attach owners to properties; management fee is locked at 7%. |
 | PM admin | I import active leases with tenant contact info. |
 | PM admin | I import vendor list with trade categories. |
 | PM staff | I see only my org's portfolio after import. |
@@ -51,7 +51,7 @@
 |--------|------------|
 | `Property` | organizationId, name, address, ownerId, builtYear, floodplainFlag |
 | `Unit` | organizationId, propertyId, unitNumber, rent, status |
-| `Owner` | organizationId, name, email, portalUserId |
+| `Owner` | organizationId, name, email, portalUserId, managementFeePercent=7 |
 | `Lease` | organizationId, unitId, tenantId, startDate, endDate, rent, status |
 | `ImportJob` | organizationId, type, status, errorLog JSON |
 
@@ -141,4 +141,5 @@ sequenceDiagram
 
 | Date | Decision |
 |------|----------|
+| 2026-07-06 | Management fee locked at 7% (no per-property override); baked into Owner entity |
 | 2026-07-05 | Draft micro-spec; Texas property fields required (floodplain, builtYear for lease addenda) |
