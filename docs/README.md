@@ -37,6 +37,27 @@
 | **Competitive matrix** | `_bmad-output/specs/spec-rentalpro/competitive-matrix.md` |
 | **Decision log** | `_bmad-output/specs/spec-rentalpro/.memlog.md` |
 
+## P0: Pilot Plan — Risk Mitigation (LOCKED 2026-07-06)
+
+**Goal:** Validate 5 biggest product assumptions early, low cost, before full MVP build.
+
+| Doc | What it is |
+|-----|------------|
+| [**PILOT-P0-ASSUMPTIONS-VALIDATION.md**](./PILOT-P0-ASSUMPTIONS-VALIDATION.md) | **6-week pilot plan.** Top 5 assumptions (ranked by risk), validation strategy per assumption, success/go-no-go criteria, resource footprint (~6 dev-weeks), pilot partner profile, contingency plans. Primary gate: **≥4 of 5 assumptions validated → proceed to MVP build.** |
+
+**At a glance:**
+- **Assumption #1:** PM companies will adopt autonomous workflows (test: week 5, ≥70% approval rate)
+- **Assumption #2:** Fair-housing/FCRA compliance baked into AI (test: week 3–6, zero violations audit)
+- **Assumption #3:** 15 hrs/week time savings is real (test: week 1–6, PM self-report ≥8 hrs/week freed)
+- **Assumption #4:** Multi-tenant architecture holds (test: week 1, RLS isolation verified)
+- **Assumption #5:** Residents adopt self-serve portal (test: week 2–6, ≥50% adoption)
+
+**Scope:** CAP-1 (onboarding) + CAP-3 (maintenance autonomy) + CAP-4 (accounting) + CAP-7 (resident portal) + CAP-11 (multi-tenant isolation)  
+**Partner:** Texas PM company, 10–50 units  
+**Timeline:** 6 weeks; decision gate week 6
+
+---
+
 ## Capability deep-dives (micro-level)
 
 One page per capability. **Gate:** sections 1–3 and 7 filled before coding.

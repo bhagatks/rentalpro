@@ -3,12 +3,15 @@ id: SPEC-rentalpro
 companions:
   - competitive-matrix.md
   - ../../../docs/AI-MVP-DECISIONS.md
+  - ../../../docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md
 sources:
   - ../../docs/HANDOFF-TO-CURSOR.md
   - ../../docs/AI-MVP-DECISIONS.md
 ---
 
 > **Canonical contract.** This SPEC and the files in `companions:` are the complete, preservation-validated contract for what to build, test, and validate.
+>
+> **MVP risk mitigation:** See [`PILOT-P0-ASSUMPTIONS-VALIDATION.md`](../../../docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md) for the 6-week pilot plan that validates the 5 biggest assumptions before full MVP build.
 
 # RentalPro.ai — Autonomous Property Management Platform
 
