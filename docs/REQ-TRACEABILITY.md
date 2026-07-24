@@ -130,6 +130,7 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 | M8–M10 picks | Continue guided walkthrough → doc per M2/M1 pattern |
 | Screening criteria + industry thesis | `resume screening` → update `AI-MVP-DECISIONS.md` |
 | CAP-1–10, 12 micro-spec locks | `lock CAP-N` → promote draft to locked |
+| Native mobile (Phase 2 Non-goal) | Partner discussion → [`MOBILE-APP-PHASE2-GAP-DISCUSSION.md`](./MOBILE-APP-PHASE2-GAP-DISCUSSION.md); do not reopen Non-goal until locked |
 | bmad-prd | After M1–M10 + CAP locks |
 
 ---

@@ -28,6 +28,7 @@
 | [ATTORNEY-REVIEW-CHECKLIST.md](./ATTORNEY-REVIEW-CHECKLIST.md) | **Master Texas attorney review** — all M-areas; **Mandatory vs Optional** tags + sign-off log |
 | [UNIFIED-COMMS-HUB-MVP-REQ.md](./UNIFIED-COMMS-HUB-MVP-REQ.md) | **M7** — unified inbox, SMS/email/chat, bulk emergency |
 | [SHARING-OPTIONS.md](./SHARING-OPTIONS.md) | How to share this with your partner (wiki, site, Notion) |
+| [**MOBILE-APP-PHASE2-GAP-DISCUSSION.md**](./MOBILE-APP-PHASE2-GAP-DISCUSSION.md) | **Mobile (Phase 2)** — existing design inventory + gaps to discuss before native apps |
 
 ## Spec & research (canonical)
 
