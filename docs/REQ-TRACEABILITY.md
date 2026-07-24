@@ -1,6 +1,6 @@
 # Requirements Traceability — Chat → Docs
 
-**Last updated:** 2026-07-05  
+**Last updated:** 2026-07-24  
 **Purpose:** Every aligned decision in spec sessions is written to requirement docs — not left in chat. This index shows **where to find what**.
 
 ---

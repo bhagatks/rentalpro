@@ -11,7 +11,8 @@
 3. **M2:** [`docs/DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) — **P1 attorney review = prod blocker**  
 4. **M7:** [`docs/UNIFIED-COMMS-HUB-MVP-REQ.md`](./UNIFIED-COMMS-HUB-MVP-REQ.md) — expand CAP-7 unified inbox  
 5. Continue **M8–M10** in [`MARKET-GAP-CHECKLIST.md`](./MARKET-GAP-CHECKLIST.md)  
-6. Lock remaining CAP micro-specs → **bmad-prd**
+6. Lock remaining CAP micro-specs → **bmad-prd**  
+7. **Mobile (Phase 2):** [`MOBILE-APP-PHASE2-GAP-DISCUSSION.md`](./MOBILE-APP-PHASE2-GAP-DISCUSSION.md) — inventory + gaps to discuss (native apps remain Non-goal for MVP)
 
 **Stack direction (not locked in spec):** Vercel + Supabase + Clerk
 
