@@ -28,8 +28,8 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 *Draft — 12 CAP micro-specs in `docs/capabilities/` (CAP-11 locked; others draft).*
 
 - **CAP-1** *(draft — `docs/capabilities/CAP-1-portfolio-onboarding.md`)*
-  - **intent:** A PM company can onboard a new client portfolio (properties, units, owners, tenants, vendors) into an isolated tenant workspace with imported historical records.
-  - **success:** A PM admin uploads a 50-unit portfolio and sees all units, active leases, and vendor records accessible in their branded workspace within one business day of import completion.
+  - **intent:** A PM company can onboard a new client portfolio (properties, units, owners, tenants, vendors) into an isolated tenant workspace with imported historical records; owner management fee is fixed at **7%**.
+  - **success:** A PM admin uploads a 50-unit portfolio and sees all units, active leases, and vendor records accessible in their branded workspace within one business day of import completion; each Owner carries `managementFeePercent=7`.
 
 - **CAP-2**
   - **intent:** The system autonomously executes the lead-to-lease lifecycle—pre-qualification, identity verification, lease execution, first-payment confirmation, and digital key issuance—without human intervention on the Professional plan.
@@ -159,8 +159,9 @@ Tiered autonomy addresses market spectrum and compliance: Basic plan ($29/mo) ma
 | M9 | Open API & webhooks (all tiers) | 🟡 | Constraint or CAP-14 or Phase 2 · **TBD** |
 | M10 | Document vault (leases, COIs, notices per unit) | 🟡 | CAP-2 partial; general vault · **TBD** |
 
-- New CAPs (13–15) vs expand existing CAPs for market gaps? — **TBD**
-- Are security deposits handled natively (CAP-4 sub-ledger) or third party? — **TBD** (M5)
+- New CAPs (13–15) vs expand existing CAPs for market gaps? — **TBD** (M8–M10 still open)
+- ~~Are security deposits handled natively (CAP-4 sub-ledger) or third party?~~ → **Resolved (M5):** Native CAP-4 deposit trust sub-ledger; third-party escrow Phase 2 option.
+- ~~CAP-1 management fee model?~~ → **Resolved:** Locked at **7%** on Owner (`managementFeePercent=7`); no per-property override.
 - ~~Phase 2 non-goals for M11/M12~~ → **Resolved:** M11 (1099), M12 (tours) locked as Non-goals above.
 - ~~Does CAP-2 include AI-generated lease documents?~~ → **Resolved:** AI fills PM template + platform Texas starter; PM reviews before e-sign.
 - ~~Does CAP-3 include full vendor management end-to-end?~~ → **Resolved:** Full maintenance lifecycle for MVP.

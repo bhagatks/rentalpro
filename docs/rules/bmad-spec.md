@@ -6,29 +6,31 @@ RentalPro is in **bmad-spec guided mode**. Follow this workflow before writing a
 
 ```
 1. Ideation ✅
-2. bmad-product-brief (skipped)
-3. bmad-spec (GUIDED MODE) ← CURRENT
+2. bmad-product-brief ✅ draft north star (`briefs/brief-rentalpro-2026-07-04/brief.md`)
+3. bmad-spec (GUIDED MODE) ← KERNEL LOCKED; CAP MICRO-SPECS + M8–M10 REMAIN
    - Why: ✅ Locked
    - Capabilities: 🔄 Draft (12 CAP micro-specs; CAP-11 locked)
    - Constraints: ✅ Locked (2026-07-05)
    - Non-goals: ✅ Locked (2026-07-05)
    - Success signal: ✅ Locked (2026-07-05)
-4. bmad-prd (next)
-5. bmad-architecture (then)
-6. bmad-create-epics-and-stories (then)
-7. bmad-dev-story (then)
-8. Ship
+   - P0 pilot plan: ✅ Locked (`docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md`)
+4. P0 pilot go/no-go
+5. bmad-prd (next)
+6. bmad-architecture (spine drafted — refine as needed)
+7. bmad-create-epics-and-stories (then)
+8. bmad-dev-story (then)
+9. Ship
 ```
 
 ## Five-field kernel (SPEC.md)
 
 | Field | Status | Rule |
 |---|---|---|
-| **Why** | Locked | Force, target, lever, escalation model — do not re-litigate |
-| **Capabilities** | Draft | CAP-N with intent + success criterion each; CAP-11 locked |
+| **Why** | Locked | Force, target, lever, escalation model — do not re-litigate. Narrative north star: product brief |
+| **Capabilities** | Draft | CAP-N with intent + success criterion each; CAP-11 locked; CAP-1 fee = 7% |
 | **Constraints** | Locked | Must bend design; if it doesn't rule anything out, it's decoration |
 | **Non-goals** | Locked | Explicit out-of-scope stops scope creep |
-| **Success signal** | Locked | Concrete, testable signal APM is working |
+| **Success signal** | Locked | Concrete, testable signal APM is working; P0 pilot validates assumptions first |
 
 ## Capability format
 

@@ -1,8 +1,8 @@
 # RentalPro.ai — Partner Knowledge Base
 
-**Last updated:** 2026-07-05  
+**Last updated:** 2026-07-24  
 **Audience:** Founders, engineers, partners  
-**Status:** Pre-MVP spec phase
+**Status:** Pre-MVP spec phase — P0 pilot gate before full build
 
 ## For partners
 
@@ -15,6 +15,7 @@
 
 | Doc | What it is |
 |-----|------------|
+| [**Product brief (north star)**](../_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md) | Vision, problem, success, P0 gate — human-readable north star |
 | [ARCHITECTURE-OVERVIEW.md](./ARCHITECTURE-OVERVIEW.md) | **Architecture walkthrough** — stack, boundaries, why (spine: `_bmad-output/planning-artifacts/architecture/`) |
 | [architecture/README.md](./architecture/README.md) | **Technical architecture reference** — schema, API, event catalog, flows, integrations |
 | [REQ-TRACEABILITY.md](./REQ-TRACEABILITY.md) | **Chat → req docs map** — where every aligned decision lives |

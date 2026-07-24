@@ -75,7 +75,7 @@
 
 - [ ] Plaid vs Stripe-only for MVP?
 - [ ] Texas TREC trust account rules (2-day deposit)?
-- [ ] Security deposit sub-ledger (M5)?
+- [x] Security deposit sub-ledger (M5) — resolved native CAP-4
 
 ## Market parity sub-features (TBD)
 
@@ -83,7 +83,7 @@ See `docs/MARKET-GAP-CHECKLIST.md`.
 
 - [x] Security deposit sub-ledger (M5) — [`SECURITY-DEPOSIT-MVP-REQ.md`](../SECURITY-DEPOSIT-MVP-REQ.md) · ⚠️ check with partner
 - [x] Delinquency & late fee auto-assessment (M2) — [`DELINQUENCY-RULES-ENGINE.md`](../DELINQUENCY-RULES-ENGINE.md)
-- [ ] Management fee auto-calculation
+- [x] Management fee auto-calculation — CAP-1 rate locked at **7%**; CAP-4 posts from `Owner.managementFeePercent`
 - [ ] Bank reconciliation UI
 - [ ] 1099 generation (M11) — Phase 2 candidate
 

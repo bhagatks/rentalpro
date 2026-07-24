@@ -21,7 +21,8 @@ The following files in `docs/rules/` are the single source of truth — both Cla
 - **Brand:** RentalPro.ai
 - **Mission:** Autonomous Property Management (APM) — AI-native platform that replaces the human property manager.
 - **Product surfaces:** B2B SaaS multi-tenant dashboard + resident/owner portals + autonomous agent workflows.
-- **Phase:** bmad-spec guided mode — kernel complete except CAP micro-spec locks; next: bmad-prd
+- **Phase:** bmad-spec guided mode — kernel complete except CAP micro-spec locks; P0 pilot gate before full MVP; next: finish M8–M10 / CAP locks → pilot → bmad-prd
+- **North star brief:** `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md`
 
 ---
 
@@ -74,6 +75,7 @@ _bmad-output/planning-artifacts/     Briefs, PRDs, architecture (future)
 - AI categorizes 100% of transactions autonomously
 - Flagged as "Pending Review" — owner/accountant signs off monthly before distributions
 - Double-entry ledger; every transaction via API (Plaid/Stripe)
+- Management fee: **7%** (CAP-1 locked on Owner; CAP-4 posts from that rate)
 
 ### Compliance
 
@@ -150,7 +152,9 @@ After any meaningful change:
 
 | What | Where |
 |---|---|
+| North star (product brief) | `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md` |
 | Vision + locked decisions | `docs/HANDOFF-TO-CURSOR.md` |
+| P0 pilot gate | `docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md` |
 | BMad workflow guide | `docs/BMAD-REFERENCE.md` |
 | Spec kernel | `_bmad-output/specs/spec-rentalpro/SPEC.md` |
 | Decision log | `_bmad-output/specs/spec-rentalpro/.memlog.md` |

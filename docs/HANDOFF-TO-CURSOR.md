@@ -1,8 +1,9 @@
 # RentalPro.ai: Handoff to Cursor
 
-**Last updated:** 2026-07-05 (M1–M7 locked; M8–M10 open)  
-**Status:** Walking M1–M10 — M1–M5, M7 locked; M6 non-goal  
-**Next session:** Continue M8–M10 → lock remaining CAPs → bmad-prd
+**Last updated:** 2026-07-24 (north star brief synced; P0 pilot + M1–M7 reflected)  
+**Status:** Kernel locked; P0 pilot gate before full MVP; M1–M5, M7 locked; M6 non-goal; M8–M10 open  
+**Next session:** Continue M8–M10 → lock remaining CAP micro-specs → run/complete P0 pilot → bmad-prd  
+**North star brief:** [`_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md`](../_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md)
 
 ## Pick up here
 
@@ -132,20 +133,26 @@ Tenant uploads video of issue → AI diagnoses problem
 - **Why:** Locked (force, target, lever, escalation model)
 - **Competitive research:** 17 platforms in `competitive-matrix.md`
 - **Capabilities kernel:** 12 CAPs drafted in `SPEC.md`
-- **Constraints:** Locked (10 non-negotiables — see SPEC.md)
+- **Constraints:** Locked (9 non-negotiables — see SPEC.md; Constraint #10 parity floor removed)
 - **Non-goals:** Locked (Phase 2 out-of-scope table — see SPEC.md)
 - **Success signal:** Locked (14-day APM validation criteria — see SPEC.md)
-- **Market gaps:** M1–M10 **open questions**; M11–M12 locked Phase 2 non-goals
+- **P0 pilot plan:** Locked — `docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md` (validate 5 assumptions before full MVP)
+- **Market gaps:** M1–M5, M7 locked MVP; M6 non-goal; M8–M10 open; M11–M12 Phase 2 non-goals
+- **CAP-1 fee:** Management fee locked at **7%** (no per-property override)
 - **CAP-11 micro-spec:** Locked (`docs/capabilities/CAP-11-multi-tenant-saas.md`)
 - **AI MVP decisions (partial):** Locked + TBD in `docs/AI-MVP-DECISIONS.md` (screening parked)
+- **Product brief (north star):** Populated draft from locked kernel + P0
 
 ### 🔄 IN PROGRESS
 - **Capabilities:** CAP-1–10, CAP-12 micro-specs draft — need review/lock
 - **AI agents:** Texas leasing/maintenance decisions locked; screening TBD
+- **P0 pilot:** Plan locked; partner recruit + execution pending
 
 ### ⏳ PENDING
-- **bmad-prd:** Expand locked spec into detailed requirements (next phase)
+- **M8–M10:** Owner portal UX, open API/webhooks, document vault
 - **CAP micro-spec locks:** Review drafts against market gap assignments
+- **P0 go/no-go:** ≥4 of 5 assumptions validated → full MVP build
+- **bmad-prd:** Expand locked spec into detailed requirements (after CAP locks / pilot gate)
 
 ### 📁 ARTIFACTS
 - **Spec workspace:** `_bmad-output/specs/spec-rentalpro/`
@@ -153,73 +160,22 @@ Tenant uploads video of issue → AI diagnoses problem
   - `competitive-matrix.md`
   - `.memlog.md` (decision log)
 - **Partner wiki:** `docs/`
+  - `PILOT-P0-ASSUMPTIONS-VALIDATION.md` — P0 gate
   - `AI-MVP-DECISIONS.md` — AI locked + TBD
   - `capabilities/CAP-11-multi-tenant-saas.md` — locked
-- **Brief workspace:** `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/`
+- **Brief (north star):** `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md`
 - **Reference:** `docs/BMAD-REFERENCE.md` (BMad keyword guide)
 
 ---
 
 ## Next Steps (For Cursor)
 
-### 1. Competitive Research
-Research these 14 property management platforms:
-1. AppFolio
-2. OnQ PM
-3. Buildium
-4. Yardi
-5. DoorLoop
-6. TenantCloud
-7. Rentec Direct
-8. RentRedi
-9. Avail
-10. Innago
-11. RealPage
-12. Entrata
-13. Rent Manager
-14. TurboTenant
-15. MRI Software
-16. Belong Home
-17. Latchel
+1. **Pick up here** — see top of this file (M8–M10, CAP micro-spec locks, P0 pilot).
+2. **North star** — product brief at `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md` (draft; partner review welcome).
+3. **P0** — recruit Texas 10–50 unit pilot partner; execute `docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md`.
+4. **Then** — bmad-prd after CAP locks / pilot go-no-go. Architecture spine already exists under `_bmad-output/planning-artifacts/architecture/`.
 
-**For Each, Document:**
-- Core features (leasing, maintenance, accounting)
-- Architecture patterns (how they handle workflows)
-- Gaps/weaknesses (what they miss)
-- Pricing model
-- AI/automation capabilities (or lack thereof)
-
-**Deliverable:** Competitive matrix showing:
-- Feature comparison
-- Architectural approach
-- Gaps RentalPro can exploit
-- Pricing/business model breakdown
-
-### 2. Finalize Capabilities
-Use competitive findings to define:
-- **CAP-1 through CAP-N:** Each capability with intent + success criterion
-- Organize by domain: Leasing, Maintenance, Accounting, Portals, Infrastructure
-
-### 3. Lock Constraints
-Non-negotiables that bend design:
-- Multi-tenancy from Day 1
-- Accounting accuracy (tax-ready, audit-ready)
-- FHA compliance (AI screening logic must not discriminate)
-- Data isolation per organization (SaaS security)
-- Scalability (support 100s of PM companies)
-
-### 4. Define Non-Goals
-Explicit out-of-scope for MVP:
-- Example: Not building a mobile app (Phase 2)
-- Example: Not integrating with external PM systems (Phase 2)
-- (To be finalized based on scope decisions)
-
-### 5. Success Signal
-Concrete, testable signal that APM is working:
-- Example: "A PM company with 100 units adds their portfolio. Within 2 weeks, 80% of routine tasks (tenant inquiries, maintenance triage, accounting categorization) are handled autonomously. PM admin reports 15+ fewer hours/week of manual work."
-
-### 6. Complete SPEC.md
-Once all five fields are locked, Spec is complete. Ready to move to PRD phase.
+*Competitive research, Constraints, Non-goals, and Success signal are done — do not re-open Why.*
 
 ---
 
@@ -232,16 +188,17 @@ Once all five fields are locked, Spec is complete. Ready to move to PRD phase.
 | Accounting: AI categorizes, human signs off (MVP) | ✅ Locked | Balances autonomy with tax accuracy risk |
 | Multi-tenancy from Day 1 | ✅ Locked | Requirement for SaaS reusability |
 | No human review for low-value transactions | ✅ Locked | Moves OER from 10% → 2% |
+| Management fee | ✅ Locked | **7%** on Owner; no per-property override (CAP-1) |
+| P0 before full MVP | ✅ Locked | Validate top 5 assumptions in 6-week Texas pilot |
 
 ---
 
-## Open Questions (To Resolve in Capabilities Phase)
+## Open Questions (Still Live)
 
-1. **Leasing scope:** Does AI generate lease documents, or just pre-qualify + issue key?
-2. **Maintenance scope:** Full end-to-end vendor management, or triage only?
-3. **Escrow/deposits:** Handled by APM or routed to third-party?
-4. **Compliance:** Which jurisdictions are MVP (federal only, or state-specific)?
-5. **Audit trail:** What level of logging required for tax/legal purposes?
+1. **Screening criteria defaults** — parked (`docs/AI-MVP-DECISIONS.md`)
+2. **M8–M10** — owner portal UX, open API/webhooks, document vault
+3. **Audit retention** — recommend 7 years; pending CAP-10 lock
+4. **P0 partner recruit** — Texas PM, 10–50 units
 
 ---
 
@@ -250,18 +207,17 @@ Once all five fields are locked, Spec is complete. Ready to move to PRD phase.
 **You are here:**
 ```
 1. Ideation ✅
-2. bmad-product-brief (skipped)
-3. bmad-spec (GUIDED MODE) ← NEARLY COMPLETE
-   - Why: ✅ Locked
+2. bmad-product-brief ✅ draft north star (partner review welcome)
+3. bmad-spec (GUIDED MODE) ← KERNEL LOCKED; CAP MICRO-SPECS + M8–M10 REMAIN
+   - Why / Constraints / Non-goals / Success: ✅ Locked
    - Capabilities: 🔄 Draft (CAP-11 locked; others need review)
-   - Constraints: ✅ Locked
-   - Non-goals: ✅ Locked
-   - Success signal: ✅ Locked
-4. bmad-prd (next)
-5. bmad-architecture (then)
-6. bmad-create-epics-and-stories (then)
-7. bmad-dev-story (then)
-8. Ship
+   - P0 pilot plan: ✅ Locked (execute before full MVP build)
+4. P0 pilot go/no-go
+5. bmad-prd
+6. bmad-architecture (spine drafted — refine as needed)
+7. bmad-create-epics-and-stories
+8. bmad-dev-story
+9. Ship
 ```
 
 ---
@@ -273,28 +229,21 @@ Once all five fields are locked, Spec is complete. Ready to move to PRD phase.
 I'm building RentalPro.ai, an Autonomous Property Management platform.
 
 Context files to read:
-- /Users/bstar/rentalpro/docs/BMAD-REFERENCE.md (BMad keywords)
-- /Users/bstar/rentalpro/_bmad-output/specs/spec-rentalpro/.memlog.md (decision log)
-- /Users/bstar/rentalpro/docs/HANDOFF-TO-CURSOR.md (this file)
+- docs/HANDOFF-TO-CURSOR.md
+- _bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md (north star)
+- _bmad-output/specs/spec-rentalpro/SPEC.md + .memlog.md
+- docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md
 
-Current status: Mid-spec in bmad-spec (guided mode)
-- Why field: ✅ Locked
-- Capabilities: 🔄 In progress
-
-Next step: Conduct deep competitive research on 14 PM platforms, then finalize Capabilities in the spec.
-
-Continue guiding me through bmad-spec in guided mode. After research, we'll lock Constraints, Non-goals, and Success signal.
+Current status: Spec kernel locked; P0 pilot is the risk gate before full MVP.
+Next: Walk M8–M10, lock CAP micro-specs, recruit Texas pilot partner.
 ```
 
 ---
 
 ## Files to Reference
 
+- **North star brief:** `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md`
 - **Spec:** `_bmad-output/specs/spec-rentalpro/SPEC.md`
 - **Memlog:** `_bmad-output/specs/spec-rentalpro/.memlog.md`
+- **P0 pilot:** `docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md`
 - **BMad Reference:** `docs/BMAD-REFERENCE.md`
-- **Project root:** `/Users/bstar/rentalpro`
-
----
-
-**Good luck in Cursor. Pick this up where you left off, and you'll have the spec locked in one focused session.**
