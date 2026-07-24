@@ -42,12 +42,18 @@ For each capability, complete its `docs/capabilities/CAP-N-*.md` section:
 
 ```
 ✅ Why (locked)
-🔄 Capabilities → micro-spec each CAP in docs/capabilities/
-⏳ Lock Constraints / Non-goals / Success signal (1 session)
+✅ Constraints / Non-goals / Success signal (locked)
+✅ P0 pilot plan (locked) — validate 5 assumptions before full MVP build
+🔄 Capabilities → micro-spec each CAP in docs/capabilities/ (CAP-11 locked)
+🔄 M8–M10 open; then CAP locks
+→ P0 pilot go/no-go (≥4 of 5 assumptions)
 → bmad-prd (expand stories)
-→ bmad-architecture (schema, APIs, agents)
+→ bmad-architecture (schema, APIs, agents) — spine already drafted
 → bmad-dev-story (sprint)
 ```
+
+**North star:** `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md`  
+**P0 plan:** `docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md`
 
 ## Tonight's 24/7 sequence
 

@@ -46,7 +46,7 @@
 ### CAP-4 Autonomous accounting
 - [x] 🔴 Security deposit sub-ledger · **MVP** — [`SECURITY-DEPOSIT-MVP-REQ.md`](./SECURITY-DEPOSIT-MVP-REQ.md) (M5)
 - [x] 🔴 Late fee auto-assessment · **MVP** — [`DELINQUENCY-RULES-ENGINE.md`](./DELINQUENCY-RULES-ENGINE.md) (M2)
-- [ ] 🟡 Management fee auto-calculation · **TBD**
+- [x] 🟡 Management fee auto-calculation · **MVP** — CAP-1 locked at **7%** (`Owner.managementFeePercent=7`); CAP-4 posts fee from that rate
 - [ ] 🟡 Bank reconciliation UI · **TBD**
 - [ ] ⚪ AP / vendor bills (non-WO) · **TBD**
 - [ ] ⚪ 1099 generation · **Non-goal** (M11 locked)

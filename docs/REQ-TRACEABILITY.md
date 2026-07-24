@@ -1,6 +1,6 @@
 # Requirements Traceability — Chat → Docs
 
-**Last updated:** 2026-07-05  
+**Last updated:** 2026-07-24  
 **Purpose:** Every aligned decision in spec sessions is written to requirement docs — not left in chat. This index shows **where to find what**.
 
 ---
@@ -43,11 +43,14 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 
 | Topic | Status | Canonical doc |
 |-------|--------|---------------|
-| Why (force, target, lever, tiered autonomy) | ✅ Locked | `SPEC.md` §Why · `HANDOFF-TO-CURSOR.md` |
+| Why (force, target, lever, tiered autonomy) | ✅ Locked | `SPEC.md` §Why · `HANDOFF-TO-CURSOR.md` · product brief |
 | Capabilities (12 CAPs intent + success) | 🔄 Draft | `SPEC.md` §Capabilities · `docs/capabilities/CAP-N-*.md` |
 | Constraints (9 non-negotiables) | ✅ Locked | `SPEC.md` §Constraints |
 | Non-goals (Phase 2 table) | ✅ Locked | `SPEC.md` §Non-goals |
 | Success signal (14-day APM criteria) | ✅ Locked | `SPEC.md` §Success signal |
+| Product brief (north star) | 🔄 Draft | `_bmad-output/planning-artifacts/briefs/brief-rentalpro-2026-07-04/brief.md` |
+| P0 pilot gate (5 assumptions) | ✅ Locked | `docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md` |
+| CAP-1 management fee | ✅ Locked | **7%** · `docs/capabilities/CAP-1-portfolio-onboarding.md` |
 
 ### Market gaps M1–M10 (guided picks)
 
@@ -115,6 +118,8 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 |------|--------------|---------|
 | **Spec kernel** | `_bmad-output/specs/spec-rentalpro/SPEC.md` | WHY, CAP summaries, Constraints, Non-goals, Success |
 | **Decision log** | `_bmad-output/specs/spec-rentalpro/.memlog.md` | Every locked decision (dated, append-only) |
+| **Product brief** | `_bmad-output/planning-artifacts/briefs/.../brief.md` | North star narrative for humans/partners |
+| **P0 pilot** | `docs/PILOT-P0-ASSUMPTIONS-VALIDATION.md` | Assumption validation before full MVP |
 | **Runbook** | `docs/*-RUNBOOK.md` or runbook section in engine doc | Time-sensitive tasks, approvals, prerequisites |
 | **Rules engine / architecture** | `docs/*-RULES-ENGINE.md` | Domain logic, state rules, data models |
 | **CAP deep-dive** | `docs/capabilities/CAP-N-*.md` | User stories, flows, APIs, acceptance tests |
@@ -123,14 +128,15 @@ Each locked market gap has a **companion req doc** with 9 sections (problem, vis
 
 ---
 
-## Still in chat only (not yet locked → not full req docs)
+## Still open (not yet locked → not full req docs)
 
 | Topic | Next action |
 |-------|-------------|
 | M8–M10 picks | Continue guided walkthrough → doc per M2/M1 pattern |
 | Screening criteria + industry thesis | `resume screening` → update `AI-MVP-DECISIONS.md` |
 | CAP-1–10, 12 micro-spec locks | `lock CAP-N` → promote draft to locked |
-| bmad-prd | After M1–M10 + CAP locks |
+| P0 pilot execution | Recruit TX partner → run 6-week plan |
+| bmad-prd | After CAP locks + P0 go/no-go |
 
 ---
 
