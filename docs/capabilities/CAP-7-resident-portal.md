@@ -80,8 +80,9 @@
 
 ## Open questions
 
-- [ ] PWA install prompt — Phase 2?
+- [ ] PWA install prompt — Phase 2? · see partner discussion [`MOBILE-APP-PHASE2-GAP-DISCUSSION.md`](../MOBILE-APP-PHASE2-GAP-DISCUSSION.md) (gap D4 / agenda item 3)
 - [ ] Twilio per-org vs shared number pool?
+- [ ] Native resident app timing/persona — tracked in mobile gap doc (not MVP; SPEC Non-goal)
 
 ## Market parity sub-features
 
